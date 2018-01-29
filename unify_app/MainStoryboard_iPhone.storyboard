@@ -17,7 +17,7 @@
         <!--Unify App-->
         <scene sceneID="cCY-SB-wT5">
             <objects>
-                <tableViewController id="PsD-7a-zsW" customClass="QSTodoListViewController" sceneMemberID="viewController">
+                <tableViewController id="PsD-7a-zsW" customClass="JobPostingListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="lJ7-Ej-a4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Unify App" id="izZ-yf-o0t"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hNe-LF-0Sj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Syncing...">
