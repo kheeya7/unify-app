@@ -1,33 +1,17 @@
-// ----------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-//
-
 #import <MicrosoftAzureMobile/MicrosoftAzureMobile.h>
 
-#import "QSTodoListViewController.h"
-#import "QSTodoService.h"
+#import "JobPostingListViewController.h"
+#import "JobPostingService.h"
 #import "QSAppDelegate.h"
 
 
 #pragma mark * Private Interface
 
 
-@interface QSTodoListViewController ()
+@interface JobPostingListViewController ()
 
 // Private properties
-@property (strong, nonatomic) QSTodoService *todoService;
+@property (strong, nonatomic) JobPostingService *jobPostingService;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
@@ -36,7 +20,7 @@
 #pragma mark * Implementation
 
 
-@implementation QSTodoListViewController
+@implementation JobPostingListViewController
 
 #pragma mark * UIView methods
 
@@ -45,8 +29,8 @@
 {
     [super viewDidLoad];
 
-    // Create the todoService - this creates the Mobile Service client inside the wrapped service
-    self.todoService = [QSTodoService defaultService];
+    // Create the jobPostingService - this creates the Mobile Service client inside the wrapped service
+    self.jobPostingService = [JobPostingService defaultService];
 
     // have refresh control reload all data from server
     [self.refreshControl addTarget:self
@@ -73,10 +57,10 @@
     QSAppDelegate *delegate = (QSAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = delegate.managedObjectContext;
 
-    fetchRequest.entity = [NSEntityDescription entityForName:@"TodoItem" inManagedObjectContext:context];
+    fetchRequest.entity = [NSEntityDescription entityForName:@"JobPosting" inManagedObjectContext:context];
 
     // show only non-completed items
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"complete == NO"];
+    // fetchRequest.predicate = [NSPredicate predicateWithFormat:@"complete == NO"];
 
     // sort by item text
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:YES]];
@@ -99,7 +83,7 @@
 {
     [self.refreshControl beginRefreshing];
 
-    [self.todoService syncData:^
+    [self.jobPostingService syncData:^
     {
          [self.refreshControl endRefreshing];
     }];
@@ -115,14 +99,14 @@
     NSManagedObject *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
     // map to a dictionary to pass to Mobile Apps SDK
-    NSDictionary *dict = [self.todoService.store tableItemFromManagedObject:item];
+    NSDictionary *dict = [self.jobPostingService.store tableItemFromManagedObject:item];
 
     // Change the appearance to look greyed out until we remove the item
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.textLabel.textColor = [UIColor grayColor];
 
-    // Ask the todoService to set the item's complete value to YES
-    [self.todoService completeItem:dict completion:nil];
+    // Ask the jobPostingService to set the item's complete value to YES
+    [self.jobPostingService completeItem:dict completion:nil];
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,7 +137,7 @@
     // Set the label on the cell and make sure the label color is black (in case this cell
     // has been reused and was previously greyed out
     cell.textLabel.textColor = [UIColor blackColor];
-    cell.textLabel.text = [item valueForKey:@"text"];
+    cell.textLabel.text = [item valueForKey:@"title"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -198,7 +182,7 @@
     }
 
     NSDictionary *item = @{ @"text" : self.itemText.text, @"complete" : @NO };
-    [self.todoService addItem:item completion:nil];
+    [self.jobPostingService addItem:item completion:nil];
     self.itemText.text = @"";
 }
 

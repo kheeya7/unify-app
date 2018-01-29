@@ -1,27 +1,11 @@
-// ----------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-//
-
 #import <MicrosoftAzureMobile/MicrosoftAzureMobile.h>
-#import "QSTodoService.h"
+#import "JobPostingService.h"
 #import "QSAppDelegate.h"
 
 #pragma mark * Private interace
 
 
-@interface QSTodoService()
+@interface JobPostingService()
 
 @property (nonatomic, strong)   MSSyncTable *syncTable;
 
@@ -31,22 +15,22 @@
 #pragma mark * Implementation
 
 
-@implementation QSTodoService
+@implementation JobPostingService
 
 
-+ (QSTodoService *)defaultService
++ (JobPostingService *)defaultService
 {
-    // Create a singleton instance of QSTodoService
-    static QSTodoService* service;
+    // Create a singleton instance of JobPostingService
+    static JobPostingService* service;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        service = [[QSTodoService alloc] init];
+        service = [[JobPostingService alloc] init];
     });
     
     return service;
 }
 
--(QSTodoService *)init
+-(JobPostingService *)init
 {
     self = [super init];
     
@@ -61,8 +45,8 @@
         
         self.client.syncContext = [[MSSyncContext alloc] initWithDelegate:nil dataSource:self.store callback:nil];
         
-        // Create an MSSyncTable instance to allow us to work with the TodoItem table
-        self.syncTable = [_client syncTableWithName:@"TodoItem"];
+        // Create an MSSyncTable instance to allow us to work with the JobPosting table
+        self.syncTable = [_client syncTableWithName:@"JobPosting"];
     }
     
     return self;
@@ -70,7 +54,7 @@
 
 -(void)addItem:(NSDictionary *)item completion:(QSCompletionBlock)completion
 {
-    // Insert the item into the TodoItem table and add to the items array on completion
+    // Insert the item into the JobPosting table and add to the items array on completion
     [self.syncTable insert:item completion:^(NSDictionary *result, NSError *error)
     {
         [self logErrorIfNotNil:error];
@@ -90,7 +74,7 @@
     NSMutableDictionary *mutable = [item mutableCopy];
     [mutable setObject:@YES forKey:@"complete"];
     
-    // Update the item in the TodoItem table and remove from the items array on completion
+    // Update the item in the JobPosting table and remove from the items array on completion
     [self.syncTable update:mutable completion:^(NSError *error)
     {
         [self logErrorIfNotNil:error];
@@ -120,7 +104,7 @@
     // Pulls data from the remote server into the local table.
     // We're pulling all items and filtering in the view
     // query ID is used for incremental sync
-    [self.syncTable pullWithQuery:query queryId:@"allTodoItems" completion:^(NSError *error) {
+    [self.syncTable pullWithQuery:query queryId:@"allJobPostingItems" completion:^(NSError *error) {
         [self logErrorIfNotNil:error];
         
         // Let the caller know that we have finished

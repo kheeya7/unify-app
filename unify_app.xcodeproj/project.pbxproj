@@ -13,15 +13,15 @@
 		03D1002816EC579A0005A1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03D1002616EC579A0005A1A9 /* InfoPlist.strings */; };
 		03D1002A16EC579A0005A1A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1002916EC579A0005A1A9 /* main.m */; };
 		03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */; };
-		03D1004716EC58300005A1A9 /* QSTodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1004616EC58300005A1A9 /* QSTodoListViewController.m */; };
-		03D1004A16EC58490005A1A9 /* QSTodoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1004916EC58490005A1A9 /* QSTodoService.m */; };
 		03D1004D16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */; };
 		03D1006516ED41D20005A1A9 /* connected57.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006116ED41D20005A1A9 /* connected57.png */; };
 		03D1006616ED41D20005A1A9 /* connected72.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006216ED41D20005A1A9 /* connected72.png */; };
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
-		689C60A41A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 689C60A21A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodeld */; };
+		7E962B53201ED4C4001A2AA8 /* JobPostingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */; };
+		7E962B54201ED4C4001A2AA8 /* JobPostingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B50201ED4C4001A2AA8 /* JobPostingService.m */; };
+		7E962B55201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */; };
 		9C35A4B01DE4C7A300650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4AF1DE4C7A300650581 /* SafariServices.framework */; };
 		9C35A4B21DE4C7B200650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B11DE4C7B200650581 /* Security.framework */; };
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
@@ -40,17 +40,17 @@
 		03D1002B16EC579A0005A1A9 /* unify_app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unify_app-Prefix.pch"; sourceTree = "<group>"; };
 		03D1002C16EC579A0005A1A9 /* QSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAppDelegate.h; sourceTree = "<group>"; };
 		03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSAppDelegate.m; sourceTree = "<group>"; };
-		03D1004516EC58300005A1A9 /* QSTodoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTodoListViewController.h; sourceTree = "<group>"; };
-		03D1004616EC58300005A1A9 /* QSTodoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTodoListViewController.m; sourceTree = "<group>"; };
-		03D1004816EC58490005A1A9 /* QSTodoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTodoService.h; sourceTree = "<group>"; };
-		03D1004916EC58490005A1A9 /* QSTodoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTodoService.m; sourceTree = "<group>"; };
 		03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		03D1006116ED41D20005A1A9 /* connected57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected57.png; sourceTree = "<group>"; };
 		03D1006216ED41D20005A1A9 /* connected72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected72.png; sourceTree = "<group>"; };
 		03D1006316ED41D20005A1A9 /* connected114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected114.png; sourceTree = "<group>"; };
 		03D1006416ED41D20005A1A9 /* connected144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected144.png; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		689C60A31A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
+		7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobPostingListViewController.m; sourceTree = "<group>"; };
+		7E962B4E201ED4C3001A2AA8 /* JobPostingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobPostingListViewController.h; sourceTree = "<group>"; };
+		7E962B4F201ED4C3001A2AA8 /* JobPostingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobPostingService.h; sourceTree = "<group>"; };
+		7E962B50201ED4C4001A2AA8 /* JobPostingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobPostingService.m; sourceTree = "<group>"; };
+		7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9C35A4AF1DE4C7A300650581 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9C35A4B11DE4C7B200650581 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9CA121721DAC7F67000C2FCA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -112,11 +112,11 @@
 		03D1002316EC579A0005A1A9 /* unify_app */ = {
 			isa = PBXGroup;
 			children = (
-				689C60A21A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodeld */,
-				03D1004816EC58490005A1A9 /* QSTodoService.h */,
-				03D1004916EC58490005A1A9 /* QSTodoService.m */,
-				03D1004516EC58300005A1A9 /* QSTodoListViewController.h */,
-				03D1004616EC58300005A1A9 /* QSTodoListViewController.m */,
+				7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */,
+				7E962B4E201ED4C3001A2AA8 /* JobPostingListViewController.h */,
+				7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */,
+				7E962B4F201ED4C3001A2AA8 /* JobPostingService.h */,
+				7E962B50201ED4C4001A2AA8 /* JobPostingService.m */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
 				03D1002C16EC579A0005A1A9 /* QSAppDelegate.h */,
 				03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */,
@@ -211,10 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
+				7E962B54201ED4C4001A2AA8 /* JobPostingService.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */,
-				03D1004716EC58300005A1A9 /* QSTodoListViewController.m in Sources */,
-				03D1004A16EC58490005A1A9 /* QSTodoService.m in Sources */,
-				689C60A41A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodeld in Sources */,
+				7E962B55201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld in Sources */,
+				7E962B53201ED4C4001A2AA8 /* JobPostingListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,13 +384,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		689C60A21A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodeld */ = {
+		7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				689C60A31A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodel */,
+				7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */,
 			);
-			currentVersion = 689C60A31A5F4D1B00E96D29 /* QSTodoDataModel.xcdatamodel */;
-			path = QSTodoDataModel.xcdatamodeld;
+			currentVersion = 7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */;
+			path = JobPostingDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
