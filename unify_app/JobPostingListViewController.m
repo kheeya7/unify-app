@@ -60,7 +60,7 @@
     fetchRequest.entity = [NSEntityDescription entityForName:@"JobPosting" inManagedObjectContext:context];
 
     // show only non-completed items
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"complete == NO"];
+    // fetchRequest.predicate = [NSPredicate predicateWithFormat:@"complete == NO"];
 
     // sort by item text
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:YES]];
