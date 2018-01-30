@@ -1,3 +1,5 @@
+// Header file for job posting list view controller
+
 #import <UIKit/UIKit.h>
 
 @interface JobPostingListViewController : UITableViewController<NSFetchedResultsControllerDelegate>
