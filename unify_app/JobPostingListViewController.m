@@ -138,6 +138,7 @@
     // has been reused and was previously greyed out
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.text = [item valueForKey:@"title"];
+    cell.detailTextLabel.text = [item valueForKey:@"company"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
