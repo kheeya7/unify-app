@@ -272,5 +272,15 @@
     });
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    JobPostingDetailViewController *pvc = [segue destinationViewController];
+    
+    NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+    
+    NSManagedObject *item = [self.fetchedResultsController objectAtIndexPath:path];
+    
+    [pvc setJobPostingItem: item];
+}
+
 
 @end
