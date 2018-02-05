@@ -138,6 +138,7 @@
     // has been reused and was previously greyed out
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.text = [item valueForKey:@"title"];
+    cell.detailTextLabel.text = [item valueForKey:@"company"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -269,6 +270,16 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView endUpdates];
     });
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    JobPostingDetailViewController *pvc = [segue destinationViewController];
+    
+    NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+    
+    NSManagedObject *item = [self.fetchedResultsController objectAtIndexPath:path];
+    
+    [pvc setJobPostingItem: item];
 }
 
 
