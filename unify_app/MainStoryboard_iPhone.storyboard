@@ -41,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="p16-yQ-jnQ" kind="show" id="yrI-tj-4OA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,6 +69,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQM-X1-JbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="599" y="179"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TTy-Nq-mF2">
+            <objects>
+                <viewController id="p16-yQ-jnQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eQX-FE-c3T"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dxz-bB-Ooz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FLs-fY-Fkl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Em-xf-tBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="179"/>
         </scene>
         <!--Job Postings-->
         <scene sceneID="0n8-is-8KE">
@@ -132,9 +153,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="zVE-5o-13N" kind="relationship" relationship="viewControllers" id="MZp-0H-taD"/>
                         <segue destination="GbO-zS-WKw" kind="relationship" relationship="viewControllers" id="Ur6-zQ-YpI"/>
                         <segue destination="T0M-Wu-WPf" kind="relationship" relationship="viewControllers" id="qoS-rr-wwq"/>
-                        <segue destination="zVE-5o-13N" kind="relationship" relationship="viewControllers" id="MZp-0H-taD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65r-O6-t6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
