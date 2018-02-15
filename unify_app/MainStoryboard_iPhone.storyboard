@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-1223" y="-613"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="B4E-U5-Qp1">
             <objects>
-                <tabBarController id="ot0-0F-zz0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTab" id="ot0-0F-zz0" customClass="MainTabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uWh-8v-RlI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
