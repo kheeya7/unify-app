@@ -34,37 +34,9 @@
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor darkGrayColor], NSForegroundColorAttributeName,                                                   [UIFont fontWithName:@"Helvetica-Light" size:20.0], NSFontAttributeName, nil]];
     
     [FIRApp configure];
-    FUIAuth *authUI = [FUIAuth defaultAuthUI];
-    
-    // You need to adopt a FUIAuthDelegate protocol to receive callback
-    authUI.delegate = self;
-    
-    NSArray<id<FUIAuthProvider>> *providers = @[
-                                                [[FUIGoogleAuth alloc] init],
-                                                ];
-    authUI.providers = providers;
-    
-    UINavigationController *authViewController = [authUI authViewController];
-    
-    self.window.rootViewController = authViewController;
+
     
     return YES;
-}
-
-- (void)authUI:(FUIAuth *)authUI
-didSignInWithUser:(nullable FIRUser *)user
-         error:(nullable NSError *)error {
-    // Implement this method to handle signed in user or error if any.
-    NSLog([user displayName]);
-    
-    // TODO: needs to navigate to the next controller
-}
-
-- (BOOL)application:(UIApplication *)app
-            openURL:(NSURL *)url
-            options:(NSDictionary *)options {
-    NSString *sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
-    return [[FUIAuth defaultAuthUI] handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 #pragma mark - Core Data stack
