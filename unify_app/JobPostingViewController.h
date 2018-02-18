@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JobPosting.h"
 
-@interface JobPostingViewController : UIViewController
+@interface JobPostingViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
