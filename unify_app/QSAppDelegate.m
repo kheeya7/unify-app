@@ -16,6 +16,9 @@
 
 #import "QSAppDelegate.h"
 
+@import UIKit;
+@import Firebase;
+
 @implementation QSAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -24,11 +27,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // These two are added by boiler plate code from Azure mobile
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:69.2/255.0 green:177.2/255.0 blue:255.0/255.0 alpha:1.0]];
     
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor darkGrayColor], NSForegroundColorAttributeName,
-                                                           [UIFont fontWithName:@"Helvetica-Light" size:20.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor darkGrayColor], NSForegroundColorAttributeName,                                                   [UIFont fontWithName:@"Helvetica-Light" size:20.0], NSFontAttributeName, nil]];
+    
+    // Starting up the Firebase
+    [FIRApp configure];
     
     return YES;
 }
