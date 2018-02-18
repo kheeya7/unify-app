@@ -8,6 +8,7 @@ target 'unify_app' do
   # Pods for unify_app
   pod 'Firebase/Core'
   pod 'FirebaseUI'
+  pod 'Firebase/Database'
 
   # Firebase dependencies
   pod 'FBSDKCoreKit'

@@ -1,32 +1,33 @@
 //
-//  MainTabBarViewController.m
+//  JobPostingViewController.m
 //  unify_app
 //
-//  Created by Kate Sohng on 2/14/18.
+//  Created by Kate Sohng on 2/17/18.
 //  Copyright © 2018 MobileServices. All rights reserved.
 //
 
-#import "MainTabBarViewController.h"
-#import "QSAppDelegate.h"
+#import "JobPostingViewController.h"
 
-@interface MainTabBarViewController ()
+@import Firebase;
 
+@interface JobPostingViewController ()
+
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 @end
 
-@implementation MainTabBarViewController
+@implementation JobPostingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.ref = [[FIRDatabase database] reference];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation

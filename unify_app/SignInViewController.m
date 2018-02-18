@@ -1,29 +1,34 @@
 //
-//  HomeViewController.m
+//  SignInViewController.m
 //  unify_app
 //
-//  Created by Kate Sohng on 2/16/18.
+//  Created by Kate Sohng on 2/18/18.
 //  Copyright © 2018 MobileServices. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "QSAppDelegate.h"
+#import "SignInViewController.h"
 
-@interface HomeViewController ()
+@import Firebase;
+@import FirebaseAuthUI;
+@import FirebaseGoogleAuthUI;
+
+@interface SignInViewController ()
 
 @end
 
-@implementation HomeViewController
-bool didShowAuthUI = false;
+@implementation SignInViewController
+
+bool shouldShowAuthUI = true;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (!didShowAuthUI) {
-        didShowAuthUI = true;
-
+    if (shouldShowAuthUI) {
         FUIAuth *authUI = [FUIAuth defaultAuthUI];
         
         // You need to adopt a FUIAuthDelegate protocol to receive callback
@@ -34,19 +39,26 @@ bool didShowAuthUI = false;
                                                     ];
         authUI.providers = providers;
         
-        UIViewController *authViewController = [authUI authViewController];
+        UINavigationController *authViewController = [authUI authViewController];
         
-        [self presentViewController:authViewController animated: YES completion: nil];
+        [self presentViewController:authViewController animated:YES completion:nil];
+        
+        shouldShowAuthUI = false;
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)authUI:(FUIAuth *)authUI
 didSignInWithUser:(nullable FIRUser *)user
          error:(nullable NSError *)error {
+    NSLog(user.displayName);
     // Implement this method to handle signed in user or error if any.
-    NSLog([user displayName]);
     
-    // TODO: needs to navigate to the next controller
+    [self performSegueWithIdentifier:@"SegueAfterSignIn" sender:self];
 }
 
 - (BOOL)application:(UIApplication *)app
@@ -54,11 +66,6 @@ didSignInWithUser:(nullable FIRUser *)user
             options:(NSDictionary *)options {
     NSString *sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
     return [[FUIAuth defaultAuthUI] handleOpenURL:url sourceApplication:sourceApplication];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
