@@ -25,6 +25,7 @@
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
+		7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFB1203A193A00078CC6 /* JobPosting.m */; };
 		9C35A4B01DE4C7A300650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4AF1DE4C7A300650581 /* SafariServices.framework */; };
 		9C35A4B21DE4C7B200650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B11DE4C7B200650581 /* Security.framework */; };
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
@@ -62,6 +63,8 @@
 		7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingViewController.m; sourceTree = "<group>"; };
 		7EBCBFAD2039F4D500078CC6 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		7EBCBFB0203A193A00078CC6 /* JobPosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPosting.h; sourceTree = "<group>"; };
+		7EBCBFB1203A193A00078CC6 /* JobPosting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPosting.m; sourceTree = "<group>"; };
 		9C35A4AF1DE4C7A300650581 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9C35A4B11DE4C7B200650581 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9CA121721DAC7F67000C2FCA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 				7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */,
 				7EBCBFAD2039F4D500078CC6 /* SignInViewController.h */,
 				7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */,
+				7EBCBFB0203A193A00078CC6 /* JobPosting.h */,
+				7EBCBFB1203A193A00078CC6 /* JobPosting.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */,
 				7E962B55201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld in Sources */,
+				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				7E962B53201ED4C4001A2AA8 /* JobPostingListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
