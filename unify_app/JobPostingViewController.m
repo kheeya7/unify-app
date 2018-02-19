@@ -14,10 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldJobTitle;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCompanyName;
-@property (weak, nonatomic) IBOutlet UILabel *labelStatusMessage;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewJobPostings;
 
 @property (strong, nonatomic) FIRDatabaseReference *refJobPostings;
+
 @property (strong, nonatomic) NSMutableArray *jobPostings;
 
 @end
@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     self.refJobPostings = [[[FIRDatabase database] reference] child:@"jobPostings"];
     
     self.jobPostings = [[NSMutableArray alloc] initWithCapacity:50];

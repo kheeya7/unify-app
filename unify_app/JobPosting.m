@@ -10,14 +10,6 @@
 
 @implementation JobPosting
 
-- (id)init {
-    if (self = [super init]) {
-        // initialize object here
-    }
-    
-    return self;
-}
-
 - (id) initWithKey: (NSString *)aKey
              title: (NSString *)aTitle
            company: (NSString *)aCompany {
