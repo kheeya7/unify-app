@@ -7,6 +7,8 @@
 //
 
 #import "SignInViewController.h"
+#import "AppDelegate.h"
+#import "User.h"
 
 @import Firebase;
 @import FirebaseAuthUI;
@@ -55,8 +57,13 @@ bool shouldShowAuthUI = true;
 - (void)authUI:(FUIAuth *)authUI
 didSignInWithUser:(nullable FIRUser *)user
          error:(nullable NSError *)error {
-    NSLog(user.displayName);
-    // Implement this method to handle signed in user or error if any.
+    User *loggedInUser = [[User alloc] initWithId:user.uid
+                                      displayName:user.displayName
+                                            email:user.email
+                                         photoUrl:user.photoURL];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.currentUser = loggedInUser;
     
     [self performSegueWithIdentifier:@"SegueAfterSignIn" sender:self];
 }
@@ -68,14 +75,16 @@ didSignInWithUser:(nullable FIRUser *)user
     return [[FUIAuth defaultAuthUI] handleOpenURL:url sourceApplication:sourceApplication];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+ */
+
 
 @end
