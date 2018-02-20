@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satisfy-Regular.ttf">
+            <string>Satisfy-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="TTy-Nq-mF2">
@@ -27,11 +32,11 @@
             </objects>
             <point key="canvasLocation" x="1233" y="179"/>
         </scene>
-        <!--Job Postings-->
+        <!--Job List-->
         <scene sceneID="0n8-is-8KE">
             <objects>
                 <navigationController id="zVE-5o-13N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Job Postings" id="El5-rA-iUB"/>
+                    <tabBarItem key="tabBarItem" title="Job List" image="joblist-icon" id="El5-rA-iUB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeA-IS-Tg9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -56,15 +61,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yK-hn-VQq">
-                                <rect key="frame" x="16" y="293" width="343" height="82"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" highlightedImage="background" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-zL-W4Z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yK-hn-VQq">
+                                <rect key="frame" x="0.0" y="421" width="375" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="70"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <size key="shadowOffset" width="2" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.62408893830000001" blue="0.3867841575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <segue destination="ot0-0F-zz0" kind="show" identifier="SegueAfterSignIn" id="nzz-1c-WHq"/>
@@ -87,11 +100,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="qHz-g3-auO"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard-icon" id="qHz-g3-auO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oam-QO-HJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1124" y="931"/>
+            <point key="canvasLocation" x="-287" y="932"/>
         </scene>
         <!--Job Postings-->
         <scene sceneID="fKu-pU-yop">
@@ -146,7 +159,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Posting-new" id="OBu-ca-uvi"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Job List" image="joblist-icon" id="OBu-ca-uvi"/>
                     <navigationItem key="navigationItem" title="Job Postings" id="PX5-g4-BsC"/>
                     <connections>
                         <outlet property="tableViewJobPostings" destination="VCV-uA-6Gv" id="PZE-cf-uls"/>
@@ -155,6 +168,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogI-jw-p3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="178.56071964017991"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Wsw-cf-7XB">
+            <objects>
+                <viewController id="ufN-e0-SeK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dfa-f5-cVA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pfq-oD-XT1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Mf-tj-mQD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat-icon" id="J6W-3J-ZWK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Im1-wZ-QhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-287" y="-552"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B4E-U5-Qp1">
@@ -168,6 +200,7 @@
                     <connections>
                         <segue destination="T0M-Wu-WPf" kind="relationship" relationship="viewControllers" id="qoS-rr-wwq"/>
                         <segue destination="zVE-5o-13N" kind="relationship" relationship="viewControllers" id="MZp-0H-taD"/>
+                        <segue destination="ufN-e0-SeK" kind="relationship" relationship="viewControllers" id="B6D-um-Lpd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65r-O6-t6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,4 +208,10 @@
             <point key="canvasLocation" x="-1124" y="179"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1024" height="683"/>
+        <image name="chat-icon" width="30" height="30"/>
+        <image name="dashboard-icon" width="30" height="30"/>
+        <image name="joblist-icon" width="30" height="30"/>
+    </resources>
 </document>
