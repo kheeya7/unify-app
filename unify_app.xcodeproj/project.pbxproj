@@ -12,16 +12,13 @@
 		03D1002216EC579A0005A1A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D1002116EC579A0005A1A9 /* CoreGraphics.framework */; };
 		03D1002816EC579A0005A1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03D1002616EC579A0005A1A9 /* InfoPlist.strings */; };
 		03D1002A16EC579A0005A1A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1002916EC579A0005A1A9 /* main.m */; };
-		03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */; };
+		03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1002D16EC579A0005A1A9 /* AppDelegate.m */; };
 		03D1004D16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */; };
 		03D1006516ED41D20005A1A9 /* connected57.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006116ED41D20005A1A9 /* connected57.png */; };
 		03D1006616ED41D20005A1A9 /* connected72.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006216ED41D20005A1A9 /* connected72.png */; };
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
-		7E962B53201ED4C4001A2AA8 /* JobPostingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */; };
-		7E962B54201ED4C4001A2AA8 /* JobPostingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B50201ED4C4001A2AA8 /* JobPostingService.m */; };
-		7E962B55201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */; };
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
@@ -31,7 +28,6 @@
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
 		A0C4C2326658DD39C0655FB5 /* Pods_unify_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143DC53523A10340E161E080 /* Pods_unify_app.framework */; };
 		A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */; };
-		A3BBD7791C05158D00DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBD7781C05158D00DD0DB0 /* MicrosoftAzureMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +39,8 @@
 		03D1002716EC579A0005A1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03D1002916EC579A0005A1A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		03D1002B16EC579A0005A1A9 /* unify_app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unify_app-Prefix.pch"; sourceTree = "<group>"; };
-		03D1002C16EC579A0005A1A9 /* QSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAppDelegate.h; sourceTree = "<group>"; };
-		03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSAppDelegate.m; sourceTree = "<group>"; };
+		03D1002C16EC579A0005A1A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03D1002D16EC579A0005A1A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		03D1006116ED41D20005A1A9 /* connected57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected57.png; sourceTree = "<group>"; };
 		03D1006216ED41D20005A1A9 /* connected72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected72.png; sourceTree = "<group>"; };
@@ -53,11 +49,6 @@
 		143DC53523A10340E161E080 /* Pods_unify_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobPostingListViewController.m; sourceTree = "<group>"; };
-		7E962B4E201ED4C3001A2AA8 /* JobPostingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobPostingListViewController.h; sourceTree = "<group>"; };
-		7E962B4F201ED4C3001A2AA8 /* JobPostingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobPostingService.h; sourceTree = "<group>"; };
-		7E962B50201ED4C4001A2AA8 /* JobPostingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobPostingService.m; sourceTree = "<group>"; };
-		7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		7EBCBF022035357800078CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingViewController.h; sourceTree = "<group>"; };
 		7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingViewController.m; sourceTree = "<group>"; };
@@ -69,7 +60,6 @@
 		9C35A4B11DE4C7B200650581 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9CA121721DAC7F67000C2FCA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		A3BBD7781C05158D00DD0DB0 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +71,6 @@
 				9C35A4B21DE4C7B200650581 /* Security.framework in Frameworks */,
 				9C35A4B01DE4C7A300650581 /* SafariServices.framework in Frameworks */,
 				9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */,
-				A3BBD7791C05158D00DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */,
 				689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */,
 				03D1001E16EC579A0005A1A9 /* UIKit.framework in Frameworks */,
 				03D1002016EC579A0005A1A9 /* Foundation.framework in Frameworks */,
@@ -117,7 +106,6 @@
 				9C35A4B11DE4C7B200650581 /* Security.framework */,
 				9C35A4AF1DE4C7A300650581 /* SafariServices.framework */,
 				9CA121721DAC7F67000C2FCA /* WebKit.framework */,
-				A3BBD7781C05158D00DD0DB0 /* MicrosoftAzureMobile.framework */,
 				689C609E1A5F3F4D00E96D29 /* CoreData.framework */,
 				03D1001D16EC579A0005A1A9 /* UIKit.framework */,
 				03D1001F16EC579A0005A1A9 /* Foundation.framework */,
@@ -131,14 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				7EBCBF022035357800078CC6 /* GoogleService-Info.plist */,
-				7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */,
-				7E962B4E201ED4C3001A2AA8 /* JobPostingListViewController.h */,
-				7E962B4D201ED4C3001A2AA8 /* JobPostingListViewController.m */,
-				7E962B4F201ED4C3001A2AA8 /* JobPostingService.h */,
-				7E962B50201ED4C4001A2AA8 /* JobPostingService.m */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
-				03D1002C16EC579A0005A1A9 /* QSAppDelegate.h */,
-				03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */,
+				03D1002C16EC579A0005A1A9 /* AppDelegate.h */,
+				03D1002D16EC579A0005A1A9 /* AppDelegate.m */,
 				03D1002416EC579A0005A1A9 /* Supporting Files */,
 				A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */,
 				7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */,
@@ -353,12 +336,9 @@
 			files = (
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
-				7E962B54201ED4C4001A2AA8 /* JobPostingService.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
-				03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */,
-				7E962B55201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld in Sources */,
+				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
-				7E962B53201ED4C4001A2AA8 /* JobPostingListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,19 +510,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7E962B51201ED4C4001A2AA8 /* JobPostingDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */,
-			);
-			currentVersion = 7E962B52201ED4C4001A2AA8 /* QSTodoDataModel.xcdatamodel */;
-			path = JobPostingDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 03D1001216EC579A0005A1A9 /* Project object */;
 }
