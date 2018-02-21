@@ -1,0 +1,6 @@
+framework module Pods_unify_app {
+  umbrella header "Pods-unify_app-umbrella.h"
+
+  export *
+  module * { export * }
+}
