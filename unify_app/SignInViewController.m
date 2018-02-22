@@ -9,6 +9,7 @@
 #import "SignInViewController.h"
 #import "AppDelegate.h"
 #import "User.h"
+#import "UnifyAuthViewController.h"
 
 @import Firebase;
 @import FirebaseAuthUI;
@@ -41,7 +42,12 @@ bool shouldShowAuthUI = true;
                                                     ];
         authUI.providers = providers;
         
-        UINavigationController *authViewController = [authUI authViewController];
+        //UINavigationController *authViewController = [authUI authViewController];
+        
+        //[self presentViewController:authViewController animated:YES completion:nil];
+        
+        UnifyAuthViewController *authViewController = [UnifyAuthViewController alloc];
+        [authViewController initWithAuthUI:authUI];
         
         [self presentViewController:authViewController animated:YES completion:nil];
         
