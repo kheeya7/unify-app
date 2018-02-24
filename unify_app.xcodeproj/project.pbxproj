@@ -24,6 +24,7 @@
 		7E258851203BDA3400143F3E /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */; };
 		7E258854203BEF2E00143F3E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E258853203BEF2E00143F3E /* User.m */; };
 		7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E258856203BF2E900143F3E /* DashboardViewController.m */; };
+		7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */; };
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
@@ -62,6 +63,8 @@
 		7E258853203BEF2E00143F3E /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7E258855203BF2E900143F3E /* DashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		7E258856203BF2E900143F3E /* DashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		7E2A99152040DC8900D0CC5D /* NewUserProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewUserProfileViewController.h; sourceTree = "<group>"; };
+		7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewUserProfileViewController.m; sourceTree = "<group>"; };
 		7EBCBF022035357800078CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingViewController.h; sourceTree = "<group>"; };
 		7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingViewController.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				7E25884D203BD93B00143F3E /* fonts */,
 				7EBCBF022035357800078CC6 /* GoogleService-Info.plist */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
+				7E2A99152040DC8900D0CC5D /* NewUserProfileViewController.h */,
+				7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */,
 				7E258855203BF2E900143F3E /* DashboardViewController.h */,
 				7E258856203BF2E900143F3E /* DashboardViewController.m */,
 				03D1002C16EC579A0005A1A9 /* AppDelegate.h */,
@@ -377,6 +382,7 @@
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
+				7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
