@@ -71,7 +71,7 @@ didSignInWithUser:(nullable FIRUser *)user
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     appDelegate.currentUser = loggedInUser;
     
-    [self performSegueWithIdentifier:@"SegueAfterSignIn" sender:self];
+    [self performSegueWithIdentifier:@"SegueToAdditionalProfile" sender:self];
 }
 
 - (BOOL)application:(UIApplication *)app
