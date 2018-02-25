@@ -19,9 +19,24 @@
         self.displayName = aDisplayName;
         self.email = aEmail;
         self.photoUrl = aPhotoUrl;
-    }
-    
+        self.nickName = @"";
+        self.occupation = @"";
+        self.additionalDetail = @"";
+    }    
     return self;
+}
+
+- (NSDictionary *) getDictionaryFormat {
+    NSDictionary *dict = @{
+                           @"uid":self.uid,
+                           @"displayName":self.displayName,
+                           @"nickName":self.nickName,
+                           @"email":self.email,
+                           @"occupation":self.occupation,
+                           @"additionalDetail":self.additionalDetail,
+                           @"photoUrl":[self.photoUrl absoluteString]
+                           };
+    return dict;
 }
 
 @end

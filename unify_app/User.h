@@ -14,10 +14,15 @@
 @property (nonatomic) NSString *displayName;
 @property (nonatomic) NSString *email;
 @property (nonatomic) NSURL *photoUrl;
+@property (nonatomic) NSString *nickName;
+@property (nonatomic) NSString *occupation;
+@property (nonatomic) NSString *additionalDetail;
 
 - (id) initWithId: (NSString *)aUid
       displayName: (NSString *)aDisplayName
             email: (NSString *)aEmail
          photoUrl: (NSURL *)aPhotoUrl;
+
+- (NSDictionary *) getDictionaryFormat;
 
 @end

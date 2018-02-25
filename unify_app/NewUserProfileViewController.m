@@ -7,6 +7,7 @@
 //
 
 #import "NewUserProfileViewController.h"
+@import Firebase;
 
 @interface NewUserProfileViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *yourNameField;
@@ -22,12 +23,33 @@
     [self performSegueWithIdentifier:@"SegueToMain2" sender:self];
 }
 - (IBAction)saveButton:(id)sender {
-        
+    // getting the AppDelegate object
+    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    User *currentUser = appDelegate.currentUser;
+    
+    // set the user properties from the user input
+    currentUser.displayName = [self yourNameField].text;
+    currentUser.nickName = [self nickNameField].text;
+    currentUser.email = [self emailField].text;
+    currentUser.occupation = [self occupationField].text;
+    currentUser.additionalDetail = [self additionalDetailField].text;
+    
+    FIRDatabaseReference *usersDBRef = [[[FIRDatabase database] reference] child:@"users"];
+    
+    [[usersDBRef child:currentUser.uid] setValue:[currentUser getDictionaryFormat] withCompletionBlock:^(NSError * _Nullable error,FIRDatabaseReference * _Nonnull ref){
+        // after the user is saved, we navigate to the main
+        [self performSegueWithIdentifier:@"SegueToMain2" sender:self];
+    }];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    User *currentUser = appDelegate.currentUser;
+    
+    [self yourNameField].text = currentUser.displayName;
+    [self emailField].text = currentUser.email;
 }
 
 - (void)didReceiveMemoryWarning {

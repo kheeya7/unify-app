@@ -27,7 +27,6 @@ bool shouldShowAuthUI = true;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,7 +70,16 @@ didSignInWithUser:(nullable FIRUser *)user
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     appDelegate.currentUser = loggedInUser;
     
-    [self performSegueWithIdentifier:@"SegueToAdditionalProfile" sender:self];
+    FIRDatabaseReference *usersDBRef = [[[FIRDatabase database] reference] child:@"users"];
+    [[usersDBRef child:loggedInUser.uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        if ([snapshot exists]) {
+            // If user is already saved, just move to the main
+            [self performSegueWithIdentifier:@"SegueToMain" sender:self];
+        } else {
+            // If user is not saved, go to additional profile setting
+            [self performSegueWithIdentifier:@"SegueToAdditionalProfile" sender:self];
+        }
+    }];
 }
 
 - (BOOL)application:(UIApplication *)app
