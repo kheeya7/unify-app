@@ -7,6 +7,7 @@
 //
 
 #import "JobPostingViewController.h"
+#import "JobPostingDetailViewController.h"
 
 @import Firebase;
 
@@ -74,15 +75,21 @@
     [[self.refJobPostings child:key] setValue: jobPosting];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *path = [[self tableViewJobPostings] indexPathForSelectedRow];
+    JobPosting *jobPosting = [self jobPostings][path.row];
+    
+    JobPostingDetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.currentJobPosting = jobPosting;
+    
 }
-*/
+
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
