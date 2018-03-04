@@ -7,6 +7,7 @@
 //
 
 #import "JobPostingViewController.h"
+#import "JobPostingDetailViewController.h"
 
 @import Firebase;
 
@@ -40,6 +41,8 @@
             // cleaar the list
             [self.jobPostings removeAllObjects];
             
+            [self.jobPostings remove]
+            
             // iterate through data
             for (FIRDataSnapshot* child in snapshot.children) {
                 NSDictionary *savedJobPosting = [child value];
@@ -47,7 +50,9 @@
                 NSString *aTitle = [savedJobPosting objectForKey:@"title"];
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
                 
-                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey title:aTitle company:aCompany];
+                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey];
+                jobPosting.title = aTitle;
+                jobPosting.company = aCompany; 
                 
                 [self.jobPostings addObject:jobPosting];
             }
@@ -74,15 +79,21 @@
     [[self.refJobPostings child:key] setValue: jobPosting];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *path = [[self tableViewJobPostings] indexPathForSelectedRow];
+    JobPosting *jobPosting = [self jobPostings][path.row];
+    
+    JobPostingDetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.currentJobPosting = jobPosting;
+    
 }
-*/
+
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
