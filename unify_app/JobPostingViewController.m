@@ -41,8 +41,6 @@
             // cleaar the list
             [self.jobPostings removeAllObjects];
             
-            [self.jobPostings remove]
-            
             // iterate through data
             for (FIRDataSnapshot* child in snapshot.children) {
                 NSDictionary *savedJobPosting = [child value];
