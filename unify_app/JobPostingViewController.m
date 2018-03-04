@@ -41,6 +41,8 @@
             // cleaar the list
             [self.jobPostings removeAllObjects];
             
+            [self.jobPostings remove]
+            
             // iterate through data
             for (FIRDataSnapshot* child in snapshot.children) {
                 NSDictionary *savedJobPosting = [child value];
@@ -48,7 +50,9 @@
                 NSString *aTitle = [savedJobPosting objectForKey:@"title"];
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
                 
-                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey title:aTitle company:aCompany];
+                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey];
+                jobPosting.title = aTitle;
+                jobPosting.company = aCompany; 
                 
                 [self.jobPostings addObject:jobPosting];
             }

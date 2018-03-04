@@ -10,13 +10,9 @@
 
 @implementation JobPosting
 
-- (id) initWithKey: (NSString *)aKey
-             title: (NSString *)aTitle
-           company: (NSString *)aCompany {
+- (id) initWithKey: (NSString *)aKey {
     if (self = [super init]) {
         self.key = aKey;
-        self.title = aTitle;
-        self.company = aCompany;
     }
     
     return self;

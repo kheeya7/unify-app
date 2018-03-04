@@ -14,8 +14,6 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *company;
 
-- (id) initWithKey: (NSString *)aKey
-             title: (NSString *)aTitle
-           company: (NSString *)aCompany;
+- (id) initWithKey: (NSString *)aKey;
 
 @end
