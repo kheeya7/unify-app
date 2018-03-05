@@ -19,6 +19,7 @@
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
+		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
 		7E25884C203BD75700143F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884B203BD75700143F3E /* Assets.xcassets */; };
 		7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */; };
 		7E258851203BDA3400143F3E /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */; };
@@ -56,6 +57,8 @@
 		143DC53523A10340E161E080 /* Pods_unify_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
+		7E1233332043841200312658 /* JobPostingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingDetailViewController.m; sourceTree = "<group>"; };
 		7E25884B203BD75700143F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				7E258853203BEF2E00143F3E /* User.m */,
 				7EEE65B5203E6E39006CD414 /* UnifyAuthViewController.h */,
 				7EEE65B6203E6E39006CD414 /* UnifyAuthViewController.m */,
+				7E1233322043841200312658 /* JobPostingDetailViewController.h */,
+				7E1233332043841200312658 /* JobPostingDetailViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
+				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */,
