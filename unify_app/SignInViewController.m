@@ -39,14 +39,10 @@ bool shouldShowAuthUI = true;
         NSArray<id<FUIAuthProvider>> *providers = @[
                                                     [[FUIGoogleAuth alloc] init],
                                                     ];
+        
         authUI.providers = providers;
         
-        //UINavigationController *authViewController = [authUI authViewController];
-        
-        //[self presentViewController:authViewController animated:YES completion:nil];
-        
-        UnifyAuthViewController *authViewController = [UnifyAuthViewController alloc];
-        [authViewController initWithAuthUI:authUI];
+        UnifyAuthViewController *authViewController = [[UnifyAuthViewController alloc] initWithAuthUI:authUI];
         
         [self presentViewController:authViewController animated:YES completion:nil];
         

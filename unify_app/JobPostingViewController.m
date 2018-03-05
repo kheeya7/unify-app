@@ -7,6 +7,7 @@
 //
 
 #import "JobPostingViewController.h"
+#import "JobPostingDetailViewController.h"
 
 @import Firebase;
 
@@ -24,10 +25,6 @@
 
 @implementation JobPostingViewController
 
-- (IBAction)onAddJobPosting:(id)sender {
-    [self addJobPosting];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -35,7 +32,7 @@
     
     self.jobPostings = [[NSMutableArray alloc] initWithCapacity:50];
     
-    [self.refJobPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+    [self.refJobPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
         if (snapshot.childrenCount > 0) {
             // cleaar the list
             [self.jobPostings removeAllObjects];
@@ -47,12 +44,14 @@
                 NSString *aTitle = [savedJobPosting objectForKey:@"title"];
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
                 
-                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey title:aTitle company:aCompany];
+                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey];
+                jobPosting.title = aTitle;
+                jobPosting.company = aCompany; 
                 
                 [self.jobPostings addObject:jobPosting];
             }
             
-            [[self tableViewJobPostings] reloadData];
+            [self.tableViewJobPostings reloadData];
         }
     }];
 }
@@ -62,36 +61,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addJobPosting {
-    NSString *key = [[self.refJobPostings childByAutoId] key];
-    
-    NSDictionary *jobPosting = @{
-                                 @"id": key,
-                                 @"title": self.textFieldJobTitle.text,
-                                 @"company": self.textFieldCompanyName.text
-                                };
-    
-    [[self.refJobPostings child:key] setValue: jobPosting];
-}
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *path = [self.tableViewJobPostings indexPathForSelectedRow];
+    JobPosting *jobPosting = self.jobPostings[path.row];
+    
+    JobPostingDetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.currentJobPosting = jobPosting;
 }
-*/
-
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    JobPosting *jobPosting = [self jobPostings][indexPath.row];
+    JobPosting *jobPosting = self.jobPostings[indexPath.row];
     
-    cell.textLabel.text = [jobPosting title];
-    cell.detailTextLabel.text = [jobPosting company];
+    cell.textLabel.text = jobPosting.title;
+    cell.detailTextLabel.text = jobPosting.company;
     
     return cell;
 }
