@@ -13,12 +13,8 @@
 
 @interface JobPostingViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *textFieldJobTitle;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldCompanyName;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewJobPostings;
-
 @property (strong, nonatomic) FIRDatabaseReference *refJobPostings;
-
 @property (strong, nonatomic) NSMutableArray *jobPostings;
 
 @end
