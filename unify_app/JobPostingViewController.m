@@ -39,10 +39,13 @@
                 NSString *aKey = [savedJobPosting objectForKey:@"id"];
                 NSString *aTitle = [savedJobPosting objectForKey:@"title"];
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
+                NSString *aJobDescription = [savedJobPosting objectForKey:@"jobDescription"];
                 
-                JobPosting *jobPosting = [[JobPosting alloc] initWithKey:aKey];
+                JobPosting *jobPosting = [[JobPosting alloc] init];
+                jobPosting.key = aKey;
                 jobPosting.title = aTitle;
                 jobPosting.company = aCompany; 
+                jobPosting.jobDescription = aJobDescription;
                 
                 [self.jobPostings addObject:jobPosting];
             }
