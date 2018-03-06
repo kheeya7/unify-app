@@ -44,7 +44,7 @@ bool shouldShowAuthUI = true;
         
         UnifyAuthViewController *authViewController = [[UnifyAuthViewController alloc] initWithAuthUI:authUI];
         
-        [self presentViewController:authViewController animated:YES completion:nil];
+        [self presentViewController:authViewController animated:NO completion:nil];
         
         shouldShowAuthUI = false;
     }
