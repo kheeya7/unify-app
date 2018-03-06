@@ -13,7 +13,6 @@
 @property (nonatomic) NSString *key;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *company;
-
-- (id) initWithKey: (NSString *)aKey;
+@property (nonatomic) NSString *jobDescription;
 
 @end

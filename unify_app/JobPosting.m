@@ -10,12 +10,4 @@
 
 @implementation JobPosting
 
-- (id) initWithKey: (NSString *)aKey {
-    if (self = [super init]) {
-        self.key = aKey;
-    }
-    
-    return self;
-}
-
 @end
