@@ -18,6 +18,7 @@
 		03D1006616ED41D20005A1A9 /* connected72.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006216ED41D20005A1A9 /* connected72.png */; };
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
+		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
 		7E25884C203BD75700143F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884B203BD75700143F3E /* Assets.xcassets */; };
@@ -59,6 +60,8 @@
 		374F4FF1206C136D008CC95E /* SF-UI-Text-Regular (1).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular (1).ttf"; path = "../../../../Downloads/SF-UI-Text-Regular (1).ttf"; sourceTree = "<group>"; };
 		374F4FF2206C1378008CC95E /* SF-UI-Text-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Semibold.ttf"; path = "../../../../Downloads/SF-UI-Text-Semibold.ttf"; sourceTree = "<group>"; };
 		374F4FF3206C1383008CC95E /* SF-UI-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Medium.ttf"; path = "../../../../Downloads/SF-UI-Display-Medium.ttf"; sourceTree = "<group>"; };
+		374F4FF7206C46EA008CC95E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		374F4FF8206C46EA008CC95E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				7E1233332043841200312658 /* JobPostingDetailViewController.m */,
 				7E37941D204E38990024D35D /* MainTabBarViewController.h */,
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
+				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
+				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
+				374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */,
 				7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
