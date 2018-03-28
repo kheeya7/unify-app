@@ -40,12 +40,14 @@
                 NSString *aTitle = [savedJobPosting objectForKey:@"title"];
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
                 NSString *aJobDescription = [savedJobPosting objectForKey:@"jobDescription"];
+                NSString *aCompanyLogoUrlString = [savedJobPosting objectForKey:@"companyLogo"];
                 
                 JobPosting *jobPosting = [[JobPosting alloc] init];
                 jobPosting.key = aKey;
                 jobPosting.title = aTitle;
                 jobPosting.company = aCompany; 
                 jobPosting.jobDescription = aJobDescription;
+                jobPosting.companyLogoUrlString = aCompanyLogoUrlString;
                 
                 [self.jobPostings addObject:jobPosting];
             }
