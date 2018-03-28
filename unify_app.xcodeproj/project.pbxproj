@@ -56,6 +56,9 @@
 		03D1006316ED41D20005A1A9 /* connected114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected114.png; sourceTree = "<group>"; };
 		03D1006416ED41D20005A1A9 /* connected144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected144.png; sourceTree = "<group>"; };
 		143DC53523A10340E161E080 /* Pods_unify_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		374F4FF1206C136D008CC95E /* SF-UI-Text-Regular (1).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular (1).ttf"; path = "../../../../Downloads/SF-UI-Text-Regular (1).ttf"; sourceTree = "<group>"; };
+		374F4FF2206C1378008CC95E /* SF-UI-Text-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Semibold.ttf"; path = "../../../../Downloads/SF-UI-Text-Semibold.ttf"; sourceTree = "<group>"; };
+		374F4FF3206C1383008CC95E /* SF-UI-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Medium.ttf"; path = "../../../../Downloads/SF-UI-Display-Medium.ttf"; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
@@ -190,6 +193,9 @@
 		7E25884D203BD93B00143F3E /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				374F4FF3206C1383008CC95E /* SF-UI-Display-Medium.ttf */,
+				374F4FF2206C1378008CC95E /* SF-UI-Text-Semibold.ttf */,
+				374F4FF1206C136D008CC95E /* SF-UI-Text-Regular (1).ttf */,
 				7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */,
 				7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */,
 			);
