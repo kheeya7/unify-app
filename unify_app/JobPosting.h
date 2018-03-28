@@ -14,5 +14,6 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *company;
 @property (nonatomic) NSString *jobDescription;
+@property (nonatomic) NSString *companyLogoUrlString;
 
 @end
