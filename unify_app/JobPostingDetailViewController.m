@@ -30,8 +30,7 @@
 
     UIImage *image = [self.currentJobPosting getImageLogo];
     [self.companyLogoImageView setImage:image];
-    UIImage *image2 = [UIImage imageWithData: imageData];
-    [self.companyLogoImageView2 setImage:image2];
+    [self.companyLogoImageView2 setImage:image];
 
 }
 - (void)didReceiveMemoryWarning {
