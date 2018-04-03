@@ -27,15 +27,10 @@
     [self.companyLabel setText:[self.currentJobPosting company]];
     [self.companyLabel2 setText:[self.currentJobPosting company]];
     [self.jobDescriptionWebView loadHTMLString:self.currentJobPosting.jobDescription baseURL:(nil)];
-    
-    NSString *logoUrlString = [[self currentJobPosting] companyLogoUrlString];
-    NSString *httpsUrlString = [logoUrlString stringByReplacingOccurrencesOfString:@"http:"withString:@"https:"];
-    NSURL *imageUrl = [NSURL URLWithString: httpsUrlString];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageUrl];
-    UIImage *image = [UIImage imageWithData: imageData];
+
+    UIImage *image = [self.currentJobPosting getImageLogo];
     [self.companyLogoImageView setImage:image];
-    UIImage *image2 = [UIImage imageWithData: imageData];
-    [self.companyLogoImageView2 setImage:image2];
+    [self.companyLogoImageView2 setImage:image];
 
 }
 - (void)didReceiveMemoryWarning {
