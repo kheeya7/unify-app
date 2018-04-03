@@ -83,6 +83,17 @@
     cell.textLabel.text = jobPosting.title;
     cell.detailTextLabel.text = jobPosting.company;
     
+    // set the image from the url
+    UIImage *image = [jobPosting getImageLogo];
+    
+    CGSize newSize = CGSizeMake(40, 40);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    cell.imageView.image = newImage;
+    
     return cell;
 }
 

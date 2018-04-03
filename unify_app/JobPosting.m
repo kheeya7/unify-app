@@ -10,4 +10,14 @@
 
 @implementation JobPosting
 
+- (UIImage *) getImageLogo {
+    NSString *logoUrlString = self.companyLogoUrlString;
+    NSString *httpsUrlString = [logoUrlString stringByReplacingOccurrencesOfString:@"http:"withString:@"https:"];
+    NSURL *imageUrl = [NSURL URLWithString: httpsUrlString];
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageUrl];
+    UIImage *image = [UIImage imageWithData: imageData];
+    
+    return image;
+}
+
 @end
