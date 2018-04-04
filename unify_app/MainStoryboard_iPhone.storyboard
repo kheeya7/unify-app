@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtx-Om-rWW" userLabel="White Overlay">
-                                <rect key="frame" x="0.0" y="131" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="131" width="376" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wze-SK-Ci1">
@@ -92,7 +92,7 @@
                                 <state key="normal" title="Apply"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-LH-vrl" userLabel="Edit Icon">
-                                <rect key="frame" x="341" y="72" width="25" height="25"/>
+                                <rect key="frame" x="347" y="72" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -202,9 +202,10 @@
                                 <rect key="frame" x="0.0" y="74" width="375" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-WN-QqJ" userLabel="White Background Top">
-                                <rect key="frame" x="9" y="133" width="357" height="158"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-WN-QqJ" userLabel="White Background Top">
+                                <rect key="frame" x="0.0" y="133" width="375" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GG5-Ri-SNN">
                                 <rect key="frame" x="138" y="86" width="98" height="98"/>
@@ -248,7 +249,7 @@
                                 <rect key="frame" x="0.0" y="472" width="375" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="write-post-icon" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-aI-QTk" userLabel="Write Post Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="write-post-icon" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-aI-QTk" userLabel="Write Post Icon">
                                 <rect key="frame" x="52" y="399" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -256,11 +257,11 @@
                                 <rect key="frame" x="9" y="514" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="send-message-icon" translatesAutoresizingMaskIntoConstraints="NO" id="G4C-Gj-6X0" userLabel="Send Message Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="send-message-icon" translatesAutoresizingMaskIntoConstraints="NO" id="G4C-Gj-6X0" userLabel="Send Message Icon">
                                 <rect key="frame" x="167" y="399" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="more-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-J3-co2" userLabel="More Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="more-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-J3-co2" userLabel="More Icon">
                                 <rect key="frame" x="283" y="399" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -300,7 +301,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="C98-kB-vzt" userLabel="Edit Icon">
-                                <rect key="frame" x="341" y="79" width="25" height="25"/>
+                                <rect key="frame" x="348" y="79" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
