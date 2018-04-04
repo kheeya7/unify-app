@@ -50,6 +50,11 @@
     
     [self yourNameField].text = currentUser.displayName;
     [self emailField].text = currentUser.email;
+    
+    self.additionalDetailField.layer.borderWidth = 1.0f;
+    self.additionalDetailField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.additionalDetailField.layer.cornerRadius = 8;
+    
 }
 
 - (void)didReceiveMemoryWarning {
