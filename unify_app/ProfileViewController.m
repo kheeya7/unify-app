@@ -26,7 +26,7 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     User *currentUser = appDelegate.currentUser;
     
-    [self displayNameLabel].text = [NSString stringWithFormat:@"Hi! %@", currentUser.displayName];
+    [self displayNameLabel].text = [NSString stringWithFormat:@"%@", currentUser.displayName];
     [self emailLabel].text = currentUser.email;
     
     NSData *data = [NSData dataWithContentsOfURL:currentUser.photoUrl];
