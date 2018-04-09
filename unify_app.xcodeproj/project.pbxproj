@@ -19,6 +19,7 @@
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
+		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
@@ -60,6 +61,8 @@
 		143DC53523A10340E161E080 /* Pods_unify_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		372236AD207575B5002AE50E /* MyNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewViewController.h; sourceTree = "<group>"; };
 		372236AE207575B5002AE50E /* MyNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewViewController.m; sourceTree = "<group>"; };
+		372236B02075793F002AE50E /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
+		372236B12075793F002AE50E /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		374F4FF7206C46EA008CC95E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		374F4FF8206C46EA008CC95E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
 				372236AD207575B5002AE50E /* MyNewViewController.h */,
 				372236AE207575B5002AE50E /* MyNewViewController.m */,
+				372236B02075793F002AE50E /* SampleViewController.h */,
+				372236B12075793F002AE50E /* SampleViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				372236AF207575B5002AE50E /* MyNewViewController.m in Sources */,
 				374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */,
+				372236B22075793F002AE50E /* SampleViewController.m in Sources */,
 				7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
