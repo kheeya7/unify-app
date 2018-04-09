@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,7 +118,7 @@
                 <navigationController id="zVE-5o-13N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Job List" image="job-icon-blue" id="El5-rA-iUB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeA-IS-Tg9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.36031553149223328" green="0.79250794649124146" blue="0.83998733758926392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
