@@ -11,7 +11,9 @@
 
 @import Firebase;
 
-@interface JobPostingViewController ()
+@interface JobPostingViewController (){
+    dispatch_queue_t imageQueue;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewJobPostings;
 @property (strong, nonatomic) FIRDatabaseReference *refJobPostings;
@@ -23,7 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    if (!imageQueue) {
+        imageQueue = dispatch_queue_create("imageLoadQueue", NULL);
+    }
+    
     self.refJobPostings = [[[FIRDatabase database] reference] child:@"jobPostings"];
     
     self.jobPostings = [[NSMutableArray alloc] initWithCapacity:50];
@@ -83,17 +89,29 @@
     cell.textLabel.text = jobPosting.title;
     cell.detailTextLabel.text = jobPosting.company;
     
+    // temporary placeholder
+    cell.imageView.image = [UIImage imageNamed:@"chat-icon"];
+    
     // set the image from the url
-    UIImage *image = [jobPosting getImageLogo];
-    
-    CGSize newSize = CGSizeMake(40, 40);
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    cell.imageView.image = newImage;
-    
+    dispatch_async(imageQueue, ^{
+        UIImage *image = [jobPosting getImageLogo];
+        // Resize the image so that icons have same size
+        CGSize newSize = CGSizeMake(40, 40);
+        UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+        [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        // Since we are modifying the UI, dispatch back on the main queue
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UITableViewCell *updateCell = [self.tableViewJobPostings cellForRowAtIndexPath:indexPath];
+            
+            // Check if the cell is still visible and not reused by other
+            if (updateCell) {
+                updateCell.imageView.image = newImage;
+            }
+        });
+    });
     return cell;
 }
 
