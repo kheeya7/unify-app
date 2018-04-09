@@ -18,6 +18,13 @@
 		03D1006616ED41D20005A1A9 /* connected72.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006216ED41D20005A1A9 /* connected72.png */; };
 		03D1006716ED41D20005A1A9 /* connected114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006316ED41D20005A1A9 /* connected114.png */; };
 		03D1006816ED41D20005A1A9 /* connected144.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D1006416ED41D20005A1A9 /* connected144.png */; };
+		30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71F9E207C07B800E8DD76 /* PulloutMenuViewController.m */; };
+		30D71FA2207C0A2500E8DD76 /* GroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FA1207C0A2500E8DD76 /* GroupsViewController.m */; };
+		30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FA4207C0A6E00E8DD76 /* GroupDetailViewController.m */; };
+		30D71FA8207C0AB900E8DD76 /* MembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FA7207C0AB900E8DD76 /* MembersViewController.m */; };
+		30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FAA207C0AE100E8DD76 /* AboutViewController.m */; };
+		30D71FAE207C0B2500E8DD76 /* SavedJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */; };
+		30D71FB1207C0B5900E8DD76 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */; };
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
 		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
@@ -59,6 +66,20 @@
 		03D1006316ED41D20005A1A9 /* connected114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected114.png; sourceTree = "<group>"; };
 		03D1006416ED41D20005A1A9 /* connected144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected144.png; sourceTree = "<group>"; };
 		143DC53523A10340E161E080 /* Pods_unify_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D71F9D207C07B800E8DD76 /* PulloutMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PulloutMenuViewController.h; sourceTree = "<group>"; };
+		30D71F9E207C07B800E8DD76 /* PulloutMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PulloutMenuViewController.m; sourceTree = "<group>"; };
+		30D71FA0207C0A2500E8DD76 /* GroupsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupsViewController.h; sourceTree = "<group>"; };
+		30D71FA1207C0A2500E8DD76 /* GroupsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupsViewController.m; sourceTree = "<group>"; };
+		30D71FA3207C0A6E00E8DD76 /* GroupDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupDetailViewController.h; sourceTree = "<group>"; };
+		30D71FA4207C0A6E00E8DD76 /* GroupDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupDetailViewController.m; sourceTree = "<group>"; };
+		30D71FA6207C0AB900E8DD76 /* MembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersViewController.h; sourceTree = "<group>"; };
+		30D71FA7207C0AB900E8DD76 /* MembersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersViewController.m; sourceTree = "<group>"; };
+		30D71FA9207C0AE100E8DD76 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		30D71FAA207C0AE100E8DD76 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		30D71FAC207C0B2500E8DD76 /* SavedJobsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavedJobsViewController.h; sourceTree = "<group>"; };
+		30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavedJobsViewController.m; sourceTree = "<group>"; };
+		30D71FAF207C0B5900E8DD76 /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		372236AD207575B5002AE50E /* MyNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewViewController.h; sourceTree = "<group>"; };
 		372236AE207575B5002AE50E /* MyNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewViewController.m; sourceTree = "<group>"; };
 		372236B02075793F002AE50E /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
@@ -213,6 +234,20 @@
 				372236AE207575B5002AE50E /* MyNewViewController.m */,
 				372236B02075793F002AE50E /* SampleViewController.h */,
 				372236B12075793F002AE50E /* SampleViewController.m */,
+				30D71F9D207C07B800E8DD76 /* PulloutMenuViewController.h */,
+				30D71F9E207C07B800E8DD76 /* PulloutMenuViewController.m */,
+				30D71FA0207C0A2500E8DD76 /* GroupsViewController.h */,
+				30D71FA1207C0A2500E8DD76 /* GroupsViewController.m */,
+				30D71FA3207C0A6E00E8DD76 /* GroupDetailViewController.h */,
+				30D71FA4207C0A6E00E8DD76 /* GroupDetailViewController.m */,
+				30D71FA6207C0AB900E8DD76 /* MembersViewController.h */,
+				30D71FA7207C0AB900E8DD76 /* MembersViewController.m */,
+				30D71FA9207C0AE100E8DD76 /* AboutViewController.h */,
+				30D71FAA207C0AE100E8DD76 /* AboutViewController.m */,
+				30D71FAC207C0B2500E8DD76 /* SavedJobsViewController.h */,
+				30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */,
+				30D71FAF207C0B5900E8DD76 /* ContactUsViewController.h */,
+				30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -459,15 +494,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D71FB1207C0B5900E8DD76 /* ContactUsViewController.m in Sources */,
+				30D71FA2207C0A2500E8DD76 /* GroupsViewController.m in Sources */,
 				7EEE65B7203E6E39006CD414 /* UnifyAuthViewController.m in Sources */,
 				7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */,
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
+				30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */,
+				30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */,
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
+				30D71FAE207C0B2500E8DD76 /* SavedJobsViewController.m in Sources */,
+				30D71FA8207C0AB900E8DD76 /* MembersViewController.m in Sources */,
+				30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				372236AF207575B5002AE50E /* MyNewViewController.m in Sources */,
 				374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */,
