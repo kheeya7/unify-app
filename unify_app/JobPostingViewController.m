@@ -90,11 +90,18 @@
     cell.detailTextLabel.text = jobPosting.company;
     
     // temporary placeholder
-    cell.imageView.image = [UIImage imageNamed:@"chat-icon"];
+    //cell.imageView.image = [UIImage imageNamed:@"chat-icon"];
     
-    // set the image from the url
+    if (!imageQueue) {
+        imageQueue = dispatch_queue_create("imageLoadQueue", NULL);
+    }
+    
+    cell.imageView.image = [UIImage imageNamed:@"company-logo-placeholder"];
+    
+    // dispatch the getting logo and resizing to the custom queue to unblock main queue
     dispatch_async(imageQueue, ^{
         UIImage *image = [jobPosting getImageLogo];
+        
         // Resize the image so that icons have same size
         CGSize newSize = CGSizeMake(40, 40);
         UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
