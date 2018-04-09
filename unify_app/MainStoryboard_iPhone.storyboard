@@ -123,7 +123,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.36031553149223328" green="0.79250794649124146" blue="0.83998733758926392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="24"/>
                             <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <color key="textShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -162,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="-1978.4000000000001" y="178.56071964017991"/>
         </scene>
-        <!--Home-->
+        <!--Unify-->
         <scene sceneID="OPL-MF-pxl">
             <objects>
                 <viewController id="T0M-Wu-WPf" customClass="DashboardViewController" sceneMemberID="viewController">
@@ -175,7 +178,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="aFJ-dy-opi"/>
+                    <navigationItem key="navigationItem" title="Unify" id="aFJ-dy-opi">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="y9I-ms-5HG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="displayNameLabel" destination="BWO-Ng-u6z" id="9wl-sv-lLN"/>
                         <outlet property="emailLabel" destination="ddF-pM-ftC" id="Rs4-uD-w7D"/>
@@ -186,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="-1978" y="959"/>
         </scene>
-        <!--Profile-->
+        <!--Unify-->
         <scene sceneID="bar-79-AuB">
             <objects>
                 <viewController id="Jyl-0v-rvh" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -307,7 +314,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="JJu-3Z-qyM"/>
+                    <navigationItem key="navigationItem" title="Unify" id="JJu-3Z-qyM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="U4G-BL-ZBu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="displayNameLabel" destination="BWO-Ng-u6z" id="4Jy-fm-kpQ"/>
                         <outlet property="emailLabel" destination="ddF-pM-ftC" id="dJZ-Cr-rNo"/>
@@ -318,7 +329,7 @@
             </objects>
             <point key="canvasLocation" x="1233" y="958"/>
         </scene>
-        <!--Notifications-->
+        <!--Unify-->
         <scene sceneID="Ez8-Bh-ZaO">
             <objects>
                 <viewController id="65t-vm-HMv" sceneMemberID="viewController">
@@ -331,13 +342,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Notifications" id="dd4-Gz-W7x"/>
+                    <navigationItem key="navigationItem" title="Unify" id="dd4-Gz-W7x">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="fYU-1k-VvH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFt-kj-MmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-287" y="958"/>
         </scene>
-        <!--Job Postings-->
+        <!--Unify-->
         <scene sceneID="fKu-pU-yop">
             <objects>
                 <viewController id="GbO-zS-WKw" customClass="JobPostingViewController" sceneMemberID="viewController">
@@ -391,7 +406,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="Job List" image="joblist-icon" id="OBu-ca-uvi"/>
-                    <navigationItem key="navigationItem" title="Job Postings" id="PX5-g4-BsC"/>
+                    <navigationItem key="navigationItem" title="Unify" id="PX5-g4-BsC">
+                        <barButtonItem key="backBarButtonItem" title="Jobs" id="8ot-lt-egE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="TwG-O7-1Kx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableViewJobPostings" destination="VCV-uA-6Gv" id="PZE-cf-uls"/>
                     </connections>
@@ -506,7 +524,7 @@
             </objects>
             <point key="canvasLocation" x="-1124" y="-553.67316341829087"/>
         </scene>
-        <!--Messages-->
+        <!--Unify-->
         <scene sceneID="Wsw-cf-7XB">
             <objects>
                 <viewController id="ufN-e0-SeK" sceneMemberID="viewController">
@@ -519,7 +537,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Messages" id="O89-fQ-2Aa"/>
+                    <navigationItem key="navigationItem" title="Unify" id="O89-fQ-2Aa">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="dJe-5q-8qT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Im1-wZ-QhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -564,7 +586,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -587,7 +612,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -610,7 +638,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -635,7 +666,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -651,6 +685,7 @@
     <resources>
         <image name="Line " width="2250" height="12"/>
         <image name="edit-icon" width="90" height="90"/>
+        <image name="hamburger-icon" width="23" height="19"/>
         <image name="home-icon-blue" width="26" height="21"/>
         <image name="job-icon-blue" width="24" height="21"/>
         <image name="joblist-icon" width="30" height="30"/>
@@ -665,6 +700,6 @@
         <image name="write-post-icon" width="180" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NZK-0X-4e2"/>
+        <segue reference="nzz-1c-WHq"/>
     </inferredMetricsTieBreakers>
 </document>
