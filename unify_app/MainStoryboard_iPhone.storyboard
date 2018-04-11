@@ -998,6 +998,7 @@
     <resources>
         <image name="FemTechNet logo" width="190" height="150"/>
         <image name="Line " width="2250" height="12"/>
+        <image name="UW Logo" width="66" height="46"/>
         <image name="bluebutton" width="295" height="55"/>
         <image name="chevron" width="60" height="90"/>
         <image name="edit-icon" width="90" height="90"/>
