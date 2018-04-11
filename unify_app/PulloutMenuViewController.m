@@ -10,6 +10,16 @@
 
 @interface PulloutMenuViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *membersField;
+@property (weak, nonatomic) IBOutlet UIButton *myGroupsField;
+@property (weak, nonatomic) IBOutlet UIButton *savedJobsField;
+@property (weak, nonatomic) IBOutlet UIButton *aboutField;
+@property (weak, nonatomic) IBOutlet UIButton *editProfileField;
+@property (weak, nonatomic) IBOutlet UIButton *contactUsField;
+
+
+
+
 @end
 
 @implementation PulloutMenuViewController
@@ -17,6 +27,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.membersField.layer.borderWidth = 1.0f;
+    self.membersField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.membersField.layer.cornerRadius = 8;
+    
+    self.myGroupsField.layer.borderWidth = 1.0f;
+    self.myGroupsField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.myGroupsField.layer.cornerRadius = 8;
+    
+    self.savedJobsField.layer.borderWidth = 1.0f;
+    self.savedJobsField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.savedJobsField.layer.cornerRadius = 8;
+    
+    self.aboutField.layer.borderWidth = 1.0f;
+    self.aboutField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.aboutField.layer.cornerRadius = 8;
+    
+    self.editProfileField.layer.borderWidth = 1.0f;
+    self.editProfileField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.editProfileField.layer.cornerRadius = 8;
+    
+    self.contactUsField.layer.borderWidth = 1.0f;
+    self.contactUsField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
+    self.contactUsField.layer.cornerRadius = 8;
 }
 
 - (void)didReceiveMemoryWarning {
