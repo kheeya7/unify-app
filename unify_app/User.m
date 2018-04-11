@@ -22,6 +22,9 @@
         self.nickName = @"";
         self.occupation = @"";
         self.additionalDetail = @"";
+        self.age = @"";
+        self.linkedIn = @"";
+        self.interest = @"";
     }    
     return self;
 }
@@ -34,7 +37,10 @@
                            @"email":self.email,
                            @"occupation":self.occupation,
                            @"additionalDetail":self.additionalDetail,
-                           @"photoUrl":[self.photoUrl absoluteString]
+                           @"photoUrl":[self.photoUrl absoluteString],
+                           @"age":self.age,
+                           @"linkedIn":self.linkedIn,
+                           @"interest":self.interest
                            };
     return dict;
 }
