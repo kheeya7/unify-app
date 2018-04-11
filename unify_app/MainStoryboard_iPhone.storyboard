@@ -64,6 +64,10 @@
                                             <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-LH-vrl" userLabel="Edit Icon">
+                                        <rect key="frame" x="347" y="0.0" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -97,10 +101,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-LH-vrl" userLabel="Edit Icon">
-                                <rect key="frame" x="347" y="72" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -121,6 +121,7 @@
         <!--Job List-->
         <scene sceneID="0n8-is-8KE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VW-YJ-fUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="zVE-5o-13N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Job List" image="job-icon-blue" id="El5-rA-iUB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeA-IS-Tg9">
@@ -129,7 +130,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.36031553149223328" green="0.79250794649124146" blue="0.83998733758926392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
                             <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                             <color key="textShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
@@ -139,7 +140,6 @@
                         <segue destination="GbO-zS-WKw" kind="relationship" relationship="rootViewController" id="faq-mR-kIk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2VW-YJ-fUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-286" y="179"/>
         </scene>
@@ -187,6 +187,9 @@
                     <navigationItem key="navigationItem" title="Unify" id="aFJ-dy-opi">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="y9I-ms-5HG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="A2F-X2-Pve" kind="presentation" id="vGU-Ic-uKh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -212,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-xR-b1s" userLabel="Background">
-                                <rect key="frame" x="0.0" y="74" width="375" height="217"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-WN-QqJ" userLabel="White Background Top">
@@ -314,7 +317,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="C98-kB-vzt" userLabel="Edit Icon">
-                                <rect key="frame" x="348" y="79" width="20" height="20"/>
+                                <rect key="frame" x="355" y="133" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -333,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gB-9i-s23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="958"/>
+            <point key="canvasLocation" x="1232.8" y="957.57121439280365"/>
         </scene>
         <!--Unify-->
         <scene sceneID="Ez8-Bh-ZaO">
@@ -411,7 +414,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Job List" image="joblist-icon" id="OBu-ca-uvi"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Job List" image="tabBarItem:OBu-ca-uvi:image" id="OBu-ca-uvi"/>
                     <navigationItem key="navigationItem" title="Unify" id="PX5-g4-BsC">
                         <barButtonItem key="backBarButtonItem" title="Jobs" id="8ot-lt-egE"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="TwG-O7-1Kx"/>
@@ -636,7 +639,7 @@
             </objects>
             <point key="canvasLocation" x="-2818" y="958"/>
         </scene>
-        <!--Pullout Menu View Controller-->
+        <!--Unify-->
         <scene sceneID="1uk-R9-kJz">
             <objects>
                 <viewController id="5TP-Pi-LkD" customClass="PulloutMenuViewController" sceneMemberID="viewController">
@@ -647,12 +650,31 @@
                     <view key="view" contentMode="scaleToFill" id="6eI-HS-Lkn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfH-kc-lFI">
+                                <rect key="frame" x="70" y="318" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2LF-PZ-Wm6" kind="show" id="oLb-nv-Eam"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roY-Ln-MQX">
+                                <rect key="frame" x="124" y="423" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Xe3-ph-oTv" kind="show" id="cc0-ix-pR5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Unify" id="Lhu-D7-bEc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9o-lz-C87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2835" y="1793"/>
+            <point key="canvasLocation" x="-2496.8000000000002" y="1792.353823088456"/>
         </scene>
         <!--Groups View Controller-->
         <scene sceneID="YRJ-D1-mk5">
@@ -665,12 +687,18 @@
                     <view key="view" contentMode="scaleToFill" id="YQA-UO-mak">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message-icon-blue" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-cE-WGz">
+                                <rect key="frame" x="81" y="254" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fos-L6-ctZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2006" y="1796"/>
+            <point key="canvasLocation" x="-2497" y="2556"/>
         </scene>
         <!--Group Detail View Controller-->
         <scene sceneID="3rA-yh-IK7">
@@ -683,12 +711,18 @@
                     <view key="view" contentMode="scaleToFill" id="Wmb-Sw-2Zj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-FI-Z7w">
+                                <rect key="frame" x="91" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zM9-1Z-IUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1136" y="1798"/>
+            <point key="canvasLocation" x="-1606" y="2555"/>
         </scene>
         <!--Members View Controller-->
         <scene sceneID="gFX-bj-Jef">
@@ -706,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srx-TC-ENg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="1802"/>
+            <point key="canvasLocation" x="31.199999999999999" y="1801.3493253373315"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="mbs-GY-9Kx">
@@ -724,7 +758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dh-vo-vzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="1806"/>
+            <point key="canvasLocation" x="826.39999999999998" y="1805.8470764617693"/>
         </scene>
         <!--Saved Jobs View Controller-->
         <scene sceneID="Nv0-oo-4bO">
@@ -742,7 +776,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bn1-AS-Lb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="1804"/>
+            <point key="canvasLocation" x="1610.4000000000001" y="1803.1484257871066"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="ndq-bh-2CA">
@@ -760,7 +794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZ7-Uw-e6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="1804"/>
+            <point key="canvasLocation" x="2376.8000000000002" y="1803.1484257871066"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="vff-T9-QnJ">
@@ -816,14 +850,39 @@
             </objects>
             <point key="canvasLocation" x="2132" y="958"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A76-YD-k01">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A2F-X2-Pve" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zNB-Of-5Q9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5TP-Pi-LkD" kind="relationship" relationship="rootViewController" id="Q5d-ND-b5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra7-yh-hJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3286" y="1792"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Bitmap" width="57" height="45"/>
         <image name="Line " width="2250" height="12"/>
         <image name="edit-icon" width="90" height="90"/>
         <image name="hamburger-icon" width="23" height="19"/>
         <image name="home-icon-blue" width="26" height="21"/>
         <image name="job-icon-blue" width="24" height="21"/>
-        <image name="joblist-icon" width="30" height="30"/>
         <image name="message-icon-blue" width="24" height="22"/>
         <image name="more-icon" width="200" height="200"/>
         <image name="notification-icon-blue" width="24" height="25"/>
@@ -832,6 +891,21 @@
         <image name="send-message-icon" width="185" height="170"/>
         <image name="small-blue-button" width="89" height="40"/>
         <image name="small-white-button" width="89" height="40"/>
+        <image name="tabBarItem:OBu-ca-uvi:image" width="30" height="30">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWHszMCwgMzB90hUKFhhaTlMub2JqZWN0c6EXgASACdIVChoYohsc
+gAWABoAJEAXTIAohIiMkV05TLmJhc2VbTlMucmVsYXRpdmWAAIAIgAdfEHNmaWxlOi8vL0FwcGxpY2F0
+aW9ucy9YY29kZS5hcHAvQ29udGVudHMvUGx1Z0lucy9JREVJbnRlcmZhY2VCdWlsZGVyS2l0LmZyYW1l
+d29yay9SZXNvdXJjZXMvSUJNaXNzaW5nSW1hZ2VHbHlwaC50aWZm0icoKSpaJGNsYXNzbmFtZVgkY2xh
+c3Nlc1VOU1VSTKIpK1hOU09iamVjdNInKC0uV05TQXJyYXmiLSvTMDEKMjM0V05TV2hpdGVcTlNDb2xv
+clNwYWNlRDAgMAAQA4AL0icoNjdXTlNDb2xvcqI2K9InKDk6V05TSW1hZ2WiOStfEA9OU0tleWVkQXJj
+aGl2ZXLRPT5Ucm9vdIABAAgAEQAaACMALQAyADcARQBLAFYAXQBkAHEAeACAAIIAhACJAIsAjQCWAJsA
+pgCoAKoArACxALQAtgC4ALoAvADDAMsA1wDZANsA3QFTAVgBYwFsAXIBdQF+AYMBiwGOAZUBnQGqAa8B
+sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
+</mutableData>
+        </image>
         <image name="welcome-background" width="375" height="667"/>
         <image name="write-post-icon" width="180" height="145"/>
     </resources>

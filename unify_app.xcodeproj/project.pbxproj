@@ -28,11 +28,11 @@
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
 		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
+		37C232B4207E8B5500049F98 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
 		7E25884C203BD75700143F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884B203BD75700143F3E /* Assets.xcassets */; };
 		7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */; };
-		7E258851203BDA3400143F3E /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */; };
 		7E258854203BEF2E00143F3E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E258853203BEF2E00143F3E /* User.m */; };
 		7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E258856203BF2E900143F3E /* DashboardViewController.m */; };
 		7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */; };
@@ -86,13 +86,13 @@
 		372236B12075793F002AE50E /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		374F4FF7206C46EA008CC95E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		374F4FF8206C46EA008CC95E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		37C232B5207E8B5500049F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
 		7E1233332043841200312658 /* JobPostingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingDetailViewController.m; sourceTree = "<group>"; };
 		7E25884B203BD75700143F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		7E258852203BEF2E00143F3E /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		7E258853203BEF2E00143F3E /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7E258855203BF2E900143F3E /* DashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				A485DDFE2072B8A100AC7757 /* SF-Pro-Text-RegularItalic.otf */,
 				A485DE0A2072B8A300AC7757 /* SF-Pro-Text-Semibold.otf */,
 				A485DE0C2072B8A300AC7757 /* SF-Pro-Text-SemiboldItalic.otf */,
-				7E258850203BDA3400143F3E /* Satisfy-Regular.ttf */,
+				37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */,
 				7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */,
 			);
 			path = fonts;
@@ -347,6 +347,11 @@
 				CLASSPREFIX = "";
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Unify;
+				TargetAttributes = {
+					03D1001916EC579A0005A1A9 = {
+						DevelopmentTeam = S84RB4C783;
+					};
+				};
 			};
 			buildConfigurationList = 03D1001516EC579A0005A1A9 /* Build configuration list for PBXProject "unify_app" */;
 			compatibilityVersion = "Xcode 6.3";
@@ -377,7 +382,7 @@
 				03D1006516ED41D20005A1A9 /* connected57.png in Resources */,
 				03D1006616ED41D20005A1A9 /* connected72.png in Resources */,
 				03D1006716ED41D20005A1A9 /* connected114.png in Resources */,
-				7E258851203BDA3400143F3E /* Satisfy-Regular.ttf in Resources */,
+				37C232B4207E8B5500049F98 /* Satisfy-Regular.ttf in Resources */,
 				7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */,
 				A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */,
 				03D1006816ED41D20005A1A9 /* connected144.png in Resources */,
@@ -529,6 +534,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37C232B5207E8B5500049F98 /* en */,
+			);
+			name = "Satisfy-Regular.ttf";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -627,6 +640,7 @@
 			baseConfigurationReference = 3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = S84RB4C783;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -636,7 +650,7 @@
 				GCC_PREFIX_HEADER = "unify_app/unify_app-Prefix.pch";
 				INFOPLIST_FILE = "unify_app/unify_app-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -648,6 +662,7 @@
 			baseConfigurationReference = A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = S84RB4C783;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -657,7 +672,7 @@
 				GCC_PREFIX_HEADER = "unify_app/unify_app-Prefix.pch";
 				INFOPLIST_FILE = "unify_app/unify_app-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
