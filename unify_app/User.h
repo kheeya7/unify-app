@@ -17,6 +17,10 @@
 @property (nonatomic) NSString *nickName;
 @property (nonatomic) NSString *occupation;
 @property (nonatomic) NSString *additionalDetail;
+@property (nonatomic) NSString *age;
+@property (nonatomic) NSString *linkedIn;
+@property (nonatomic) NSString *interest;
+
 
 - (id) initWithId: (NSString *)aUid
       displayName: (NSString *)aDisplayName
