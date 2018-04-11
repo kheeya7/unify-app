@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *occupationField;
 @property (weak, nonatomic) IBOutlet UITextView *additionalDetailField;
+@property (weak, nonatomic) IBOutlet UITextField *ageField;
+@property (weak, nonatomic) IBOutlet UITextField *linkedInField;
+@property (weak, nonatomic) IBOutlet UITextField *interestField;
 
 @end
 
@@ -33,6 +36,9 @@
     currentUser.email = [self emailField].text;
     currentUser.occupation = [self occupationField].text;
     currentUser.additionalDetail = [self additionalDetailField].text;
+    currentUser.age = [self ageField].text;
+    currentUser.linkedIn = [self linkedInField].text;
+    currentUser.interest = [self interestField].text;
     
     FIRDatabaseReference *usersDBRef = [[[FIRDatabase database] reference] child:@"users"];
     
