@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ot0-0F-zz0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,25 +49,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ir-yP-GN5">
-                                        <rect key="frame" x="68" y="103" width="102" height="47"/>
+                                        <rect key="frame" x="68" y="99" width="102" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save" backgroundImage="small-white-button">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abw-kw-DwK">
-                                        <rect key="frame" x="208" y="103" width="102" height="47"/>
+                                        <rect key="frame" x="208" y="99" width="102" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Apply" backgroundImage="small-blue-button">
                                             <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-LH-vrl" userLabel="Edit Icon">
-                                        <rect key="frame" x="347" y="0.0" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -121,7 +117,6 @@
         <!--Job List-->
         <scene sceneID="0n8-is-8KE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2VW-YJ-fUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="zVE-5o-13N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Job List" image="job-icon-blue" id="El5-rA-iUB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeA-IS-Tg9">
@@ -140,6 +135,7 @@
                         <segue destination="GbO-zS-WKw" kind="relationship" relationship="rootViewController" id="faq-mR-kIk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VW-YJ-fUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-286" y="179"/>
         </scene>
@@ -326,6 +322,9 @@
                     <navigationItem key="navigationItem" title="Unify" id="JJu-3Z-qyM">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="U4G-BL-ZBu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="A2F-X2-Pve" kind="presentation" id="VrX-Ix-FrX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -354,6 +353,9 @@
                     <navigationItem key="navigationItem" title="Unify" id="dd4-Gz-W7x">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="fYU-1k-VvH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="A2F-X2-Pve" kind="presentation" id="FGA-zw-hAR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -402,7 +404,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="p16-yQ-jnQ" kind="show" id="ktO-bo-ynR"/>
+                                            <segue destination="p16-yQ-jnQ" kind="show" identifier="segueJobDetailView" id="ktO-bo-ynR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -417,7 +419,11 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="Job List" image="tabBarItem:OBu-ca-uvi:image" id="OBu-ca-uvi"/>
                     <navigationItem key="navigationItem" title="Unify" id="PX5-g4-BsC">
                         <barButtonItem key="backBarButtonItem" title="Jobs" id="8ot-lt-egE"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="TwG-O7-1Kx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="TwG-O7-1Kx">
+                            <connections>
+                                <segue destination="A2F-X2-Pve" kind="presentation" identifier="pulloutSegue" id="REJ-lV-ED4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewJobPostings" destination="VCV-uA-6Gv" id="PZE-cf-uls"/>
@@ -552,6 +558,9 @@
                     <navigationItem key="navigationItem" title="Unify" id="O89-fQ-2Aa">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="hamburger-icon" id="dJe-5q-8qT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="A2F-X2-Pve" kind="presentation" id="vw1-yJ-8Mp"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -650,24 +659,6 @@
                     <view key="view" contentMode="scaleToFill" id="6eI-HS-Lkn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfH-kc-lFI">
-                                <rect key="frame" x="70" y="318" width="184" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="2LF-PZ-Wm6" kind="show" id="oLb-nv-Eam"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roY-Ln-MQX">
-                                <rect key="frame" x="124" y="423" width="178" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Xe3-ph-oTv" kind="show" id="cc0-ix-pR5"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unify" id="Lhu-D7-bEc"/>
@@ -712,7 +703,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-FI-Z7w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FemTechNet" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-FI-Z7w">
                                 <rect key="frame" x="91" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -740,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srx-TC-ENg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="1801.3493253373315"/>
+            <point key="canvasLocation" x="-641" y="2555"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="mbs-GY-9Kx">
@@ -841,7 +832,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dh-vo-vzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826.39999999999998" y="1805.8470764617693"/>
+            <point key="canvasLocation" x="388" y="2555"/>
         </scene>
         <!--Saved Jobs View Controller-->
         <scene sceneID="Nv0-oo-4bO">
@@ -859,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bn1-AS-Lb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610.4000000000001" y="1803.1484257871066"/>
+            <point key="canvasLocation" x="1489" y="2555"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="ndq-bh-2CA">
@@ -877,7 +868,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZ7-Uw-e6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.8000000000002" y="1803.1484257871066"/>
+            <point key="canvasLocation" x="2458" y="2554"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="vff-T9-QnJ">
@@ -960,7 +951,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bitmap" width="57" height="45"/>
+        <image name="FemTechNet" width="98" height="14"/>
+        <image name="FemTechNet logo" width="190" height="150"/>
         <image name="Line " width="2250" height="12"/>
         <image name="UW Logo" width="66" height="46"/>
         <image name="edit-icon" width="90" height="90"/>
@@ -994,6 +986,7 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
         <image name="write-post-icon" width="180" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="vGU-Ic-uKh"/>
         <segue reference="NZK-0X-4e2"/>
     </inferredMetricsTieBreakers>
 </document>
