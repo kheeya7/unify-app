@@ -74,11 +74,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSIndexPath *path = [self.tableViewJobPostings indexPathForSelectedRow];
-    JobPosting *jobPosting = self.jobPostings[path.row];
     
-    JobPostingDetailViewController *detailViewController = [segue destinationViewController];
-    detailViewController.currentJobPosting = jobPosting;
+    if ([segue.identifier isEqualToString:@"pulloutSegue"]) {
+        
+    } else if ([segue.identifier isEqualToString:@"segueJobDetailView"]) {
+        NSIndexPath *path = [self.tableViewJobPostings indexPathForSelectedRow];
+        JobPosting *jobPosting = self.jobPostings[path.row];
+        
+        JobPostingDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.currentJobPosting = jobPosting;
+    }
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
