@@ -37,6 +37,7 @@
 		7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E258856203BF2E900143F3E /* DashboardViewController.m */; };
 		7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */; };
 		7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E37941E204E38990024D35D /* MainTabBarViewController.m */; };
+		7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9B14A2081AFD30047FA57 /* ChatViewController.m */; };
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
@@ -101,6 +102,8 @@
 		7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewUserProfileViewController.m; sourceTree = "<group>"; };
 		7E37941D204E38990024D35D /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		7E37941E204E38990024D35D /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		7EA9B1492081AFD30047FA57 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = unify_app/Chat/ChatViewController.h; sourceTree = SOURCE_ROOT; };
+		7EA9B14A2081AFD30047FA57 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = unify_app/Chat/ChatViewController.m; sourceTree = SOURCE_ROOT; };
 		7EBCBF022035357800078CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingViewController.h; sourceTree = "<group>"; };
 		7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingViewController.m; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 		03D1002316EC579A0005A1A9 /* unify_app */ = {
 			isa = PBXGroup;
 			children = (
+				7EA9B1482081AF8E0047FA57 /* Chat */,
 				7E25884D203BD93B00143F3E /* fonts */,
 				7EBCBF022035357800078CC6 /* GoogleService-Info.plist */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
@@ -304,6 +308,16 @@
 				7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		7EA9B1482081AF8E0047FA57 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7EA9B1492081AFD30047FA57 /* ChatViewController.h */,
+				7EA9B14A2081AFD30047FA57 /* ChatViewController.m */,
+			);
+			name = Chat;
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		A45807836EE7704DC7186E40 /* Pods */ = {
@@ -503,6 +517,7 @@
 				30D71FA2207C0A2500E8DD76 /* GroupsViewController.m in Sources */,
 				7EEE65B7203E6E39006CD414 /* UnifyAuthViewController.m in Sources */,
 				7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */,
+				7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */,
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
