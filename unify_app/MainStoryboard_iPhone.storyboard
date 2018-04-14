@@ -184,9 +184,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Q9K-22-eKb"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="y9I-ms-5HG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" id="iKO-8I-i6d"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -324,9 +321,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Low-cP-4Fe"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="U4G-BL-ZBu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" id="vzP-dv-9Wh"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -356,9 +350,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="sw7-xZ-ggO"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="fYU-1k-VvH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" id="nt7-0d-PuP"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -424,7 +415,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="8ot-lt-egE"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="TwG-O7-1Kx">
                             <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" id="7mJ-Pj-Oda"/>
+                                <segue destination="ufN-e0-SeK" kind="showDetail" id="US7-KA-6lL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -545,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="-1124" y="-553.67316341829087"/>
         </scene>
-        <!--Unify-->
+        <!--ChatView-->
         <scene sceneID="Wsw-cf-7XB">
             <objects>
-                <viewController id="ufN-e0-SeK" sceneMemberID="viewController">
+                <viewController id="ufN-e0-SeK" userLabel="ChatView" customClass="ChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfa-f5-cVA"/>
                         <viewControllerLayoutGuide type="bottom" id="Pfq-oD-XT1"/>
@@ -557,18 +548,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FemTechNet" translatesAutoresizingMaskIntoConstraints="NO" id="2f8-06-nb9">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-lo-WNb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="508"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReceiver" textLabel="fBA-7F-HJf" detailTextLabel="S41-Vx-KuN" style="IBUITableViewCellStyleSubtitle" id="xbR-tw-9IC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbR-tw-9IC" id="hLJ-Uo-biC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fBA-7F-HJf">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S41-Vx-KuN">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ufN-e0-SeK" id="Ejp-Ti-njV"/>
+                                    <outlet property="delegate" destination="ufN-e0-SeK" id="rul-PH-Cfd"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojs-Rr-aFQ">
+                                <rect key="frame" x="0.0" y="580" width="316" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-gH-75q">
+                                <rect key="frame" x="323" y="580" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="ufN-e0-SeK" eventType="touchUpInside" id="ybP-sS-BR2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unify" id="O89-fQ-2Aa"/>
+                    <connections>
+                        <outlet property="chatMessageInput" destination="ojs-Rr-aFQ" id="YXY-BS-vmA"/>
+                        <outlet property="chatTableView" destination="1K3-lo-WNb" id="cB1-HW-Rwe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Im1-wZ-QhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="179"/>
+            <point key="canvasLocation" x="1233" y="-522"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="B4E-U5-Qp1">
@@ -790,11 +831,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Unify" id="Lhu-D7-bEc">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZSL-jb-64r"/>
-                        <barButtonItem key="rightBarButtonItem" image="message-icon-blue" id="3W5-ia-Lt0">
-                            <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" id="1pc-gJ-PS3"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="message-icon-blue" id="3W5-ia-Lt0"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9o-lz-C87" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1048,7 +1085,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FemTechNet" width="98" height="14"/>
         <image name="FemTechNet logo" width="190" height="150"/>
         <image name="Line " width="2250" height="12"/>
         <image name="UW Logo" width="66" height="46"/>
@@ -1086,6 +1122,5 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nzz-1c-WHq"/>
-        <segue reference="1pc-gJ-PS3"/>
     </inferredMetricsTieBreakers>
 </document>
