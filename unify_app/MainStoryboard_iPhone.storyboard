@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ot0-0F-zz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1022,7 +1022,6 @@
         <!--More-->
         <scene sceneID="A76-YD-k01">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ra7-yh-hJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A2F-X2-Pve" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="hamburger-icon" id="Teh-wX-klH"/>
                     <toolbarItems/>
@@ -1043,6 +1042,7 @@
                         <segue destination="5TP-Pi-LkD" kind="relationship" relationship="rootViewController" id="Q5d-ND-b5T"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra7-yh-hJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2161" y="958"/>
         </scene>
