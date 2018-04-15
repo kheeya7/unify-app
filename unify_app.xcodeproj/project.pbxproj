@@ -30,6 +30,7 @@
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
 		37C232B4207E8B5500049F98 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
+		7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0A71962082EBE500B560EA /* ChatSenderCell.m */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
 		7E25884C203BD75700143F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884B203BD75700143F3E /* Assets.xcassets */; };
 		7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */; };
@@ -90,6 +91,8 @@
 		37C232B5207E8B5500049F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E0A71952082EBE500B560EA /* ChatSenderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatSenderCell.h; path = unify_app/Chat/ChatSenderCell.h; sourceTree = SOURCE_ROOT; };
+		7E0A71962082EBE500B560EA /* ChatSenderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatSenderCell.m; path = unify_app/Chat/ChatSenderCell.m; sourceTree = SOURCE_ROOT; };
 		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
 		7E1233332043841200312658 /* JobPostingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingDetailViewController.m; sourceTree = "<group>"; };
 		7E25884B203BD75700143F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 			children = (
 				7EA9B1492081AFD30047FA57 /* ChatViewController.h */,
 				7EA9B14A2081AFD30047FA57 /* ChatViewController.m */,
+				7E0A71952082EBE500B560EA /* ChatSenderCell.h */,
+				7E0A71962082EBE500B560EA /* ChatSenderCell.m */,
 			);
 			name = Chat;
 			path = "New Group1";
@@ -524,6 +529,7 @@
 				30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */,
 				30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */,
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
+				7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
