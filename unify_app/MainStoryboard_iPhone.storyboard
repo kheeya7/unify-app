@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -577,6 +578,31 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellSender" id="nQI-VG-8nM" customClass="ChatSenderCell">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQI-VG-8nM" id="7ie-5W-a1v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message Body" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-DZ-U4s">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zU8-DZ-U4s" firstAttribute="centerY" secondItem="7ie-5W-a1v" secondAttribute="centerY" id="VDB-Az-WHG"/>
+                                                <constraint firstItem="zU8-DZ-U4s" firstAttribute="top" secondItem="7ie-5W-a1v" secondAttribute="topMargin" id="dVX-Eb-MKe"/>
+                                                <constraint firstItem="zU8-DZ-U4s" firstAttribute="centerX" secondItem="7ie-5W-a1v" secondAttribute="centerX" id="s1s-6e-6cM"/>
+                                                <constraint firstItem="zU8-DZ-U4s" firstAttribute="leading" secondItem="7ie-5W-a1v" secondAttribute="leadingMargin" constant="-1" id="xBj-Tb-i9R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="zU8-DZ-U4s" id="nnN-Lk-Ylt"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="ufN-e0-SeK" id="Ejp-Ti-njV"/>
@@ -609,7 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Im1-wZ-QhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="-522"/>
+            <point key="canvasLocation" x="1232.8" y="-522.18890554722645"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="B4E-U5-Qp1">
