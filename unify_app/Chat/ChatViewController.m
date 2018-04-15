@@ -7,6 +7,8 @@
 //
 
 #import "ChatViewController.h"
+#import "User.h"
+#import "AppDelegate.h"
 
 @import Firebase;
 
@@ -16,6 +18,7 @@
 
 @property (strong, nonatomic) FIRDatabaseReference *refChat;
 @property (strong, nonatomic) NSMutableArray *messages;
+@property (weak, nonatomic) User *currentUser;
 
 @end
 
@@ -35,6 +38,8 @@
     
     self.chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    self.currentUser = appDelegate.currentUser;
     
     [self.refChat observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         if (snapshot.childrenCount > 0) {
@@ -62,7 +67,9 @@
     NSDictionary *message = @{
                               @"id": key,
                               @"messageBody": self.chatMessageInput.text,
-                              @"sender": @"kate"
+                              @"sender": self.currentUser.displayName,
+                              @"senderUid":
+                                  self.currentUser.uid
                               };
     [[self.refChat child:key] setValue: message];
 }
