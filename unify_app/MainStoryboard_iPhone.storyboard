@@ -185,6 +185,9 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Q9K-22-eKb"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="y9I-ms-5HG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ufN-e0-SeK" kind="showDetail" id="yPs-28-ibq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1295,5 +1298,6 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
+        <segue reference="yPs-28-ibq"/>
     </inferredMetricsTieBreakers>
 </document>
