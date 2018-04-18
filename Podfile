@@ -14,8 +14,6 @@ target 'unify_app' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
 
-end
-
 post_install do |installer|
     copy_pods_resources_path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app-resources.sh"
     string_to_replace = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"'
