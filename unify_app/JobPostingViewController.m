@@ -25,28 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
-    for(NSString *fontfamilyname in [UIFont familyNames])
-        
-    {
-        
-        NSLog(@"Family:'%@'",fontfamilyname);
-        
-        for(NSString *fontName in [UIFont fontNamesForFamilyName:fontfamilyname])
-            
-        {
-            
-            NSLog(@"\tfont:'%@'",fontName);
-            
-        }
-        
-        NSLog(@"---");
-        
-    }
-    */
-    /*
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Satisfy" size:12]}];
-    */
+
     if (!imageQueue) {
         imageQueue = dispatch_queue_create("imageLoadQueue", NULL);
     }
