@@ -27,6 +27,7 @@
 
 - (IBAction)onSend:(id)sender {
     [self addMessageToChat];
+    self.chatMessageInput.text = @"";
 }
 
 
@@ -53,6 +54,13 @@
             }
             
             [self.chatTableView reloadData];
+        }
+        
+        //Auto scroll-up when the message hit the bottom of the chat
+        if (self.messages.count > 0)
+        {
+            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0]
+             atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         }
     }];
 }
