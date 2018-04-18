@@ -27,6 +27,7 @@
 
 - (IBAction)onSend:(id)sender {
     [self addMessageToChat];
+    self.chatMessageInput.text = @"";
 }
 
 
