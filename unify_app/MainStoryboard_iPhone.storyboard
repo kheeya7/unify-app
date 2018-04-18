@@ -260,7 +260,7 @@
                                 <rect key="frame" x="0.0" y="472" width="375" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="write-post-icon" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-aI-QTk" userLabel="Write Post Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Write-post-icon" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-aI-QTk" userLabel="Write Post Icon">
                                 <rect key="frame" x="52" y="399" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -610,19 +610,18 @@
                                 </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojs-Rr-aFQ">
-                                <rect key="frame" x="0.0" y="580" width="316" height="30"/>
+                                <rect key="frame" x="29" y="580" width="316" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-gH-75q">
-                                <rect key="frame" x="323" y="580" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDG-R4-M6w">
+                                <rect key="frame" x="318" y="584" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="onSend:" destination="ufN-e0-SeK" eventType="touchUpInside" id="ybP-sS-BR2"/>
-                                </connections>
+                                <state key="normal" title="Button" backgroundImage="send-message-button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -735,6 +734,30 @@
                                 <rect key="frame" x="40" y="548" width="295" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-R1-qRw">
+                                <rect key="frame" x="25" y="422" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="2J5-0l-xgS">
+                                <rect key="frame" x="25" y="482" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-q5-Dnd">
+                                <rect key="frame" x="25" y="312" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="Kur-lp-cQT">
+                                <rect key="frame" x="25" y="251" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-rw-qNh">
+                                <rect key="frame" x="25" y="190" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-box" translatesAutoresizingMaskIntoConstraints="NO" id="70J-Jt-5Wo">
+                                <rect key="frame" x="25" y="131" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-NL-0H9">
                                 <rect key="frame" x="25" y="129" width="238" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -771,7 +794,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V1-Ze-IMJ">
-                                <rect key="frame" x="25" y="482" width="238" height="44"/>
+                                <rect key="frame" x="25" y="480" width="238" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="   Saved Jobs">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -791,8 +814,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERC-wl-6bv">
-                                <rect key="frame" x="25" y="422" width="238" height="44"/>
+                                <rect key="frame" x="25" y="420" width="238" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="   Edit Profile">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -862,7 +886,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9o-lz-C87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="958"/>
+            <point key="canvasLocation" x="3024.8000000000002" y="957.57121439280365"/>
         </scene>
         <!--Groups View Controller-->
         <scene sceneID="YRJ-D1-mk5">
@@ -1211,6 +1235,7 @@
         <image name="FemTechNet logo" width="190" height="150"/>
         <image name="Line " width="2250" height="12"/>
         <image name="UW Logo" width="66" height="46"/>
+        <image name="Write-post-icon" width="180" height="145"/>
         <image name="bluebutton" width="295" height="55"/>
         <image name="chevron" width="60" height="90"/>
         <image name="edit-icon" width="90" height="90"/>
@@ -1222,9 +1247,11 @@
         <image name="notification-icon-blue" width="24" height="25"/>
         <image name="profile-icon-1" width="210" height="210"/>
         <image name="profile-icon-blue" width="19" height="23"/>
-        <image name="send-message-icon" width="185" height="170"/>
+        <image name="send-message-button" width="52" height="52"/>
+        <image name="send-message-icon" width="20" height="18"/>
         <image name="small-blue-button" width="89" height="40"/>
         <image name="small-white-button" width="89" height="40"/>
+        <image name="square-box" width="591" height="93"/>
         <image name="tabBarItem:OBu-ca-uvi:image" width="30" height="30">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
@@ -1241,7 +1268,6 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
 </mutableData>
         </image>
         <image name="welcome-background" width="375" height="667"/>
-        <image name="write-post-icon" width="180" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nzz-1c-WHq"/>
