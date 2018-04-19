@@ -99,6 +99,7 @@
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E0A71952082EBE500B560EA /* ChatSenderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatSenderCell.h; path = unify_app/Chat/ChatSenderCell.h; sourceTree = SOURCE_ROOT; };
 		7E0A71962082EBE500B560EA /* ChatSenderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatSenderCell.m; path = unify_app/Chat/ChatSenderCell.m; sourceTree = SOURCE_ROOT; };
+		7E0A71982087E43400B560EA /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		7E1233322043841200312658 /* JobPostingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDetailViewController.h; sourceTree = "<group>"; };
 		7E1233332043841200312658 /* JobPostingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingDetailViewController.m; sourceTree = "<group>"; };
 		7E25884B203BD75700143F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,8 +288,10 @@
 		7E25884D203BD93B00143F3E /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				37C232B92087CBAB00049F98 /* Satisfy-Regular.ttf */,
 				A485DDFD2072B8A100AC7757 /* SF-Pro-Display-Black.otf */,
 				A485DDFF2072B8A100AC7757 /* SF-Pro-Display-BlackItalic.otf */,
+				7E0A71982087E43400B560EA /* Satisfy-Regular.ttf */,
 				A485DE052072B8A200AC7757 /* SF-Pro-Display-Bold.otf */,
 				A485DDF92072B8A000AC7757 /* SF-Pro-Display-BoldItalic.otf */,
 				A485DE0D2072B8A400AC7757 /* SF-Pro-Display-Heavy.otf */,
@@ -317,7 +320,6 @@
 				A485DDFE2072B8A100AC7757 /* SF-Pro-Text-RegularItalic.otf */,
 				A485DE0A2072B8A300AC7757 /* SF-Pro-Text-Semibold.otf */,
 				A485DE0C2072B8A300AC7757 /* SF-Pro-Text-SemiboldItalic.otf */,
-				37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */,
 				7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */,
 			);
 			path = fonts;
@@ -378,7 +380,7 @@
 				ORGANIZATIONNAME = Unify;
 				TargetAttributes = {
 					03D1001916EC579A0005A1A9 = {
-						DevelopmentTeam = S84RB4C783;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -411,7 +413,7 @@
 				03D1006516ED41D20005A1A9 /* connected57.png in Resources */,
 				03D1006616ED41D20005A1A9 /* connected72.png in Resources */,
 				03D1006716ED41D20005A1A9 /* connected114.png in Resources */,
-				37C232B4207E8B5500049F98 /* Satisfy-Regular.ttf in Resources */,
+				37C232BA2087CBAB00049F98 /* Satisfy-Regular.ttf in Resources */,
 				7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */,
 				A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */,
 				03D1006816ED41D20005A1A9 /* connected144.png in Resources */,
@@ -567,14 +569,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37C232B5207E8B5500049F98 /* en */,
-			);
-			name = "Satisfy-Regular.ttf";
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -673,7 +667,8 @@
 			baseConfigurationReference = 3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = S84RB4C783;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -685,6 +680,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -695,7 +691,8 @@
 			baseConfigurationReference = A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = S84RB4C783;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -707,6 +704,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unify-app1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

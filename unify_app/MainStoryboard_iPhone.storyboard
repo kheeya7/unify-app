@@ -712,6 +712,9 @@
                                 <state key="normal" title="Button" backgroundImage="send-message-button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSend:" destination="ufN-e0-SeK" eventType="touchUpInside" id="sft-k5-5NM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
