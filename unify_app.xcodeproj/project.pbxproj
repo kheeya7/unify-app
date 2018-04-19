@@ -28,7 +28,9 @@
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
 		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
-		37C232BA2087CBAB00049F98 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C232B92087CBAB00049F98 /* Satisfy-Regular.ttf */; };
+		37C232B4207E8B5500049F98 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C232B6207E8B5500049F98 /* Satisfy-Regular.ttf */; };
+		37C232BD2087DEA100049F98 /* JobsAndCompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */; };
+		37C232C02087E50A00049F98 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C232BF2087E50A00049F98 /* Company.m */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
 		7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0A71962082EBE500B560EA /* ChatSenderCell.m */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
@@ -88,7 +90,11 @@
 		372236B12075793F002AE50E /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		374F4FF7206C46EA008CC95E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		374F4FF8206C46EA008CC95E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		37C232B92087CBAB00049F98 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
+		37C232B5207E8B5500049F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/Satisfy-Regular.ttf"; sourceTree = "<group>"; };
+		37C232BB2087DEA100049F98 /* JobsAndCompaniesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsAndCompaniesViewController.h; sourceTree = "<group>"; };
+		37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobsAndCompaniesViewController.m; sourceTree = "<group>"; };
+		37C232BE2087E50A00049F98 /* Company.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		37C232BF2087E50A00049F98 /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E0A71952082EBE500B560EA /* ChatSenderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatSenderCell.h; path = unify_app/Chat/ChatSenderCell.h; sourceTree = SOURCE_ROOT; };
@@ -223,8 +229,12 @@
 				A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */,
 				7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */,
 				7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */,
+				37C232BB2087DEA100049F98 /* JobsAndCompaniesViewController.h */,
+				37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */,
 				7EBCBFAD2039F4D500078CC6 /* SignInViewController.h */,
 				7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */,
+				37C232BE2087E50A00049F98 /* Company.h */,
+				37C232BF2087E50A00049F98 /* Company.m */,
 				7EBCBFB0203A193A00078CC6 /* JobPosting.h */,
 				7EBCBFB1203A193A00078CC6 /* JobPosting.m */,
 				7E25884B203BD75700143F3E /* Assets.xcassets */,
@@ -531,6 +541,7 @@
 				30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */,
 				30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */,
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
+				37C232C02087E50A00049F98 /* Company.m in Sources */,
 				7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
@@ -540,6 +551,7 @@
 				30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				372236AF207575B5002AE50E /* MyNewViewController.m in Sources */,
+				37C232BD2087DEA100049F98 /* JobsAndCompaniesViewController.m in Sources */,
 				374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */,
 				372236B22075793F002AE50E /* SampleViewController.m in Sources */,
 				7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */,

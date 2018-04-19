@@ -87,6 +87,7 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     JobPosting *jobPosting = self.jobPostings[indexPath.row];
