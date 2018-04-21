@@ -44,6 +44,9 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
+    //Let the ChatViewController be the delegate of the message input, so that we can handle return key
+    self.chatMessageInput.delegate = self;
+    
     [self listenForNewMessage];
 }
 
@@ -82,6 +85,18 @@
                                   [self getTimestampString]
                               };
     [[self.refChat child:key] setValue: message];
+    
+    self.chatMessageInput.text = @"";
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.chatMessageInput) {
+        [textField resignFirstResponder];
+        [self addMessageToChat];
+        
+        return NO;
+    }
+    return YES;
 }
 
 - (NSString *)getTimestampString {
