@@ -44,24 +44,22 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
-    [self.refChat observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        if (snapshot.childrenCount > 0) {
-            [self.messages removeAllObjects];
-            
-            for (FIRDataSnapshot* child in snapshot.children) {
-                NSDictionary *savedMessage = [child value];
-                
-                [self.messages addObject: savedMessage];
-            }
-            
-            [self.chatTableView reloadData];
-        }
+    [self listenForNewMessage];
+}
+
+-(void)listenForNewMessage {
+    [self.refChat observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * snapshot) {
+        
+        NSDictionary *newMessage = snapshot.value;
+        
+        [self.messages addObject: newMessage];
+        
+        [self.chatTableView reloadData];
         
         //Auto scroll-up when the message hit the bottom of the chat
         if (self.messages.count > 0)
         {
-            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0]
-             atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         }
     }];
 }
