@@ -78,9 +78,24 @@
                               @"messageBody": self.chatMessageInput.text,
                               @"sender": self.currentUser.displayName,
                               @"senderUid":
-                                  self.currentUser.uid
+                                  self.currentUser.uid,
+                              @"messageTime":
+                                  [self getTimestampString]
                               };
     [[self.refChat child:key] setValue: message];
+}
+
+- (NSString *)getTimestampString {
+    // Get current device time
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    // Display in 12HR/24HR (ie.11:25pm or 23:25) format according to User Setting
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSString *currentTime = [dateFormatter stringFromDate:today];
+    
+    return currentTime;
 }
 
 /*
@@ -101,6 +116,7 @@
         ChatSenderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellSender"];
         
         cell.messageLabel.text = [message objectForKey:@"messageBody"];
+        cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
     } else {
