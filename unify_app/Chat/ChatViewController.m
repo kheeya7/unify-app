@@ -137,7 +137,7 @@
         ChatReceiverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
         
         cell.messageLabel.text = [message objectForKey:@"messageBody"];
-        cell.detailTextLabel.text = [message objectForKey:@"sender"];
+        cell.senderNameLabel.text = [message objectForKey:@"sender"];
         cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
