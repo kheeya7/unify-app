@@ -10,6 +10,7 @@
 #import "User.h"
 #import "AppDelegate.h"
 #import "ChatSenderCell.h"
+#import "ChatReceiverCell.h"
 
 @import Firebase;
 
@@ -120,12 +121,24 @@
         
         return cell;
     } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
+        ChatReceiverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
         
-        cell.textLabel.text = [message objectForKey:@"messageBody"];
+        cell.messageLabel.text = [message objectForKey:@"messageBody"];
         cell.detailTextLabel.text = [message objectForKey:@"sender"];
+        cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *message = self.messages[indexPath.row];
+    
+    if ([[message objectForKey:@"senderUid"] isEqualToString:self.currentUser.uid])
+    {
+        return 55.0;
+    } else {
+        return 65.0;
     }
 }
 
