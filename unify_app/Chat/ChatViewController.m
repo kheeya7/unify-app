@@ -44,24 +44,25 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
-    [self.refChat observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        if (snapshot.childrenCount > 0) {
-            [self.messages removeAllObjects];
-            
-            for (FIRDataSnapshot* child in snapshot.children) {
-                NSDictionary *savedMessage = [child value];
-                
-                [self.messages addObject: savedMessage];
-            }
-            
-            [self.chatTableView reloadData];
-        }
+    //Let the ChatViewController be the delegate of the message input, so that we can handle return key
+    self.chatMessageInput.delegate = self;
+    
+    [self listenForNewMessage];
+}
+
+-(void)listenForNewMessage {
+    [self.refChat observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * snapshot) {
+        
+        NSDictionary *newMessage = snapshot.value;
+        
+        [self.messages addObject: newMessage];
+        
+        [self.chatTableView reloadData];
         
         //Auto scroll-up when the message hit the bottom of the chat
         if (self.messages.count > 0)
         {
-            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0]
-             atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         }
     }];
 }
@@ -84,6 +85,18 @@
                                   [self getTimestampString]
                               };
     [[self.refChat child:key] setValue: message];
+    
+    self.chatMessageInput.text = @"";
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.chatMessageInput) {
+        [textField resignFirstResponder];
+        [self addMessageToChat];
+        
+        return NO;
+    }
+    return YES;
 }
 
 - (NSString *)getTimestampString {
@@ -124,7 +137,7 @@
         ChatReceiverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
         
         cell.messageLabel.text = [message objectForKey:@"messageBody"];
-        cell.detailTextLabel.text = [message objectForKey:@"sender"];
+        cell.senderNameLabel.text = [message objectForKey:@"sender"];
         cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
