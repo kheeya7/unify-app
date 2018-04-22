@@ -10,6 +10,7 @@
 #import "User.h"
 #import "AppDelegate.h"
 #import "ChatSenderCell.h"
+#import "ChatReceiverCell.h"
 
 @import Firebase;
 
@@ -43,24 +44,25 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
-    [self.refChat observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        if (snapshot.childrenCount > 0) {
-            [self.messages removeAllObjects];
-            
-            for (FIRDataSnapshot* child in snapshot.children) {
-                NSDictionary *savedMessage = [child value];
-                
-                [self.messages addObject: savedMessage];
-            }
-            
-            [self.chatTableView reloadData];
-        }
+    //Let the ChatViewController be the delegate of the message input, so that we can handle return key
+    self.chatMessageInput.delegate = self;
+    
+    [self listenForNewMessage];
+}
+
+-(void)listenForNewMessage {
+    [self.refChat observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * snapshot) {
+        
+        NSDictionary *newMessage = snapshot.value;
+        
+        [self.messages addObject: newMessage];
+        
+        [self.chatTableView reloadData];
         
         //Auto scroll-up when the message hit the bottom of the chat
         if (self.messages.count > 0)
         {
-            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0]
-             atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messages.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         }
     }];
 }
@@ -78,9 +80,36 @@
                               @"messageBody": self.chatMessageInput.text,
                               @"sender": self.currentUser.displayName,
                               @"senderUid":
-                                  self.currentUser.uid
+                                  self.currentUser.uid,
+                              @"messageTime":
+                                  [self getTimestampString]
                               };
     [[self.refChat child:key] setValue: message];
+    
+    self.chatMessageInput.text = @"";
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.chatMessageInput) {
+        [textField resignFirstResponder];
+        [self addMessageToChat];
+        
+        return NO;
+    }
+    return YES;
+}
+
+- (NSString *)getTimestampString {
+    // Get current device time
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    // Display in 12HR/24HR (ie.11:25pm or 23:25) format according to User Setting
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSString *currentTime = [dateFormatter stringFromDate:today];
+    
+    return currentTime;
 }
 
 /*
@@ -101,15 +130,28 @@
         ChatSenderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellSender"];
         
         cell.messageLabel.text = [message objectForKey:@"messageBody"];
+        cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
     } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
+        ChatReceiverCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReceiver"];
         
-        cell.textLabel.text = [message objectForKey:@"messageBody"];
-        cell.detailTextLabel.text = [message objectForKey:@"sender"];
+        cell.messageLabel.text = [message objectForKey:@"messageBody"];
+        cell.senderNameLabel.text = [message objectForKey:@"sender"];
+        cell.timeStampLabel.text = [message objectForKey:@"messageTime"];
         
         return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *message = self.messages[indexPath.row];
+    
+    if ([[message objectForKey:@"senderUid"] isEqualToString:self.currentUser.uid])
+    {
+        return 55.0;
+    } else {
+        return 65.0;
     }
 }
 
