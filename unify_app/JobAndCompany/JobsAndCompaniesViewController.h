@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JobsAndCompaniesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface JobsAndCompaniesViewController : UIViewController <UITableViewDelegate>
 
 @end
