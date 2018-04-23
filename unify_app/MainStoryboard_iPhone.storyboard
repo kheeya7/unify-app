@@ -732,6 +732,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unify" id="hzN-7D-awy">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CWO-vh-ncq"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="tuO-Uk-plM">
                             <connections>
                                 <segue destination="ufN-e0-SeK" kind="showDetail" id="JZx-NH-HJ1"/>
@@ -1583,6 +1584,6 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
-        <segue reference="yPs-28-ibq"/>
+        <segue reference="JZx-NH-HJ1"/>
     </inferredMetricsTieBreakers>
 </document>
