@@ -20,6 +20,7 @@
         UIImage *image = [UIImage imageWithData: imageData];
         
         return image;
+        
     } else {
         return [UIImage imageNamed:@"company-logo-placeholder"];
     }
