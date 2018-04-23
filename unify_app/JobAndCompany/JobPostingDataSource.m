@@ -30,6 +30,10 @@
     return self;
 }
 
+- (JobPosting *) getJobPostingAtRow:(NSInteger)index {
+    return self.jobPostings[index];
+}
+
 - (void) loadData {
     if (!imageQueue) {
         imageQueue = dispatch_queue_create("imageLoadQueue", NULL);

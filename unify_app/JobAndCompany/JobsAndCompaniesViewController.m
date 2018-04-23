@@ -65,14 +65,12 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if ([segue.identifier isEqualToString:@"pulloutSegue"]) {
+    if ([segue.destinationViewController isMemberOfClass:[JobPostingDetailViewController class]]) {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        JobPosting *jobPosting = [self.jobPostingDataSource getJobPostingAtRow:path.row];
         
-    } else if ([segue.identifier isEqualToString:@"segueJobDetailView"]) {
-        //NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        //JobPosting *jobPosting = self.jobPostings[path.row];
-        
-        //JobPostingDetailViewController *detailViewController = [segue destinationViewController];
-        //detailViewController.currentJobPosting = jobPosting;
+        JobPostingDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.currentJobPosting = jobPosting;
     }
 }
 
