@@ -16,6 +16,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewJobPostings;
+
 @property (strong, nonatomic) FIRDatabaseReference *refJobPostings;
 @property (strong, nonatomic) NSMutableArray *jobPostings;
 

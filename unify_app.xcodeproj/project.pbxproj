@@ -53,6 +53,7 @@
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
 		A0C4C2326658DD39C0655FB5 /* Pods_unify_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143DC53523A10340E161E080 /* Pods_unify_app.framework */; };
 		A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */; };
+		A4D20AB7208E709100A56E38 /* newsPost.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D20AB6208E709100A56E38 /* newsPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,8 @@
 		A485DE0D2072B8A400AC7757 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
 		A485DE0E2072B8A400AC7757 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		A485DE0F2072B8A400AC7757 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		A4D20AB5208E709100A56E38 /* newsPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsPost.h; sourceTree = "<group>"; };
+		A4D20AB6208E709100A56E38 /* newsPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newsPost.m; sourceTree = "<group>"; };
 		A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +235,8 @@
 				7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */,
 				7E258855203BF2E900143F3E /* DashboardViewController.h */,
 				7E258856203BF2E900143F3E /* DashboardViewController.m */,
+				A4D20AB5208E709100A56E38 /* newsPost.h */,
+				A4D20AB6208E709100A56E38 /* newsPost.m */,
 				03D1002C16EC579A0005A1A9 /* AppDelegate.h */,
 				03D1002D16EC579A0005A1A9 /* AppDelegate.m */,
 				03D1002416EC579A0005A1A9 /* Supporting Files */,
@@ -580,6 +585,7 @@
 				7E422216208D20CF00AB1196 /* CompanyDataSource.m in Sources */,
 				30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
+				A4D20AB7208E709100A56E38 /* newsPost.m in Sources */,
 				372236AF207575B5002AE50E /* MyNewViewController.m in Sources */,
 				37C232BD2087DEA100049F98 /* JobsAndCompaniesViewController.m in Sources */,
 				374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */,
