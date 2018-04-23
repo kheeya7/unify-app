@@ -40,6 +40,8 @@
 		7E2A99172040DC8900D0CC5D /* NewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */; };
 		7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E37941E204E38990024D35D /* MainTabBarViewController.m */; };
 		7E42220E208BE0C800AB1196 /* ChatReceiverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E42220D208BE0C800AB1196 /* ChatReceiverCell.m */; };
+		7E422213208D20AF00AB1196 /* JobPostingDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E422212208D20AF00AB1196 /* JobPostingDataSource.m */; };
+		7E422216208D20CF00AB1196 /* CompanyDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E422215208D20CF00AB1196 /* CompanyDataSource.m */; };
 		7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9B14A2081AFD30047FA57 /* ChatViewController.m */; };
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
@@ -113,6 +115,10 @@
 		7E37941E204E38990024D35D /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		7E42220C208BE0C800AB1196 /* ChatReceiverCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatReceiverCell.h; path = unify_app/Chat/ChatReceiverCell.h; sourceTree = SOURCE_ROOT; };
 		7E42220D208BE0C800AB1196 /* ChatReceiverCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatReceiverCell.m; path = unify_app/Chat/ChatReceiverCell.m; sourceTree = SOURCE_ROOT; };
+		7E422211208D20AF00AB1196 /* JobPostingDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingDataSource.h; sourceTree = "<group>"; };
+		7E422212208D20AF00AB1196 /* JobPostingDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingDataSource.m; sourceTree = "<group>"; };
+		7E422214208D20CF00AB1196 /* CompanyDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyDataSource.h; sourceTree = "<group>"; };
+		7E422215208D20CF00AB1196 /* CompanyDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyDataSource.m; sourceTree = "<group>"; };
 		7EA9B1492081AFD30047FA57 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = unify_app/Chat/ChatViewController.h; sourceTree = SOURCE_ROOT; };
 		7EA9B14A2081AFD30047FA57 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = unify_app/Chat/ChatViewController.m; sourceTree = SOURCE_ROOT; };
 		7EBCBF022035357800078CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 		03D1002316EC579A0005A1A9 /* unify_app */ = {
 			isa = PBXGroup;
 			children = (
+				7E422210208D1EC400AB1196 /* Future Classes */,
+				7E42220F208D1E4900AB1196 /* JobAndCompany */,
 				7EA9B1482081AF8E0047FA57 /* Chat */,
 				7E25884D203BD93B00143F3E /* fonts */,
 				7EBCBF022035357800078CC6 /* GoogleService-Info.plist */,
@@ -230,43 +238,17 @@
 				A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */,
 				7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */,
 				7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */,
-				37C232BB2087DEA100049F98 /* JobsAndCompaniesViewController.h */,
-				37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */,
 				7EBCBFAD2039F4D500078CC6 /* SignInViewController.h */,
 				7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */,
-				37C232BE2087E50A00049F98 /* Company.h */,
-				37C232BF2087E50A00049F98 /* Company.m */,
-				7EBCBFB0203A193A00078CC6 /* JobPosting.h */,
-				7EBCBFB1203A193A00078CC6 /* JobPosting.m */,
 				7E25884B203BD75700143F3E /* Assets.xcassets */,
 				7E258852203BEF2E00143F3E /* User.h */,
 				7E258853203BEF2E00143F3E /* User.m */,
 				7EEE65B5203E6E39006CD414 /* UnifyAuthViewController.h */,
 				7EEE65B6203E6E39006CD414 /* UnifyAuthViewController.m */,
-				7E1233322043841200312658 /* JobPostingDetailViewController.h */,
-				7E1233332043841200312658 /* JobPostingDetailViewController.m */,
 				7E37941D204E38990024D35D /* MainTabBarViewController.h */,
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
 				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
 				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
-				372236AD207575B5002AE50E /* MyNewViewController.h */,
-				372236AE207575B5002AE50E /* MyNewViewController.m */,
-				372236B02075793F002AE50E /* SampleViewController.h */,
-				372236B12075793F002AE50E /* SampleViewController.m */,
-				30D71F9D207C07B800E8DD76 /* PulloutMenuViewController.h */,
-				30D71F9E207C07B800E8DD76 /* PulloutMenuViewController.m */,
-				30D71FA0207C0A2500E8DD76 /* GroupsViewController.h */,
-				30D71FA1207C0A2500E8DD76 /* GroupsViewController.m */,
-				30D71FA3207C0A6E00E8DD76 /* GroupDetailViewController.h */,
-				30D71FA4207C0A6E00E8DD76 /* GroupDetailViewController.m */,
-				30D71FA6207C0AB900E8DD76 /* MembersViewController.h */,
-				30D71FA7207C0AB900E8DD76 /* MembersViewController.m */,
-				30D71FA9207C0AE100E8DD76 /* AboutViewController.h */,
-				30D71FAA207C0AE100E8DD76 /* AboutViewController.m */,
-				30D71FAC207C0B2500E8DD76 /* SavedJobsViewController.h */,
-				30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */,
-				30D71FAF207C0B5900E8DD76 /* ContactUsViewController.h */,
-				30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -323,6 +305,50 @@
 				7E25884E203BD95E00143F3E /* fontawesome-webfont.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		7E42220F208D1E4900AB1196 /* JobAndCompany */ = {
+			isa = PBXGroup;
+			children = (
+				7E1233322043841200312658 /* JobPostingDetailViewController.h */,
+				7E1233332043841200312658 /* JobPostingDetailViewController.m */,
+				37C232BB2087DEA100049F98 /* JobsAndCompaniesViewController.h */,
+				37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */,
+				37C232BE2087E50A00049F98 /* Company.h */,
+				37C232BF2087E50A00049F98 /* Company.m */,
+				7EBCBFB0203A193A00078CC6 /* JobPosting.h */,
+				7EBCBFB1203A193A00078CC6 /* JobPosting.m */,
+				7E422211208D20AF00AB1196 /* JobPostingDataSource.h */,
+				7E422212208D20AF00AB1196 /* JobPostingDataSource.m */,
+				7E422214208D20CF00AB1196 /* CompanyDataSource.h */,
+				7E422215208D20CF00AB1196 /* CompanyDataSource.m */,
+			);
+			path = JobAndCompany;
+			sourceTree = "<group>";
+		};
+		7E422210208D1EC400AB1196 /* Future Classes */ = {
+			isa = PBXGroup;
+			children = (
+				372236AD207575B5002AE50E /* MyNewViewController.h */,
+				372236AE207575B5002AE50E /* MyNewViewController.m */,
+				372236B02075793F002AE50E /* SampleViewController.h */,
+				372236B12075793F002AE50E /* SampleViewController.m */,
+				30D71F9D207C07B800E8DD76 /* PulloutMenuViewController.h */,
+				30D71F9E207C07B800E8DD76 /* PulloutMenuViewController.m */,
+				30D71FA0207C0A2500E8DD76 /* GroupsViewController.h */,
+				30D71FA1207C0A2500E8DD76 /* GroupsViewController.m */,
+				30D71FA3207C0A6E00E8DD76 /* GroupDetailViewController.h */,
+				30D71FA4207C0A6E00E8DD76 /* GroupDetailViewController.m */,
+				30D71FA6207C0AB900E8DD76 /* MembersViewController.h */,
+				30D71FA7207C0AB900E8DD76 /* MembersViewController.m */,
+				30D71FA9207C0AE100E8DD76 /* AboutViewController.h */,
+				30D71FAA207C0AE100E8DD76 /* AboutViewController.m */,
+				30D71FAC207C0B2500E8DD76 /* SavedJobsViewController.h */,
+				30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */,
+				30D71FAF207C0B5900E8DD76 /* ContactUsViewController.h */,
+				30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */,
+			);
+			path = "Future Classes";
 			sourceTree = "<group>";
 		};
 		7EA9B1482081AF8E0047FA57 /* Chat */ = {
@@ -547,9 +573,11 @@
 				7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
+				7E422213208D20AF00AB1196 /* JobPostingDataSource.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* AppDelegate.m in Sources */,
 				30D71FAE207C0B2500E8DD76 /* SavedJobsViewController.m in Sources */,
 				30D71FA8207C0AB900E8DD76 /* MembersViewController.m in Sources */,
+				7E422216208D20CF00AB1196 /* CompanyDataSource.m in Sources */,
 				30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */,
 				7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */,
 				372236AF207575B5002AE50E /* MyNewViewController.m in Sources */,
