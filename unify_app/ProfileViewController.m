@@ -12,6 +12,7 @@
 #import "User.h"
 
 @interface ProfileViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *displayNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
