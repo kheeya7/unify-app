@@ -14,10 +14,14 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *timestamp;
 @property (nonatomic) NSString *postText;
+@property (nonatomic) NSString *photoUrl;
 
 - (id) initWithKey: (NSString *)aKey
               name: (NSString *)aName
               time: (NSString *)aTimestamp
-              post: (NSString *)aPost;
+              post: (NSString *)aPost
+      userPhotoUrl: (NSString *)aPhotoUrl;
+
+- (UIImage *) getUserPhoto;
 
 @end

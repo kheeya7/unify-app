@@ -51,8 +51,9 @@
                 NSString *aName = [savedNewsPosting objectForKey:@"user"];
                 NSString *aTimestamp = [savedNewsPosting objectForKey:@"postTime"];
                 NSString *aPost = [savedNewsPosting objectForKey:@"postText"];
+                NSString *aPhotoUrl = [savedNewsPosting objectForKey:@"userPhotoUrl"];
                 
-                NewsPosting *newsPosting = [[NewsPosting alloc] initWithKey:aKey name:aName time:aTimestamp post:aPost];
+                NewsPosting *newsPosting = [[NewsPosting alloc] initWithKey:aKey name:aName time:aTimestamp post:aPost userPhotoUrl:aPhotoUrl];
                 
                 [self.postings addObject:newsPosting];
             }
@@ -79,7 +80,8 @@
                                   @"id": key,
                                   @"postText":self.postNewsTextField.text,
                                   @"user": self.currentUser.displayName,
-                                  @"postTime":[self getTimestampString]
+                                  @"postTime":[self getTimestampString],
+                                  @"userPhotoUrl": self.currentUser.photoUrl.absoluteString
                                   };
     [[self.refPostings child:key] setValue:newsPosting];
 }
@@ -97,15 +99,6 @@
     return currentTime;
 }
 
-
-#pragma mark - text field delegate
-
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField
-//{
-//    [self postNewsItem:textField.text];
-//    return YES;
-//}
-
 #pragma mark - table view delegate and data source methods
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath: (nonnull NSIndexPath *)indexPath {
     
@@ -113,9 +106,12 @@
     
     NewsPosting *newsPosting = [self postings][indexPath.row];
     
+    UIImage *photo = [newsPosting getUserPhoto];
+    
     cell.nameLabel.text = [newsPosting name];
     cell.timeStampLabel.text = [newsPosting timestamp];
     cell.newsTextView.text = [newsPosting postText];
+    cell.photoImageView.image = photo;
     
     return cell;
 }
