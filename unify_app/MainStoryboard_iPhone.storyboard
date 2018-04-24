@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-1978.4000000000001" y="178.56071964017991"/>
         </scene>
-        <!--Unify-->
+        <!--Dashboard View Controller-->
         <scene sceneID="OPL-MF-pxl">
             <objects>
-                <viewController id="T0M-Wu-WPf" customClass="DashboardViewController" sceneMemberID="viewController">
+                <viewController id="T0M-Wu-WPf" userLabel="Dashboard View Controller" customClass="DashboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AD1-wz-s4x"/>
                         <viewControllerLayoutGuide type="bottom" id="Rfe-9b-7eu"/>
@@ -264,12 +264,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whats on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ek-ci-6A4">
-                                <rect key="frame" x="73" y="98" width="277" height="30"/>
+                                <rect key="frame" x="73" y="98" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TX-hl-g9e">
+                                <rect key="frame" x="337" y="102" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="send-message-button"/>
+                                <connections>
+                                    <action selector="onAddNewsPosting:" destination="T0M-Wu-WPf" eventType="touchUpInside" id="4rT-zB-F3v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -283,6 +291,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="photoView" destination="62c-tW-DMT" id="Qlx-gg-j5l"/>
                         <outlet property="postNewsTextField" destination="6Ek-ci-6A4" id="SVZ-xA-MDV"/>
                         <outlet property="tableView" destination="HrO-oB-OKV" id="EcU-f0-ekc"/>
                     </connections>
@@ -1584,6 +1593,6 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
-        <segue reference="JZx-NH-HJ1"/>
+        <segue reference="yPs-28-ibq"/>
     </inferredMetricsTieBreakers>
 </document>
