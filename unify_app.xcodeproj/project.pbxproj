@@ -31,6 +31,8 @@
 		37C232BD2087DEA100049F98 /* JobsAndCompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C232BC2087DEA100049F98 /* JobsAndCompaniesViewController.m */; };
 		37C232C02087E50A00049F98 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C232BF2087E50A00049F98 /* Company.m */; };
 		689C609F1A5F3F4D00E96D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689C609E1A5F3F4D00E96D29 /* CoreData.framework */; };
+		7E05171E208EC46300E8B325 /* NewsPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E05171D208EC46300E8B325 /* NewsPosting.m */; };
+		7E051722208ED26900E8B325 /* NewsPostingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E051721208ED26900E8B325 /* NewsPostingCell.m */; };
 		7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0A71962082EBE500B560EA /* ChatSenderCell.m */; };
 		7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1233332043841200312658 /* JobPostingDetailViewController.m */; };
 		7E25884C203BD75700143F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25884B203BD75700143F3E /* Assets.xcassets */; };
@@ -99,6 +101,10 @@
 		37C232BF2087E50A00049F98 /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.debug.xcconfig"; sourceTree = "<group>"; };
 		689C609E1A5F3F4D00E96D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E05171C208EC46300E8B325 /* NewsPosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsPosting.h; sourceTree = "<group>"; };
+		7E05171D208EC46300E8B325 /* NewsPosting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsPosting.m; sourceTree = "<group>"; };
+		7E051720208ED26900E8B325 /* NewsPostingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsPostingCell.h; sourceTree = "<group>"; };
+		7E051721208ED26900E8B325 /* NewsPostingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsPostingCell.m; sourceTree = "<group>"; };
 		7E0A71952082EBE500B560EA /* ChatSenderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatSenderCell.h; path = unify_app/Chat/ChatSenderCell.h; sourceTree = SOURCE_ROOT; };
 		7E0A71962082EBE500B560EA /* ChatSenderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatSenderCell.m; path = unify_app/Chat/ChatSenderCell.m; sourceTree = SOURCE_ROOT; };
 		7E0A71982087E43400B560EA /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 		03D1002316EC579A0005A1A9 /* unify_app */ = {
 			isa = PBXGroup;
 			children = (
+				7E05171F208ED11A00E8B325 /* Dashboard */,
 				7E422210208D1EC400AB1196 /* Future Classes */,
 				7E42220F208D1E4900AB1196 /* JobAndCompany */,
 				7EA9B1482081AF8E0047FA57 /* Chat */,
@@ -233,8 +240,6 @@
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
 				7E2A99152040DC8900D0CC5D /* NewUserProfileViewController.h */,
 				7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */,
-				7E258855203BF2E900143F3E /* DashboardViewController.h */,
-				7E258856203BF2E900143F3E /* DashboardViewController.m */,
 				A4D20AB5208E709100A56E38 /* newsPost.h */,
 				A4D20AB6208E709100A56E38 /* newsPost.m */,
 				03D1002C16EC579A0005A1A9 /* AppDelegate.h */,
@@ -271,6 +276,19 @@
 				03D1002B16EC579A0005A1A9 /* unify_app-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E05171F208ED11A00E8B325 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				7E258855203BF2E900143F3E /* DashboardViewController.h */,
+				7E258856203BF2E900143F3E /* DashboardViewController.m */,
+				7E05171C208EC46300E8B325 /* NewsPosting.h */,
+				7E05171D208EC46300E8B325 /* NewsPosting.m */,
+				7E051720208ED26900E8B325 /* NewsPostingCell.h */,
+				7E051721208ED26900E8B325 /* NewsPostingCell.m */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		7E25884D203BD93B00143F3E /* fonts */ = {
@@ -569,12 +587,14 @@
 				7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */,
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
+				7E05171E208EC46300E8B325 /* NewsPosting.m in Sources */,
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
 				7E42220E208BE0C800AB1196 /* ChatReceiverCell.m in Sources */,
 				30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */,
 				30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */,
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
 				37C232C02087E50A00049F98 /* Company.m in Sources */,
+				7E051722208ED26900E8B325 /* NewsPostingCell.m in Sources */,
 				7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,

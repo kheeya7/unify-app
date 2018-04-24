@@ -9,7 +9,8 @@
 #import "DashboardViewController.h"
 #import "AppDelegate.h"
 #import "User.h"
-//#import "newsPost.h"
+#import "NewsPosting.h"
+#import "NewsPostingCell.h"
 
 @import Firebase;
 
@@ -36,6 +37,29 @@
     [super viewDidLoad];
     self.refPostings = [[[FIRDatabase database] reference] child:@"news"];
     
+    self.postings = [[NSMutableArray alloc] initWithCapacity:50];
+    
+    [self.refPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
+        if(snapshot.childrenCount > 0) {
+            // clear the list
+            [self.postings removeAllObjects];
+            
+            // iterate through data
+            for (FIRDataSnapshot* child in snapshot.children){
+                NSDictionary *savedNewsPosting = [child value];
+                NSString *aKey = [savedNewsPosting objectForKey:@"id"];
+                NSString *aName = [savedNewsPosting objectForKey:@"user"];
+                NSString *aTimestamp = [savedNewsPosting objectForKey:@"postTime"];
+                NSString *aPost = [savedNewsPosting objectForKey:@"postText"];
+                
+                NewsPosting *newsPosting = [[NewsPosting alloc] initWithKey:aKey name:aName time:aTimestamp post:aPost];
+                
+                [self.postings addObject:newsPosting];
+            }
+            [[self tableView] reloadData];
+        }
+    }];
+    
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
@@ -46,6 +70,7 @@
     }
 
 #pragma mark - setup
+
 - (void)addNewsPosting{
     
     NSString *key = [[self.refPostings childByAutoId] key];
@@ -82,33 +107,22 @@
 //}
 
 #pragma mark - table view delegate and data source methods
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//   UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath: (nonnull NSIndexPath *)indexPath {
     
-//    newsPost *thisPost = self.postings[indexPath.row];
+    NewsPostingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-//    UIImageView *imageView = [cell viewWithTag:0];
-//    UILabel *nameLabel = [cell viewWithTag:1];
-//    UILabel *dateLabel = [cell viewWithTag:2];
-//    UITextView *postBody = [cell viewWithTag:3];
+    NewsPosting *newsPosting = [self postings][indexPath.row];
     
-        //    [imageView setImage:thisPost.userImage];
-        //    nameLabel.text = thisPost.user;
-        //    dateLabel.text = thisPost.date // figure out how to format
-//    postBody.text = thisPost.postText;
+    cell.nameLabel.text = [newsPosting name];
+    cell.timeStampLabel.text = [newsPosting timestamp];
+    cell.newsTextView.text = [newsPosting postText];
     
-//   return cell;
-    
-//}
+    return cell;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return self.postings.count;
-    } else {
-        return 0;
-    }
+    return [self.postings count];
 }
 
 
