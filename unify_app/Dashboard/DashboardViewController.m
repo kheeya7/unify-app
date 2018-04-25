@@ -70,7 +70,7 @@
                 
                 NewsPosting *newsPosting = [[NewsPosting alloc] initWithKey:aKey name:aName time:aTimestamp post:aPost userPhotoUrl:aPhotoUrl];
                 
-                [self.postings addObject:newsPosting];
+                [self.postings insertObject:newsPosting atIndex:0];
             }
             [[self tableView] reloadData];
         }
@@ -131,17 +131,25 @@
     cell.newsTextView.text = [newsPosting postText];
     cell.photoImageView.image = photo;
     
+    cell.photoImageView.layer.cornerRadius = cell.photoImageView.frame.size.width / 2 ;
+    cell.photoImageView.clipsToBounds = YES;
+    
+    self.photoView.layer.cornerRadius = self.photoView.frame.size.width / 2 ;
+    self.photoView.clipsToBounds = YES;
+    
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return [self.postings count];
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return 170.0;
 }
 
