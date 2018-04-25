@@ -28,9 +28,9 @@
 
 @implementation DashboardViewController
 
-- (IBAction)onAddNewsPosting:(id)sender {
-    [self addNewsPosting];
-}
+//- (IBAction)onAddNewsPosting:(id)sender {
+//   [self addNewsPosting];
+//}
 
 #pragma mark - inherited methods
 - (void)viewDidLoad {
@@ -39,6 +39,21 @@
     
     self.postings = [[NSMutableArray alloc] initWithCapacity:50];
     
+    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    self.currentUser = appDelegate.currentUser;
+    
+    NSData *data = [NSData dataWithContentsOfURL:(self.currentUser.photoUrl)];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    [self.photoView setImage:image];
+    
+    //Let the DashboardViewController be the delegate of the message input, so that we can handle return key
+    self.postNewsTextField.delegate = self;
+    
+    [self listenForNews];
+    }
+
+-(void)listenForNews {
     [self.refPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
         if(snapshot.childrenCount > 0) {
             // clear the list
@@ -60,15 +75,7 @@
             [[self tableView] reloadData];
         }
     }];
-    
-    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
-    self.currentUser = appDelegate.currentUser;
-    
-    NSData *data = [NSData dataWithContentsOfURL:(self.currentUser.photoUrl)];
-    UIImage *image = [UIImage imageWithData:data];
-    
-    [self.photoView setImage:image];
-    }
+}
 
 #pragma mark - setup
 
@@ -84,6 +91,17 @@
                                   @"userPhotoUrl": self.currentUser.photoUrl.absoluteString
                                   };
     [[self.refPostings child:key] setValue:newsPosting];
+    
+    self.postNewsTextField.text = @"";
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *) newsTextField {
+    if (newsTextField == self.postNewsTextField) {
+        [newsTextField resignFirstResponder];
+        [self addNewsPosting];
+        return NO;
+    }
+    return YES;
 }
 
 - (NSString *)getTimestampString {
