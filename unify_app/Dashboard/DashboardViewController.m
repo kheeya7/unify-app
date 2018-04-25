@@ -28,9 +28,9 @@
 
 @implementation DashboardViewController
 
-- (IBAction)onAddNewsPosting:(id)sender {
-    [self addNewsPosting];
-}
+//- (IBAction)onAddNewsPosting:(id)sender {
+//   [self addNewsPosting];
+//}
 
 #pragma mark - inherited methods
 - (void)viewDidLoad {
@@ -91,6 +91,8 @@
                                   @"userPhotoUrl": self.currentUser.photoUrl.absoluteString
                                   };
     [[self.refPostings child:key] setValue:newsPosting];
+    
+    self.postNewsTextField.text = @"";
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *) newsTextField {
