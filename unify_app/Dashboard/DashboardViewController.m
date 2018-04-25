@@ -70,7 +70,7 @@
                 
                 NewsPosting *newsPosting = [[NewsPosting alloc] initWithKey:aKey name:aName time:aTimestamp post:aPost userPhotoUrl:aPhotoUrl];
                 
-                [self.postings addObject:newsPosting];
+                [self.postings insertObject:newsPosting atIndex:0];
             }
             [[self tableView] reloadData];
         }
