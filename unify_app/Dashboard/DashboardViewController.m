@@ -11,7 +11,6 @@
 #import "User.h"
 #import "NewsPosting.h"
 #import "NewsPostingCell.h"
-#import "newsPost.h"
 
 @import Firebase;
 
@@ -132,11 +131,11 @@
     cell.newsTextView.text = [newsPosting postText];
     cell.photoImageView.image = photo;
     
-    self.photoView.layer.cornerRadius = self.photoView.frame.size.width / 2 ;
-    self.photoView.clipsToBounds = YES;
-    
     cell.photoImageView.layer.cornerRadius = cell.photoImageView.frame.size.width / 2 ;
     cell.photoImageView.clipsToBounds = YES;
+    
+    self.photoView.layer.cornerRadius = self.photoView.frame.size.width / 2 ;
+    self.photoView.clipsToBounds = YES;
     
     return cell;
 }
