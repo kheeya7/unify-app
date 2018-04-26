@@ -98,7 +98,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Satisfy-Regular.ttf</string>
-		<string>fontawesome-webfont.ttf</string>
 	</array>
 </dict>
 </plist>

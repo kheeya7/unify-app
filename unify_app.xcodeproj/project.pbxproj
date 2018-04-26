@@ -25,6 +25,7 @@
 		30D71FAB207C0AE100E8DD76 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FAA207C0AE100E8DD76 /* AboutViewController.m */; };
 		30D71FAE207C0B2500E8DD76 /* SavedJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */; };
 		30D71FB1207C0B5900E8DD76 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */; };
+		37125B1820910D440004C99D /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E0A71982087E43400B560EA /* Satisfy-Regular.ttf */; };
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
 		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
@@ -459,6 +460,7 @@
 				03D1006516ED41D20005A1A9 /* connected57.png in Resources */,
 				03D1006616ED41D20005A1A9 /* connected72.png in Resources */,
 				03D1006716ED41D20005A1A9 /* connected114.png in Resources */,
+				37125B1820910D440004C99D /* Satisfy-Regular.ttf in Resources */,
 				7E25884F203BD95E00143F3E /* fontawesome-webfont.ttf in Resources */,
 				A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */,
 				03D1006816ED41D20005A1A9 /* connected144.png in Resources */,
