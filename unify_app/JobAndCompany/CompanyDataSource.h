@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Company.h"
 
 @interface CompanyDataSource : NSObject <UITableViewDataSource>
 
 - (id) initWithTableView: (UITableView *) aTableCView;
 - (void) loadData;
+-(Company *) getCompanyAtRow: (NSInteger) index;
 
 @end

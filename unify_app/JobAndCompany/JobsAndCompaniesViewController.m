@@ -8,8 +8,10 @@
 
 #import "JobsAndCompaniesViewController.h"
 #import "JobPostingDetailViewController.h"
+#import "CompanyDetailViewController.h"
 #import "JobPostingDataSource.h"
 #import "CompanyDataSource.h"
+#import "Company.h"
 
 @import Firebase;
 
@@ -71,6 +73,12 @@
         
         JobPostingDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.currentJobPosting = jobPosting;
+    } else if ([segue.destinationViewController isMemberOfClass:[CompanyDetailViewController class]]) {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        Company *company = [self.companyDataSource getCompanyAtRow:path.row];
+        
+        CompanyDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.currentCompany = company;
     }
 }
 

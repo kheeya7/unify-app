@@ -30,6 +30,10 @@
     return self;
 }
 
+- (Company *) getCompanyAtRow:(NSInteger)index {
+    return self.companies[index];
+}
+
 - (void) loadData {
     if (!imageQueue) {
         imageQueue = dispatch_queue_create("imageLoadQueue", NULL);
