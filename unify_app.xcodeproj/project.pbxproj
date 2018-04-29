@@ -46,6 +46,7 @@
 		7E422213208D20AF00AB1196 /* JobPostingDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E422212208D20AF00AB1196 /* JobPostingDataSource.m */; };
 		7E422216208D20CF00AB1196 /* CompanyDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E422215208D20CF00AB1196 /* CompanyDataSource.m */; };
 		7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9B14A2081AFD30047FA57 /* ChatViewController.m */; };
+		7EABC3062095698800F9EEE3 /* CompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EABC3052095698800F9EEE3 /* CompanyDetailViewController.m */; };
 		7EBCBF032035357900078CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCBF022035357800078CC6 /* GoogleService-Info.plist */; };
 		7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */; };
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
@@ -129,6 +130,8 @@
 		7E422215208D20CF00AB1196 /* CompanyDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyDataSource.m; sourceTree = "<group>"; };
 		7EA9B1492081AFD30047FA57 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = unify_app/Chat/ChatViewController.h; sourceTree = SOURCE_ROOT; };
 		7EA9B14A2081AFD30047FA57 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = unify_app/Chat/ChatViewController.m; sourceTree = SOURCE_ROOT; };
+		7EABC3042095698800F9EEE3 /* CompanyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyDetailViewController.h; sourceTree = "<group>"; };
+		7EABC3052095698800F9EEE3 /* CompanyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailViewController.m; sourceTree = "<group>"; };
 		7EBCBF022035357800078CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EBCBFAA2038E24E00078CC6 /* JobPostingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobPostingViewController.h; sourceTree = "<group>"; };
 		7EBCBFAB2038E24E00078CC6 /* JobPostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPostingViewController.m; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				7E422212208D20AF00AB1196 /* JobPostingDataSource.m */,
 				7E422214208D20CF00AB1196 /* CompanyDataSource.h */,
 				7E422215208D20CF00AB1196 /* CompanyDataSource.m */,
+				7EABC3042095698800F9EEE3 /* CompanyDetailViewController.h */,
+				7EABC3052095698800F9EEE3 /* CompanyDetailViewController.m */,
 			);
 			path = JobAndCompany;
 			sourceTree = "<group>";
@@ -583,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D71FB1207C0B5900E8DD76 /* ContactUsViewController.m in Sources */,
+				7EABC3062095698800F9EEE3 /* CompanyDetailViewController.m in Sources */,
 				30D71FA2207C0A2500E8DD76 /* GroupsViewController.m in Sources */,
 				7EEE65B7203E6E39006CD414 /* UnifyAuthViewController.m in Sources */,
 				7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */,
