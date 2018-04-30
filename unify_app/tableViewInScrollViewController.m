@@ -37,6 +37,7 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    NSLog(@"scrollViewDidScroll");
     // THIS WORKS BUT IS A BIT BUGGY
     if (scrollView == self.scrollView) {
         float yOffsetScrollView = self.scrollView.contentOffset.y;

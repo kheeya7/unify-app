@@ -51,7 +51,7 @@
     self.postNewsTextField.delegate = self;
     
     [self listenForNews];
-    }
+}
 
 -(void)listenForNews {
     [self.refPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {

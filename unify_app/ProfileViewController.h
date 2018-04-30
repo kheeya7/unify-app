@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSMutableArray *userPostings;
 
 @end
