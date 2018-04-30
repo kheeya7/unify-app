@@ -15,7 +15,10 @@
 @import FirebaseAuthUI;
 @import FirebaseGoogleAuthUI;
 
-@interface SignInViewController ()
+@interface SignInViewController (){
+    NSUserDefaults *defaults;//this will keep track as to whether the notification is on or off
+}
+
 
 @end
 
@@ -26,6 +29,11 @@ bool shouldShowAuthUI = true;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    defaults = [NSUserDefaults standardUserDefaults];
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
     
 }
 

@@ -15,12 +15,18 @@
 @end
 
 @implementation AppDelegate
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    //authorizes the use of notifications for the user
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Starting up the Firebase
     [FIRApp configure];
     
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
