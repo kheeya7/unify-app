@@ -13,6 +13,6 @@
 
 - (id) initWithTableView: (UITableView *) aTableCView;
 - (void) loadData;
--(Company *) getCompanyAtRow: (NSInteger) index;
+- (Company *) getCompanyAtRow: (NSInteger) index;
 
 @end
