@@ -56,6 +56,7 @@
                 NSString *aCompany = [savedJobPosting objectForKey:@"company"];
                 NSString *aJobDescription = [savedJobPosting objectForKey:@"jobDescription"];
                 NSString *aCompanyLogoUrlString = [savedJobPosting objectForKey:@"companyLogo"];
+                NSString *aOriginUrlString = [savedJobPosting objectForKey:@"originUrl"];
                 
                 JobPosting *jobPosting = [[JobPosting alloc] init];
                 jobPosting.key = aKey;
@@ -63,6 +64,7 @@
                 jobPosting.company = aCompany;
                 jobPosting.jobDescription = aJobDescription;
                 jobPosting.companyLogoUrlString = aCompanyLogoUrlString;
+                jobPosting.originUrlString = aOriginUrlString;
                 
                 [self.jobPostings addObject:jobPosting];
             }
