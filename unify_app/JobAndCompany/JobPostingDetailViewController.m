@@ -42,6 +42,7 @@
     [self setBackgroundImage];
 }
 
+
 - (void)setBackgroundImage {
     // Get a reference to the storage service using the default Firebase App
     FIRStorage *storage = [FIRStorage storage];
@@ -65,6 +66,11 @@
     }];
 }
 
+- (IBAction)applyButton:(id)sender {
+   // NSLog(self.currentJobPosting.originUrlString);
+[[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.currentJobPosting.originUrlString]];
+}
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

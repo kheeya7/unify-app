@@ -64,6 +64,9 @@
                                         <state key="normal" title="Apply" backgroundImage="small-blue-button">
                                             <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="applyButton:" destination="p16-yQ-jnQ" eventType="touchUpInside" id="5i7-xN-xfB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1734,7 +1737,7 @@ sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
         <image name="write-post-icon" width="90" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nzz-1c-WHq"/>
-        <segue reference="JZx-NH-HJ1"/>
+        <segue reference="NZK-0X-4e2"/>
+        <segue reference="yPs-28-ibq"/>
     </inferredMetricsTieBreakers>
 </document>

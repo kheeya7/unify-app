@@ -15,6 +15,7 @@
 @property (nonatomic) NSString *company;
 @property (nonatomic) NSString *jobDescription;
 @property (nonatomic) NSString *companyLogoUrlString;
+@property (nonatomic) NSString *originUrlString;
 
 - (UIImage *) getImageLogo;
 
