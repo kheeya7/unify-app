@@ -56,6 +56,7 @@
                 NSString *aCompanyDescription = [companyDict objectForKey:@"description"];
                 NSString *aCompanyLogoUrlString = [companyDict objectForKey:@"logo"];
                 NSString *aLocation = [companyDict objectForKey:@"location"];
+                NSString *aBackgroundImageString = [companyDict objectForKey:@"backgroundPhoto"];
                 
                 Company *company = [[Company alloc] init];
                 company.key = aKey;
@@ -63,6 +64,7 @@
                 company.companyDescription = aCompanyDescription;
                 company.companyLogoUrlString = aCompanyLogoUrlString;
                 company.location = aLocation;
+                company.companyBackground = aBackgroundImageString;
                 
                 [self.companies addObject:company];
             }
