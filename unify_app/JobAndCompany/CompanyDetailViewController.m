@@ -7,11 +7,18 @@
 //
 
 #import "CompanyDetailViewController.h"
+#import "CompanyDataSource.h"
+#import "Company.h"
+
+@import Firebase;
+@import FirebaseStorage;
 
 @interface CompanyDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *CompanyNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *HeaderBackgroundImage;
+
+- (void)setBackgroundImage;
 
 @end
 
@@ -25,6 +32,28 @@
     
     UIImage *image = [self.currentCompany getImageLogo];
     [self.CompanyLogo setImage: image];
+    
+    [self setBackgroundImage];
+}
+
+- (void)setBackgroundImage {
+    // Get a reference to the storage service using the default Firebase App
+    FIRStorage *storage = [FIRStorage storage];
+    
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage reference];
+    
+    NSString *imageFileName = [self.currentCompany companyBackground];
+    FIRStorageReference *imageRef = [storageRef child:imageFileName];
+    
+    [imageRef dataWithMaxSize:2000000 completion:^(NSData * _Nullable data, NSError * _Nullable error){
+        if (error != nil) {
+            // NSLog(error);
+        } else {
+            UIImage *image = [UIImage imageWithData: data];
+            [self.HeaderBackgroundImage setImage: image];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
