@@ -46,9 +46,9 @@
     NSString *imageFileName = [self.currentCompany companyBackground];
     FIRStorageReference *imageRef = [storageRef child:imageFileName];
     
-    [imageRef dataWithMaxSize:1000000 completion:^(NSData * _Nullable data, NSError * _Nullable error){
+    [imageRef dataWithMaxSize:2000000 completion:^(NSData * _Nullable data, NSError * _Nullable error){
         if (error != nil) {
-            NSLog(error);
+            // NSLog(error);
         } else {
             UIImage *image = [UIImage imageWithData: data];
             [self.HeaderBackgroundImage setImage: image];
