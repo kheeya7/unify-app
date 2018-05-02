@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
-@interface MembersViewController : UIViewController
+@interface MembersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
