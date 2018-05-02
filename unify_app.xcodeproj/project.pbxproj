@@ -736,6 +736,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AEE264CA113157B48CBD130 /* Pods-unify_app.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -760,6 +762,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
