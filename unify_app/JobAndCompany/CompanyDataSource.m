@@ -57,6 +57,7 @@
                 NSString *aCompanyLogoUrlString = [companyDict objectForKey:@"logo"];
                 NSString *aLocation = [companyDict objectForKey:@"location"];
                 NSString *aBackgroundImageString = [companyDict objectForKey:@"backgroundPhoto"];
+                NSString *aFemaleRatio = [companyDict objectForKey:@"femaleRatio"];
                 
                 Company *company = [[Company alloc] init];
                 company.key = aKey;
@@ -65,6 +66,9 @@
                 company.companyLogoUrlString = aCompanyLogoUrlString;
                 company.location = aLocation;
                 company.companyBackground = aBackgroundImageString;
+                NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+                f.numberStyle = NSNumberFormatterDecimalStyle;
+                company.femaleRatio = [f numberFromString:aFemaleRatio];
                 
                 [self.companies addObject:company];
             }

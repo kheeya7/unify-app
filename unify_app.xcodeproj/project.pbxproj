@@ -58,6 +58,7 @@
 		A0C4C2326658DD39C0655FB5 /* Pods_unify_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143DC53523A10340E161E080 /* Pods_unify_app.framework */; };
 		A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */; };
 		A4D20ABA2092505B00A56E38 /* tableViewInScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */; };
+		BA9314372097AC0F00D6B8D8 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,8 @@
 		A4D20AB82092505B00A56E38 /* tableViewInScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewInScrollViewController.h; sourceTree = "<group>"; };
 		A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewInScrollViewController.m; sourceTree = "<group>"; };
 		A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.release.xcconfig"; sourceTree = "<group>"; };
+		BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
 				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
 				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
+				BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */,
+				BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */,
 			);
 			path = unify_app;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				7E258857203BF2E900143F3E /* DashboardViewController.m in Sources */,
 				37C232C02087E50A00049F98 /* Company.m in Sources */,
 				7E051722208ED26900E8B325 /* NewsPostingCell.m in Sources */,
+				BA9314372097AC0F00D6B8D8 /* NotificationViewController.m in Sources */,
 				7E0A71972082EBE500B560EA /* ChatSenderCell.m in Sources */,
 				7EBCBFAC2038E24E00078CC6 /* JobPostingViewController.m in Sources */,
 				7E1233342043841200312658 /* JobPostingDetailViewController.m in Sources */,
