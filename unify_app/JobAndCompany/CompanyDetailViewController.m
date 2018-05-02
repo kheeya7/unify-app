@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *CompanyNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *HeaderBackgroundImage;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 - (void)setBackgroundImage;
 
@@ -34,6 +35,14 @@
     [self.CompanyLogo setImage: image];
     
     [self setBackgroundImage];
+    
+    self.progressView.progress = self.currentCompany.femaleRatio.floatValue / 100;
+    
+    // self.progressView.transform = CGAffineTransformMakeScale(1.0f, 8.0f);
+    // self.progressView.layer.cornerRadius = 8;
+    // self.progressView.clipsToBounds = TRUE;
+    //self.progressView.layer.sublayers[1].cornerRadius = 8;
+    // self.progressView.subviews[1].clipsToBounds = true;
 }
 
 - (void)setBackgroundImage {
