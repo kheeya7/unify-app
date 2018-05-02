@@ -25,8 +25,10 @@
 - (id) initWithId: (NSString *)aUid
       displayName: (NSString *)aDisplayName
             email: (NSString *)aEmail
-         photoUrl: (NSURL *)aPhotoUrl;
+         photoUrl: (NSString *)aPhotoUrl;
 
 - (NSDictionary *) getDictionaryFormat;
+
+- (UIImage *) getUserPhoto;
 
 @end

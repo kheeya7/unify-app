@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *displayNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+//@property (weak, nonatomic) User *currentUser;
+
 @end
 
 @implementation ProfileViewController
