@@ -7,11 +7,19 @@
 //
 
 #import "CompanyDetailViewController.h"
+#import "CompanyDataSource.h"
+#import "Company.h"
+
+@import Firebase;
+@import FirebaseStorage;
 
 @interface CompanyDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *CompanyNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *HeaderBackgroundImage;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+
+- (void)setBackgroundImage;
 
 @end
 
@@ -25,6 +33,36 @@
     
     UIImage *image = [self.currentCompany getImageLogo];
     [self.CompanyLogo setImage: image];
+    
+    [self setBackgroundImage];
+    
+    self.progressView.progress = self.currentCompany.femaleRatio.floatValue / 100;
+    
+    // self.progressView.transform = CGAffineTransformMakeScale(1.0f, 8.0f);
+    // self.progressView.layer.cornerRadius = 8;
+    // self.progressView.clipsToBounds = TRUE;
+    //self.progressView.layer.sublayers[1].cornerRadius = 8;
+    // self.progressView.subviews[1].clipsToBounds = true;
+}
+
+- (void)setBackgroundImage {
+    // Get a reference to the storage service using the default Firebase App
+    FIRStorage *storage = [FIRStorage storage];
+    
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage reference];
+    
+    NSString *imageFileName = [self.currentCompany companyBackground];
+    FIRStorageReference *imageRef = [storageRef child:imageFileName];
+    
+    [imageRef dataWithMaxSize:2000000 completion:^(NSData * _Nullable data, NSError * _Nullable error){
+        if (error != nil) {
+            // NSLog(error);
+        } else {
+            UIImage *image = [UIImage imageWithData: data];
+            [self.HeaderBackgroundImage setImage: image];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
