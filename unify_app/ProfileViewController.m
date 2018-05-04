@@ -53,11 +53,14 @@
     
     [self.photoView setImage:image];
     
+    self.photoView.layer.cornerRadius = self.photoView.frame.size.width / 2 ;
+    self.photoView.clipsToBounds = YES;
+    
     [self setup];
-    [self loadWhatsNewData];
+    [self loadRecentActivityData];
 }
 
-- (void)loadWhatsNewData {
+- (void)loadRecentActivityData {
     [self.refPostings observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
         if(snapshot.childrenCount > 0) {
             // clear the list
@@ -151,6 +154,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 250;
+    return 150;
 }
 @end

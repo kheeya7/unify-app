@@ -271,6 +271,8 @@
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
 				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
 				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
+				7EF0ADAD209C1084005187BB /* RecentActivityCell.h */,
+				7EF0ADAE209C1084005187BB /* RecentActivityCell.m */,
 				BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */,
 				BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */,
 			);
@@ -301,8 +303,6 @@
 				7E05171D208EC46300E8B325 /* NewsPosting.m */,
 				7E051720208ED26900E8B325 /* NewsPostingCell.h */,
 				7E051721208ED26900E8B325 /* NewsPostingCell.m */,
-				7EF0ADAD209C1084005187BB /* RecentActivityCell.h */,
-				7EF0ADAE209C1084005187BB /* RecentActivityCell.m */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
