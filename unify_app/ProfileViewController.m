@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *displayNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 
 @property (strong, nonatomic) User *currentUser;
 
@@ -45,8 +46,9 @@
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     self.currentUser = appDelegate.currentUser;
     
-    [self displayNameLabel].text = [NSString stringWithFormat:@"%@", self.currentUser.displayName];
+    [self displayNameLabel].text = self.currentUser.displayName;
     [self emailLabel].text = self.currentUser.email;
+    [self bioLabel].text = self.currentUser.additionalDetail;
     
     NSData *data = [NSData dataWithContentsOfURL:self.currentUser.photoUrl];
     UIImage *image = [UIImage imageWithData:data];

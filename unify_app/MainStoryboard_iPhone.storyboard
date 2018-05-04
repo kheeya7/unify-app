@@ -450,17 +450,17 @@
                                         <rect key="frame" x="1" y="251" width="375" height="3"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-ot-SdR">
-                                        <rect key="frame" x="9" y="194" width="359" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNs-9w-QjU" userLabel="Recent Activity Label">
                                         <rect key="frame" x="16" y="351" width="144" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-4F-GD3">
+                                        <rect key="frame" x="16" y="181" width="343" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -476,8 +476,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bioLabel" destination="6J6-4F-GD3" id="Vku-0h-eql"/>
                         <outlet property="displayNameLabel" destination="BWO-Ng-u6z" id="4Jy-fm-kpQ"/>
-                        <outlet property="emailLabel" destination="ddF-pM-ftC" id="dJZ-Cr-rNo"/>
+                        <outlet property="emailLabel" destination="ddF-pM-ftC" id="N5m-eY-gEw"/>
                         <outlet property="photoView" destination="GG5-Ri-SNN" id="EL1-sz-cTH"/>
                         <outlet property="scrollView" destination="bJ2-XL-yTF" id="Kod-zK-kXb"/>
                         <outlet property="tableView" destination="WdI-BO-wGH" id="ZlK-a4-V96"/>

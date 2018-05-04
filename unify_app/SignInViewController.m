@@ -77,6 +77,9 @@ didSignInWithUser:(nullable FIRUser *)user
     FIRDatabaseReference *usersDBRef = [[[FIRDatabase database] reference] child:@"users"];
     [[usersDBRef child:loggedInUser.uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         if ([snapshot exists]) {
+            // save other properties to the current user
+            appDelegate.currentUser.additionalDetail = [[snapshot value] valueForKey:@"additionalDetail"];
+            
             // If user is already saved, just move to the main
             [self performSegueWithIdentifier:@"SegueToMain" sender:self];
         } else {
