@@ -87,6 +87,7 @@
                                   @"id": key,
                                   @"postText":self.postNewsTextField.text,
                                   @"user": self.currentUser.displayName,
+                                  @"uid": self.currentUser.uid,
                                   @"postTime":[self getTimestampString],
                                   @"userPhotoUrl": self.currentUser.photoUrl.absoluteString
                                   };
