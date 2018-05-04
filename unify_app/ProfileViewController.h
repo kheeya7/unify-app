@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSMutableArray *userPostings;
 
 //@property (weak, nonatomic) User *currentUser;
 
