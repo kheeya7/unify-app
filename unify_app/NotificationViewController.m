@@ -1,18 +1,19 @@
 //
-//  MembersViewController.m
+//  NotificationViewController.m
 //  unify_app
 //
-//  Created by rcaligan on 4/9/18.
+//  Created by user139262 on 4/30/18.
 //  Copyright © 2018 Unify. All rights reserved.
 //
 
-#import "MembersViewController.h"
+#import "NotificationViewController.h"
 
-@interface MembersViewController ()
+@interface NotificationViewController ()
 
 @end
 
-@implementation MembersViewController
+@implementation NotificationViewController
+@synthesize message;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
