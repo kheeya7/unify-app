@@ -52,6 +52,7 @@
 		7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */; };
 		7EBCBFB2203A193A00078CC6 /* JobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCBFB1203A193A00078CC6 /* JobPosting.m */; };
 		7EEE65B7203E6E39006CD414 /* UnifyAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE65B6203E6E39006CD414 /* UnifyAuthViewController.m */; };
+		7EF0ADAF209C1084005187BB /* RecentActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0ADAE209C1084005187BB /* RecentActivityCell.m */; };
 		9C35A4B01DE4C7A300650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4AF1DE4C7A300650581 /* SafariServices.framework */; };
 		9C35A4B21DE4C7B200650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B11DE4C7B200650581 /* Security.framework */; };
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
@@ -142,6 +143,8 @@
 		7EBCBFB1203A193A00078CC6 /* JobPosting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobPosting.m; sourceTree = "<group>"; };
 		7EEE65B5203E6E39006CD414 /* UnifyAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnifyAuthViewController.h; sourceTree = "<group>"; };
 		7EEE65B6203E6E39006CD414 /* UnifyAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnifyAuthViewController.m; sourceTree = "<group>"; };
+		7EF0ADAD209C1084005187BB /* RecentActivityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentActivityCell.h; sourceTree = "<group>"; };
+		7EF0ADAE209C1084005187BB /* RecentActivityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentActivityCell.m; sourceTree = "<group>"; };
 		9C35A4AF1DE4C7A300650581 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9C35A4B11DE4C7B200650581 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9CA121721DAC7F67000C2FCA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -268,6 +271,8 @@
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
 				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
 				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
+				7EF0ADAD209C1084005187BB /* RecentActivityCell.h */,
+				7EF0ADAE209C1084005187BB /* RecentActivityCell.m */,
 				BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */,
 				BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */,
 			);
@@ -603,6 +608,7 @@
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
 				7E05171E208EC46300E8B325 /* NewsPosting.m in Sources */,
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
+				7EF0ADAF209C1084005187BB /* RecentActivityCell.m in Sources */,
 				7E42220E208BE0C800AB1196 /* ChatReceiverCell.m in Sources */,
 				30D71FA5207C0A6E00E8DD76 /* GroupDetailViewController.m in Sources */,
 				30D71F9F207C07B800E8DD76 /* PulloutMenuViewController.m in Sources */,
