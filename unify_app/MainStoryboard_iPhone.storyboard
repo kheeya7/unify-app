@@ -1225,19 +1225,19 @@
                                     <constraint firstAttribute="height" constant="70" id="I5j-GN-Rhr"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-Js-mCE">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unity-badge-1" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-Js-mCE">
                                 <rect key="frame" x="36" y="234" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-pT-Dzv">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unify-badge-2" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-pT-Dzv">
                                 <rect key="frame" x="114" y="234" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7sV-tq-C50">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unify-badge-3" translatesAutoresizingMaskIntoConstraints="NO" id="7sV-tq-C50">
                                 <rect key="frame" x="192" y="234" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-J8-Vdp">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unify-badge-4" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-J8-Vdp">
                                 <rect key="frame" x="270" y="234" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1282,6 +1282,10 @@
                         <outlet property="CompanyLogo" destination="HIx-zw-Tgf" id="q5o-7p-leu"/>
                         <outlet property="CompanyNameLabel" destination="xRO-2h-LOO" id="Nvx-Lw-faF"/>
                         <outlet property="HeaderBackgroundImage" destination="WCr-hU-ydG" id="Qr7-ui-eEg"/>
+                        <outlet property="badgeImageView1" destination="LTg-Js-mCE" id="298-y6-NOW"/>
+                        <outlet property="badgeImageView2" destination="ro5-pT-Dzv" id="d8C-Eq-BY2"/>
+                        <outlet property="badgeImageView3" destination="7sV-tq-C50" id="k91-eD-8HU"/>
+                        <outlet property="badgeImageView4" destination="zg8-J8-Vdp" id="c7u-sp-v2v"/>
                         <outlet property="progressView" destination="UpK-GA-b7x" id="Fhn-Go-T9b"/>
                     </connections>
                 </viewController>
@@ -2206,6 +2210,10 @@ pgCoAKoArACxALQAtgC4ALoAvADDAMsA1wDZANsA3QFTAVgBYwFsAXIBdQF+AYMBiwGOAZUBnQGqAa8B
 sQGzAbgBwAHDAcgB0AHTAeUB6AHtAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAe8
 </mutableData>
         </image>
+        <image name="unify-badge-2" width="35" height="36"/>
+        <image name="unify-badge-3" width="35" height="35"/>
+        <image name="unify-badge-4" width="35" height="34"/>
+        <image name="unity-badge-1" width="535" height="535"/>
         <image name="welcome-background" width="375" height="667"/>
         <image name="white-box" width="258" height="114"/>
     </resources>
