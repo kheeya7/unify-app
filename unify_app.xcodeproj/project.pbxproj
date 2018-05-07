@@ -26,6 +26,7 @@
 		30D71FAE207C0B2500E8DD76 /* SavedJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */; };
 		30D71FB1207C0B5900E8DD76 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */; };
 		37125B1820910D440004C99D /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E0A71982087E43400B560EA /* Satisfy-Regular.ttf */; };
+		37125B21209EB9B40004C99D /* MembersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37125B20209EB9B40004C99D /* MembersDetailViewController.m */; };
 		372236AF207575B5002AE50E /* MyNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236AE207575B5002AE50E /* MyNewViewController.m */; };
 		372236B22075793F002AE50E /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372236B12075793F002AE50E /* SampleViewController.m */; };
 		374F4FF9206C46EA008CC95E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374F4FF8206C46EA008CC95E /* ProfileViewController.m */; };
@@ -93,6 +94,8 @@
 		30D71FAD207C0B2500E8DD76 /* SavedJobsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavedJobsViewController.m; sourceTree = "<group>"; };
 		30D71FAF207C0B5900E8DD76 /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		30D71FB0207C0B5900E8DD76 /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		37125B1F209EB9B40004C99D /* MembersDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersDetailViewController.h; sourceTree = "<group>"; };
+		37125B20209EB9B40004C99D /* MembersDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersDetailViewController.m; sourceTree = "<group>"; };
 		372236AD207575B5002AE50E /* MyNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewViewController.h; sourceTree = "<group>"; };
 		372236AE207575B5002AE50E /* MyNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewViewController.m; sourceTree = "<group>"; };
 		372236B02075793F002AE50E /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
@@ -249,6 +252,12 @@
 				7EBCBF022035357800078CC6 /* GoogleService-Info.plist */,
 				30D71FA6207C0AB900E8DD76 /* MembersViewController.h */,
 				30D71FA7207C0AB900E8DD76 /* MembersViewController.m */,
+				37125B1F209EB9B40004C99D /* MembersDetailViewController.h */,
+				37125B20209EB9B40004C99D /* MembersDetailViewController.m */,
+				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
+				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
+				7E258852203BEF2E00143F3E /* User.h */,
+				7E258853203BEF2E00143F3E /* User.m */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
 				A4D20AB82092505B00A56E38 /* tableViewInScrollViewController.h */,
 				A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */,
@@ -263,14 +272,10 @@
 				7EBCBFAD2039F4D500078CC6 /* SignInViewController.h */,
 				7EBCBFAE2039F4D500078CC6 /* SignInViewController.m */,
 				7E25884B203BD75700143F3E /* Assets.xcassets */,
-				7E258852203BEF2E00143F3E /* User.h */,
-				7E258853203BEF2E00143F3E /* User.m */,
 				7EEE65B5203E6E39006CD414 /* UnifyAuthViewController.h */,
 				7EEE65B6203E6E39006CD414 /* UnifyAuthViewController.m */,
 				7E37941D204E38990024D35D /* MainTabBarViewController.h */,
 				7E37941E204E38990024D35D /* MainTabBarViewController.m */,
-				374F4FF7206C46EA008CC95E /* ProfileViewController.h */,
-				374F4FF8206C46EA008CC95E /* ProfileViewController.m */,
 				7EF0ADAD209C1084005187BB /* RecentActivityCell.h */,
 				7EF0ADAE209C1084005187BB /* RecentActivityCell.m */,
 				BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */,
@@ -606,6 +611,7 @@
 				7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */,
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
+				37125B21209EB9B40004C99D /* MembersDetailViewController.m in Sources */,
 				7E05171E208EC46300E8B325 /* NewsPosting.m in Sources */,
 				7E258854203BEF2E00143F3E /* User.m in Sources */,
 				7EF0ADAF209C1084005187BB /* RecentActivityCell.m in Sources */,
