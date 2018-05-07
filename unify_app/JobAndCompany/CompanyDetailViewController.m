@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView2;
-@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView3;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView4;
 
 
@@ -80,8 +79,6 @@
                 self.badgeImageView1.alpha = 1;
             } else if (aBadgeNumber.intValue == 2) {
                 self.badgeImageView2.alpha = 1;
-            } else if (aBadgeNumber.intValue == 3) {
-                self.badgeImageView3.alpha = 1;
             } else if (aBadgeNumber.intValue == 4) {
                 self.badgeImageView4.alpha = 1;
             }
