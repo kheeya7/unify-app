@@ -18,6 +18,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *HeaderBackgroundImage;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView1;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView2;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView3;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView4;
 
 - (void)setBackgroundImage;
 
@@ -38,11 +42,23 @@
     
     self.progressView.progress = self.currentCompany.femaleRatio.floatValue / 100;
     
-    // self.progressView.transform = CGAffineTransformMakeScale(1.0f, 8.0f);
-    // self.progressView.layer.cornerRadius = 8;
-    // self.progressView.clipsToBounds = TRUE;
-    //self.progressView.layer.sublayers[1].cornerRadius = 8;
-    // self.progressView.subviews[1].clipsToBounds = true;
+    [self setBadges];
+}
+
+- (void)setBadges {
+    if (self.currentCompany.badges != nil) {
+        for(NSNumber *aBadgeNumber in self.currentCompany.badges) {
+            if (aBadgeNumber.intValue == 1) {
+                self.badgeImageView1.alpha = 1;
+            } else if (aBadgeNumber.intValue == 2) {
+                self.badgeImageView2.alpha = 1;
+            } else if (aBadgeNumber.intValue == 3) {
+                self.badgeImageView3.alpha = 1;
+            } else if (aBadgeNumber.intValue == 4) {
+                self.badgeImageView4.alpha = 1;
+            }
+        }
+    }
 }
 
 - (void)setBackgroundImage {

@@ -58,6 +58,7 @@
                 NSString *aLocation = [companyDict objectForKey:@"location"];
                 NSString *aBackgroundImageString = [companyDict objectForKey:@"backgroundPhoto"];
                 NSString *aFemaleRatio = [companyDict objectForKey:@"femaleRatio"];
+                NSArray *aBadges = [companyDict objectForKey:@"badges"];
                 
                 Company *company = [[Company alloc] init];
                 company.key = aKey;
@@ -69,6 +70,7 @@
                 NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
                 f.numberStyle = NSNumberFormatterDecimalStyle;
                 company.femaleRatio = [f numberFromString:aFemaleRatio];
+                company.badges = aBadges;
                 
                 [self.companies addObject:company];
             }
