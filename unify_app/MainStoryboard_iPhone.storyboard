@@ -1267,9 +1267,8 @@
                                 <rect key="frame" x="0.0" y="64" width="376" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRW-Je-Qi7">
+                            <view alpha="0.75" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRW-Je-Qi7">
                                 <rect key="frame" x="16" y="122" width="343" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRO-2h-LOO">
                                         <rect key="frame" x="0.0" y="64" width="343" height="21"/>
@@ -1281,9 +1280,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-MF-d1O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Company Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-MF-d1O">
                                 <rect key="frame" x="16" y="377" width="343" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1300,32 +1298,42 @@
                                 <rect key="frame" x="137" y="234" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Female Ratio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpU-1l-JgX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Female Ratio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpU-1l-JgX">
                                 <rect key="frame" x="16" y="407" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="UpK-GA-b7x">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="UpK-GA-b7x">
                                 <rect key="frame" x="120" y="416" width="239" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.36031553150000001" green="0.7925079465" blue="0.83998733759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="Szd-n9-QGV"/>
+                                </constraints>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIK-JM-pqx">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIK-JM-pqx">
                                 <rect key="frame" x="16" y="344" width="343" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="What do these badges mean?"/>
                                 <connections>
                                     <action selector="onBadgeClicked:" destination="cEn-rE-BEz" eventType="touchUpInside" id="lsA-Xm-GJw"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unify-badge-4" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-J8-Vdp">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="unify-badge-4" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-J8-Vdp">
                                 <rect key="frame" x="259" y="234" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="centerY" secondItem="vpU-1l-JgX" secondAttribute="centerY" id="8HJ-HK-Kbv"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="trailing" secondItem="zg8-J8-Vdp" secondAttribute="trailing" id="LZ8-VO-VPO"/>
+                            <constraint firstItem="6Dg-8S-li1" firstAttribute="top" secondItem="UpK-GA-b7x" secondAttribute="bottom" constant="200" id="Mcr-Wc-ikW"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="trailing" secondItem="gtA-Oz-hCO" secondAttribute="trailingMargin" id="gPT-5s-Ioa"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="trailing" secondItem="s1Y-MF-d1O" secondAttribute="trailing" id="l9a-Az-giO"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="trailing" secondItem="jRW-Je-Qi7" secondAttribute="trailing" id="odE-gm-RFo"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="top" secondItem="s1Y-MF-d1O" secondAttribute="bottom" constant="15" id="pHA-nY-IbK"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="leading" secondItem="vpU-1l-JgX" secondAttribute="trailing" constant="8" symbolic="YES" id="tgV-Us-qWK"/>
+                            <constraint firstItem="UpK-GA-b7x" firstAttribute="trailing" secondItem="WIK-JM-pqx" secondAttribute="trailing" id="uDM-4f-HpQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="CompanyLogo" destination="HIx-zw-Tgf" id="q5o-7p-leu"/>
