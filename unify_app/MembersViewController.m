@@ -7,7 +7,7 @@
 //
 
 #import "MembersViewController.h"
-#import "ProfileViewController.h"
+#import "MembersDetailViewController.h"
 #import "User.h"
 
 @import Firebase;
@@ -75,18 +75,18 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//
-//    [segue.identifier isEqualToString:@"segueMemberProfile"]; {
-//        NSIndexPath *path = [self.tableViewMembers indexPathForSelectedRow];
-//        User *user = self.members[path.row];
-//
-//    ProfileViewController *detailViewController = [segue destinationViewController];
-//        detailViewController.currentUser = user;
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+
+    [segue.identifier isEqualToString:@"segueMemberDetailView"]; {
+        NSIndexPath *path = [self.tableViewMembers indexPathForSelectedRow];
+        User *user = self.members[path.row];
+
+    MembersDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.currentUser = user;
+    }
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
