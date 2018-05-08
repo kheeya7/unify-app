@@ -1631,6 +1631,10 @@
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="5TP-Pi-LkD" eventType="touchUpInside" id="egi-xg-wYu"/>
+                                    <action selector="logoutClick:" destination="5TP-Pi-LkD" eventType="touchUpInside" id="lIo-Su-su9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
