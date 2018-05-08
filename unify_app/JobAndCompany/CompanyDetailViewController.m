@@ -14,7 +14,7 @@
 @import Firebase;
 @import FirebaseStorage;
 
-@interface CompanyDetailViewController () <UIPopoverPresentationControllerDelegate>
+@interface CompanyDetailViewController() <UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *CompanyNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
@@ -23,8 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView2;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView4;
-
-
 
 @property (strong, nonatomic) BadgeViewController *badgeViewController;
 
