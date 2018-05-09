@@ -58,7 +58,6 @@
 		9CA121731DAC7F67000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121721DAC7F67000C2FCA /* WebKit.framework */; };
 		A0C4C2326658DD39C0655FB5 /* Pods_unify_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143DC53523A10340E161E080 /* Pods_unify_app.framework */; };
 		A31A89F51BF3FD8600C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F41BF3FD8600C7B656 /* Launch Screen.storyboard */; };
-		A4D20ABA2092505B00A56E38 /* tableViewInScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */; };
 		BA9314372097AC0F00D6B8D8 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -179,8 +178,6 @@
 		A485DE0D2072B8A400AC7757 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
 		A485DE0E2072B8A400AC7757 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		A485DE0F2072B8A400AC7757 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
-		A4D20AB82092505B00A56E38 /* tableViewInScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewInScrollViewController.h; sourceTree = "<group>"; };
-		A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewInScrollViewController.m; sourceTree = "<group>"; };
 		A570C95E64D0D4C1185764F6 /* Pods-unify_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-unify_app/Pods-unify_app.release.xcconfig"; sourceTree = "<group>"; };
 		BA9314352097AC0F00D6B8D8 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		BA9314362097AC0F00D6B8D8 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
@@ -250,8 +247,6 @@
 				30D71FA6207C0AB900E8DD76 /* MembersViewController.h */,
 				30D71FA7207C0AB900E8DD76 /* MembersViewController.m */,
 				03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */,
-				A4D20AB82092505B00A56E38 /* tableViewInScrollViewController.h */,
-				A4D20AB92092505B00A56E38 /* tableViewInScrollViewController.m */,
 				7E2A99152040DC8900D0CC5D /* NewUserProfileViewController.h */,
 				7E2A99162040DC8900D0CC5D /* NewUserProfileViewController.m */,
 				03D1002C16EC579A0005A1A9 /* AppDelegate.h */,
@@ -602,7 +597,6 @@
 				30D71FA2207C0A2500E8DD76 /* GroupsViewController.m in Sources */,
 				7EEE65B7203E6E39006CD414 /* UnifyAuthViewController.m in Sources */,
 				7E37941F204E38990024D35D /* MainTabBarViewController.m in Sources */,
-				A4D20ABA2092505B00A56E38 /* tableViewInScrollViewController.m in Sources */,
 				7EA9B14B2081AFD30047FA57 /* ChatViewController.m in Sources */,
 				7EBCBFAF2039F4D500078CC6 /* SignInViewController.m in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
