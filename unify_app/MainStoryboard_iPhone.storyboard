@@ -145,7 +145,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="peq-kf-B1R">
             <objects>
-                <viewController id="h2a-9S-lrW" customClass="SignInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInView" id="h2a-9S-lrW" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ryo-u3-vqz"/>
                         <viewControllerLayoutGuide type="bottom" id="OMr-Yn-fRb"/>
@@ -1631,6 +1631,9 @@
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutClick:" destination="5TP-Pi-LkD" eventType="touchUpInside" id="B9t-EK-tNX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

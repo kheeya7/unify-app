@@ -7,6 +7,14 @@
 //
 
 #import "PulloutMenuViewController.h"
+#import "SignInViewController.h"
+#import "AppDelegate.h"
+#import "User.h"
+#import "UnifyAuthViewController.h"
+
+@import Firebase;
+@import FirebaseAuthUI;
+@import FirebaseGoogleAuthUI;
 
 @interface PulloutMenuViewController ()
 
@@ -17,16 +25,33 @@
 @property (weak, nonatomic) IBOutlet UIButton *editProfileField;
 @property (weak, nonatomic) IBOutlet UIButton *contactUsField;
 
-
-
+- (BOOL)signOut:(NSError *_Nullable *_Nullable)error;
 
 @end
 
 @implementation PulloutMenuViewController
 
+- (IBAction)logoutClick:(id)sender {
+    NSError *signOutError;
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    if (!status) {
+        NSLog(@"Error signing out: %@", signOutError);
+        return;
+    }else{
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        appDelegate.currentUser = nil;
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"signInView"];
+        controller.modalPresentationStyle = UIModalPresentationPopover;
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     
     self.membersField.layer.borderWidth = 1.0f;
     self.membersField.layer.borderColor = [[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:0.30] CGColor];
