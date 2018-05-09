@@ -15,7 +15,7 @@
 @import FirebaseAuthUI;
 @import FirebaseGoogleAuthUI;
 
-@interface SignInViewController (){
+@interface SignInViewController()<FUIAuthDelegate>{
     NSUserDefaults *defaults;//this will keep track as to whether the notification is on or off
 }
 
@@ -56,6 +56,10 @@ bool shouldShowAuthUI = true;
         
         shouldShowAuthUI = false;
     }
+}
+
+- (void) resetSignInView {
+    shouldShowAuthUI = true;
 }
 
 - (void)didReceiveMemoryWarning {

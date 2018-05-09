@@ -11,4 +11,6 @@
 
 @interface SignInViewController : UIViewController
 
+- (void) resetSignInView;
+
 @end
