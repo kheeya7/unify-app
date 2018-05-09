@@ -44,6 +44,7 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
         UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"signInView"];
         controller.modalPresentationStyle = UIModalPresentationPopover;
+        [controller resetSignInView];
         [self presentViewController:controller animated:YES completion:nil];
     }
 }
