@@ -42,10 +42,11 @@
         appDelegate.currentUser = nil;
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"signInView"];
-        controller.modalPresentationStyle = UIModalPresentationPopover;
-        [controller resetSignInView];
-        [self presentViewController:controller animated:YES completion:nil];
+        SignInViewController *signInVC = (SignInViewController *)[storyboard instantiateViewControllerWithIdentifier:@"signInView"];
+        signInVC.modalPresentationStyle = UIModalPresentationPopover;
+        [signInVC resetSignInView];
+        
+        [self presentViewController:signInVC animated:YES completion:nil];
     }
 }
 
