@@ -25,8 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *editProfileField;
 @property (weak, nonatomic) IBOutlet UIButton *contactUsField;
 
-- (BOOL)signOut:(NSError *_Nullable *_Nullable)error;
-
 @end
 
 @implementation PulloutMenuViewController
