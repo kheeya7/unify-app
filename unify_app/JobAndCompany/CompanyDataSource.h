@@ -16,3 +16,4 @@
 - (Company *) getCompanyAtRow: (NSInteger) index;
 
 @end
+
