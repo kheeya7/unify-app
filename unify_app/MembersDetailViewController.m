@@ -29,9 +29,14 @@
 
 @property (nonatomic) float scrollViewContentHeight;
 @property (nonatomic) float screenHeight;
+@property (nonatomic) CGFloat lastContentOffsetScroll;
+@property (nonatomic) CGFloat lastContentOffsetTable;
 
 @property (strong, nonatomic) NSMutableArray *postings;
 @property (strong, nonatomic) FIRDatabaseReference *refPostings;
+
+// DEGUG
+@property (nonatomic) BOOL scrollViewEnabled;
 
 @end
 
@@ -71,6 +76,14 @@
     
     [self setup];
     [self loadRecentActivityData];
+    
+    self.scrollView.delegate = self;
+    self.scrollViewEnabled = YES;
+    
+    float yOffsetScrollView = self.scrollView.contentOffset.y;
+    float yOffsetTableView = self.tableView.contentOffset.y;
+    
+    NSLog(@"yOffsetScrollView = %.2f | yOffsetTable = %.2f", yOffsetScrollView, yOffsetTableView);
 }
 
 
@@ -122,30 +135,49 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    // THIS WORKS BUT IS A BIT BUGGY
-    if (scrollView == self.scrollView) {
-        float yOffsetScrollView = self.scrollView.contentOffset.y;
-        if (yOffsetScrollView >= 100) {
-            NSLog(@"turning OFF scroll view and turning ON tableview");
-            self.scrollView.scrollEnabled = NO;
-            self.tableView.scrollEnabled = YES;
+    // DETERMINE DIRECTION OF SCROLL
+    
+    BOOL scrollScrollDirectionUp;
+    
+    if (self.lastContentOffsetScroll > self.scrollView.contentOffset.y) {
+        scrollScrollDirectionUp = YES;
+    } else {
+        scrollScrollDirectionUp = NO;
+    }
+    
+    // TOGGLE WHICH VIEW (TABLEVIEW OR SCROLLVIEW)
+    // HAS SCROLLING ENABLED DEPENDING ON SCROLL DIRECTION
+    // AND Y OFFSET
+    
+    float yOffsetScrollView = self.scrollView.contentOffset.y;
+    float yOffsetTableView = self.tableView.contentOffset.y;
+    
+    if (!scrollScrollDirectionUp) {
+        if (scrollView == self.scrollView) {
+            if (yOffsetScrollView >= 340) {
+                self.scrollView.scrollEnabled = NO;
+                self.tableView.scrollEnabled = YES;
+            }
         }
     }
     
     if (scrollView == self.tableView) {
-        float yOffsetTableView = self.tableView.contentOffset.y;
-        NSLog(@"yOffset: %f", yOffsetTableView);
-        NSLog(@"scrollView == self.tableView");
         if (yOffsetTableView <= 0) {
-            NSLog(@"turning ON scroll view and turning OFF tableview");
             self.scrollView.scrollEnabled = YES;
             self.tableView.scrollEnabled = NO;
         }
     }
     
+    // UPDATE LAST CONTENT OFFSET (SO WE CAN KEEP TRACK OF
+    // SCROLL DIRECTION)
+    
+    self.lastContentOffsetScroll = self.scrollView.contentOffset.y;
+    self.lastContentOffsetTable = self.tableView.contentOffset.y;
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"%lu POSTINGS", self.postings.count);
     return self.postings.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -171,15 +203,5 @@
 {
     return 150;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
