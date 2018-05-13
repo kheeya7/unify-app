@@ -41,6 +41,8 @@ bool shouldShowAuthUI = true;
     if (shouldShowAuthUI) {
         FUIAuth *authUI = [FUIAuth defaultAuthUI];
         
+        authUI.signInWithEmailHidden = YES;
+        
         // You need to adopt a FUIAuthDelegate protocol to receive callback
         authUI.delegate = self;
         
