@@ -37,7 +37,7 @@
                            @"email":self.email,
                            @"occupation":self.occupation,
                            @"additionalDetail":self.additionalDetail,
-                           @"photoUrl":self.photoUrl,
+                           @"photoUrl":self.photoUrl.absoluteString,
                            @"age":self.age,
                            @"linkedIn":self.linkedIn,
                            @"interest":self.interest
