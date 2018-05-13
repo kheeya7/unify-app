@@ -17,6 +17,7 @@
 @property (nonatomic) NSString *location;
 @property (nonatomic) NSString *companyBackground;
 @property (nonatomic) NSNumber *femaleRatio;
+@property (nonatomic) NSNumber *wouldRecommend;
 @property (nonatomic) NSArray *badges;
 
 

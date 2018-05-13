@@ -67,9 +67,11 @@
                 company.companyLogoUrlString = aCompanyLogoUrlString;
                 company.location = aLocation;
                 company.companyBackground = aBackgroundImageString;
+                
                 NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
                 f.numberStyle = NSNumberFormatterDecimalStyle;
                 company.femaleRatio = [f numberFromString:aFemaleRatio];
+                company.wouldRecommend = [f numberFromString: [companyDict objectForKey:@"wouldRecommend"]];
                 company.badges = aBadges;
                 
                 [self.companies addObject:company];
