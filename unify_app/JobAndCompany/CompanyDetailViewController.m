@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *CompanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *HeaderBackgroundImage;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView2;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView2;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView4;
@@ -66,7 +67,8 @@
     [self setBackgroundImage];
     
     self.progressView.progress = self.currentCompany.femaleRatio.floatValue / 100;
-    
+    self.progressView2.progress = self.currentCompany.wouldRecommend.floatValue / 100;
+   
     [self setBadges];
 }
 
