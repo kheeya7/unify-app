@@ -15,9 +15,7 @@
 @interface JobPostingDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *companyLabel2;
 @property (weak, nonatomic) IBOutlet UIWebView *jobDescriptionWebView;
-@property (weak, nonatomic) IBOutlet UIImageView *companyLogoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *companyLogoImageView2;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
@@ -32,16 +30,14 @@
     // Do any additional setup after loading the view.
     [self.titleLabel setText:[self.currentJobPosting title]];
     [self.companyLabel setText:[self.currentJobPosting company]];
-    [self.companyLabel2 setText:[self.currentJobPosting company]];
+    
     [self.jobDescriptionWebView loadHTMLString:self.currentJobPosting.jobDescription baseURL:(nil)];
-
+    
     UIImage *image = [self.currentJobPosting getImageLogo];
-    [self.companyLogoImageView setImage:image];
     [self.companyLogoImageView2 setImage:image];
     
     [self setBackgroundImage];
 }
-
 
 - (void)setBackgroundImage {
     // Get a reference to the storage service using the default Firebase App
