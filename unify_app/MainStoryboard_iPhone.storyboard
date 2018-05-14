@@ -248,7 +248,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="y9I-ms-5HG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" action="showDetailViewController:sender:" id="yPs-28-ibq"/>
+                                <segue destination="ufN-e0-SeK" kind="show" id="yPs-28-ibq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -422,7 +422,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="U4G-BL-ZBu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" action="showDetailViewController:sender:" id="SER-3T-1v5"/>
+                                <segue destination="ufN-e0-SeK" kind="show" id="SER-3T-1v5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -706,9 +706,8 @@
                     <navigationItem key="navigationItem" title="Unify" id="dd4-Gz-W7x">
                         <barButtonItem key="backBarButtonItem" title="Back" id="sw7-xZ-ggO"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="message-icon-blue" id="fYU-1k-VvH">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" action="showDetailViewController:sender:" id="VVd-nL-URt"/>
+                                <segue destination="ufN-e0-SeK" kind="show" id="VVd-nL-URt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1590,7 +1589,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZSL-jb-64r"/>
                         <barButtonItem key="rightBarButtonItem" image="message-icon-blue" id="3W5-ia-Lt0">
                             <connections>
-                                <segue destination="ufN-e0-SeK" kind="show" action="showDetailViewController:sender:" id="5LR-sl-O9c"/>
+                                <segue destination="ufN-e0-SeK" kind="show" id="5LR-sl-O9c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2799,23 +2798,6 @@
             </objects>
             <point key="canvasLocation" x="-287" y="179"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Nq7-TX-tZN">
-            <objects>
-                <viewController id="hAc-Cq-k0n" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9pC-UN-vj3"/>
-                        <viewControllerLayoutGuide type="bottom" id="Saf-st-SYO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zaH-7k-eIU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EXd-XK-kvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="FemTechNet logo" width="190" height="150"/>
@@ -2865,6 +2847,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nzz-1c-WHq"/>
-        <segue reference="tVZ-eA-AD9"/>
+        <segue reference="VVd-nL-URt"/>
     </inferredMetricsTieBreakers>
 </document>
