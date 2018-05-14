@@ -31,12 +31,20 @@
     [self.titleLabel setText:[self.currentJobPosting title]];
     [self.companyLabel setText:[self.currentJobPosting company]];
     
+    self.jobDescriptionWebView.delegate = self;
     [self.jobDescriptionWebView loadHTMLString:self.currentJobPosting.jobDescription baseURL:(nil)];
     
     UIImage *image = [self.currentJobPosting getImageLogo];
     [self.companyLogoImageView2 setImage:image];
     
     [self setBackgroundImage];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSString *cssString = @"body { font-family: Helvetica; font-size: 15px }"; // 1
+    NSString *javascriptString = @"var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)"; // 2
+    NSString *javascriptWithCSSString = [NSString stringWithFormat:javascriptString, cssString]; // 3
+    [webView stringByEvaluatingJavaScriptFromString:javascriptWithCSSString]; // 4
 }
 
 - (void)setBackgroundImage {
