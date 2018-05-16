@@ -14,7 +14,7 @@
 
 @import Firebase;
 
-@interface ChatViewController ()
+@interface ChatViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property (weak, nonatomic) IBOutlet UITextField *chatMessageInput;
 
@@ -25,6 +25,8 @@
 @end
 
 @implementation ChatViewController
+
+BOOL moved;
 
 - (IBAction)onSend:(id)sender {
     [self addMessageToChat];
@@ -89,16 +91,6 @@
     self.chatMessageInput.text = @"";
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField == self.chatMessageInput) {
-        [textField resignFirstResponder];
-        [self addMessageToChat];
-        
-        return NO;
-    }
-    return YES;
-}
-
 - (NSString *)getTimestampString {
     // Get current device time
     NSDate *today = [NSDate date];
@@ -157,6 +149,48 @@
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.messages count];
+}
+
+// Keyboard editing
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.chatMessageInput) {
+        [textField resignFirstResponder];
+        [self addMessageToChat];
+        
+        if(moved) {
+            [self animateViewToPosition:self.view directionUP:NO];
+        }
+        moved = NO;
+        return YES;
+        
+        //return NO;
+    }
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    if(!moved) {
+        [self animateViewToPosition:self.view directionUP:YES];
+        moved = YES;
+    }
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField resignFirstResponder];
+}
+
+-(void)animateViewToPosition:(UIView *)viewToMove directionUP:(BOOL)up {
+    
+    const int movementDistance = -210; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? movementDistance : -movementDistance);
+    [UIView beginAnimations: @"animateTextField" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    viewToMove.frame = CGRectOffset(viewToMove.frame, 0, movement);
+    [UIView commitAnimations];
 }
 
 @end
