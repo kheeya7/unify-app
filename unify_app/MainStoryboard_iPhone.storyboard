@@ -417,7 +417,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="comment-icon-1"/>
                                         <connections>
-                                            <segue destination="ufN-e0-SeK" kind="presentation" id="BfJ-kb-NQ8"/>
+                                            <segue destination="ufN-e0-SeK" kind="show" id="BfJ-kb-NQ8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1977,7 +1977,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="comment-icon-1"/>
                                 <connections>
-                                    <segue destination="ufN-e0-SeK" kind="presentation" id="KGn-Fw-yYm"/>
+                                    <segue destination="ufN-e0-SeK" kind="show" id="KGn-Fw-yYm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-N4-oqX">
@@ -2138,7 +2138,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="comment-icon-1"/>
                                 <connections>
-                                    <segue destination="ufN-e0-SeK" kind="presentation" id="AAS-yj-cNU"/>
+                                    <segue destination="ufN-e0-SeK" kind="show" id="AAS-yj-cNU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2366,7 +2366,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="comment-icon-1"/>
                                         <connections>
-                                            <segue destination="ufN-e0-SeK" kind="presentation" id="tj5-9n-aHi"/>
+                                            <segue destination="ufN-e0-SeK" kind="show" id="tj5-9n-aHi"/>
                                         </connections>
                                     </button>
                                 </subviews>
