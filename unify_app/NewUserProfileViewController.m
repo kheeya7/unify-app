@@ -9,7 +9,7 @@
 #import "NewUserProfileViewController.h"
 @import Firebase;
 
-@interface NewUserProfileViewController ()
+@interface NewUserProfileViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *yourNameField;
 @property (weak, nonatomic) IBOutlet UITextField *nickNameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *ageField;
 @property (weak, nonatomic) IBOutlet UITextField *linkedInField;
 @property (weak, nonatomic) IBOutlet UITextField *interestField;
+@property BOOL moved;
 
 @end
 
@@ -64,11 +65,6 @@
     self.additionalDetailField.layer.cornerRadius = 8;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *) textField {
-    [textField resignFirstResponder];
-    return YES;
-}
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
@@ -87,5 +83,49 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - text input box keyboard navigation
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    if(self.moved) {
+        [self animateViewToPosition:self.view directionUP:NO];
+    }
+    self.moved = NO;
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField == self.nickNameField) {
+        return;
+    }
+
+    if(!self.moved) {
+        [self animateViewToPosition:self.view directionUP:YES];
+        self.moved = YES;
+    }
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    if(self.moved) {
+        [self animateViewToPosition:self.view directionUP:NO];
+    }
+    self.moved = NO;
+}
+
+-(void)animateViewToPosition:(UIView *)viewToMove directionUP:(BOOL)up {
+    
+    const int movementDistance = -210; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? movementDistance : -movementDistance);
+    [UIView beginAnimations: @"animateTextField" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    viewToMove.frame = CGRectOffset(viewToMove.frame, 0, movement);
+    [UIView commitAnimations];
+}
 
 @end
