@@ -19,6 +19,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (BOOL)textFieldShouldReturn:(UITextField *) textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
