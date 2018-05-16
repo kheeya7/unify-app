@@ -35,6 +35,7 @@
 #pragma mark - inherited methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.refPostings = [[[FIRDatabase database] reference] child:@"news"];
     
     self.postings = [[NSMutableArray alloc] initWithCapacity:50];
@@ -103,6 +104,10 @@
         return NO;
     }
     return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (NSString *)getTimestampString {
