@@ -394,7 +394,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-4F-GD3">
-                                        <rect key="frame" x="16" y="181" width="343" height="36"/>
+                                        <rect key="frame" x="16" y="181" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1881,7 +1881,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-JT-WwQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noot" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-JT-WwQ">
                                 <rect key="frame" x="22" y="356" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1907,7 +1907,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ywg-3G-xeL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="savannah" translatesAutoresizingMaskIntoConstraints="NO" id="Ywg-3G-xeL">
                                 <rect key="frame" x="13" y="444" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2002,7 +2002,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="XOt-qQ-MLc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noot" translatesAutoresizingMaskIntoConstraints="NO" id="XOt-qQ-MLc">
                                 <rect key="frame" x="22" y="356" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2028,7 +2028,7 @@
                                 <rect key="frame" x="43" y="258" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="XNf-Us-bM7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="savannah" translatesAutoresizingMaskIntoConstraints="NO" id="XNf-Us-bM7">
                                 <rect key="frame" x="13" y="444" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2872,7 +2872,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
-        <segue reference="tj5-9n-aHi"/>
+        <segue reference="BfJ-kb-NQ8"/>
         <segue reference="MFD-2k-roM"/>
     </inferredMetricsTieBreakers>
 </document>
