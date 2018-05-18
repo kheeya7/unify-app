@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2a-9S-lrW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -393,8 +393,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-4F-GD3">
-                                        <rect key="frame" x="16" y="181" width="343" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-4F-GD3">
+                                        <rect key="frame" x="16" y="181" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1192,13 +1192,13 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unity-badge-1" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-Js-mCE">
-                                <rect key="frame" x="12" y="234" width="100" height="100"/>
+                                <rect key="frame" x="12" y="234" width="91" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unify-badge-2" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-pT-Dzv">
-                                <rect key="frame" x="139" y="234" width="100" height="100"/>
+                                <rect key="frame" x="130" y="234" width="118" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unify-badge-4" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-J8-Vdp">
-                                <rect key="frame" x="259" y="234" width="100" height="100"/>
+                                <rect key="frame" x="268" y="234" width="91" height="100"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIK-JM-pqx">
                                 <rect key="frame" x="16" y="328" width="224" height="15"/>
@@ -1325,7 +1325,6 @@
                             <constraint firstItem="jRW-Je-Qi7" firstAttribute="leading" secondItem="gtA-Oz-hCO" secondAttribute="leadingMargin" id="Hd4-wf-hL6"/>
                             <constraint firstItem="jRW-Je-Qi7" firstAttribute="leading" secondItem="WIK-JM-pqx" secondAttribute="leading" id="HzO-bD-Wkh"/>
                             <constraint firstItem="LTg-Js-mCE" firstAttribute="leading" secondItem="gtA-Oz-hCO" secondAttribute="leadingMargin" constant="-4" id="M6g-R6-lzZ"/>
-                            <constraint firstItem="HIx-zw-Tgf" firstAttribute="trailing" secondItem="WIK-JM-pqx" secondAttribute="trailing" id="OZg-84-fEH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YrW-aG-Aan" secondAttribute="trailing" constant="-6" id="QJL-zv-YQI"/>
                             <constraint firstItem="ro5-pT-Dzv" firstAttribute="centerX" secondItem="YrW-aG-Aan" secondAttribute="centerX" id="QXC-Ho-mWA"/>
                             <constraint firstItem="jRW-Je-Qi7" firstAttribute="trailing" secondItem="gtA-Oz-hCO" secondAttribute="trailingMargin" id="R2a-2z-QxK"/>
@@ -2872,7 +2871,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
-        <segue reference="tj5-9n-aHi"/>
+        <segue reference="BfJ-kb-NQ8"/>
         <segue reference="MFD-2k-roM"/>
     </inferredMetricsTieBreakers>
 </document>
