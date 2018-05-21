@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView2;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView4;
-@property (weak, nonatomic) IBOutlet UILabel *companyDescription;
+@property (weak, nonatomic) IBOutlet UITextView *companyDetailTextView;
 
 @property (strong, nonatomic) BadgeViewController *badgeViewController;
 
@@ -62,8 +62,8 @@
     
     [self.CompanyNameLabel setText:self.currentCompany.name];
     
-    [self.companyDescription sizeToFit];
-    [self.companyDescription  setText:self.currentCompany.companyDescription];
+    [self.companyDetailTextView sizeToFit];
+    [self.companyDetailTextView  setText:self.currentCompany.companyDescription];
     
     UIImage *image = [self.currentCompany getImageLogo];
     [self.CompanyLogo setImage: image];
