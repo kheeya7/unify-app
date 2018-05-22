@@ -1530,7 +1530,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMc-B9-Mxl">
                                 <rect key="frame" x="25" y="249" width="238" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="   About">
+                                <state key="normal" title="   About Unify">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -2878,7 +2878,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NZK-0X-4e2"/>
-        <segue reference="BfJ-kb-NQ8"/>
+        <segue reference="5LR-sl-O9c"/>
         <segue reference="MFD-2k-roM"/>
     </inferredMetricsTieBreakers>
 </document>
